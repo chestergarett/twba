@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "17c3a7a4-7e17-4c54-9b9f-38a835a79cca",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marca Leon": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "marca leon sampung piso isa kape"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'marca leon sampung piso isa kape'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 22.75,
+    "totalItems": 1,
+    "brandedAmount": 22.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "marca leon sampung piso isa kape",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:49:57.861513.000Z"
+  },
+  "processingTime": 5.45,
+  "edgeVersion": "v2.0.0-stt-only"
+}

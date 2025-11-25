@@ -1,0 +1,138 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "dcd08d69-2ce0-4898-a166-96d03c4dca20",
+  "brandDetection": {
+    "detectedBrands": {
+      "Milo": 0.77,
+      "Blend 45": 0.444
+    },
+    "explicitMentions": [
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "milo isa blend forty"
+      },
+      {
+        "brand": "Blend 45",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.444,
+        "detection_type": "exact_match",
+        "context": "milo isa blend forty five, please dalawang milo po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 3
+          },
+          {
+            "brand": "Blend 45",
+            "confidence": 0.444,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "MILO-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 195.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'milo isa blend forty'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Blend 45",
+      "productName": "Blend 45 Coffee",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "BLEND-45-COFFEE-25G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 21.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.444,
+      "brandConfidence": 0.567,
+      "suggestedBrands": null,
+      "notes": "STT: 'milo isa blend forty five, please dalawang milo po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 216.0,
+    "totalItems": 6,
+    "brandedAmount": 216.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 30.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "milo isa blend forty five, please dalawang milo po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T20:42:19.472302.000Z"
+  },
+  "processingTime": 12.35,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d999138b-1eed-43fc-a029-be4a870f2385",
+  "brandDetection": {
+    "detectedBrands": {
+      "Coca-Cola": 0.17,
+      "Del Monte": 0.432,
+      "TNT": 0.67
+    },
+    "explicitMentions": [
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.17,
+        "detection_type": "exact_match",
+        "context": "tatlo Coke isa TNTng Del dalawa Monte"
+      },
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.432,
+        "detection_type": "exact_match",
+        "context": "tatlo Coke isa TNTng Del dalawa Monte"
+      },
+      {
+        "brand": "TNT",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.67,
+        "detection_type": "exact_match",
+        "context": "tatlo Coke isa TNTng Del dalawa Monte"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.17,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.432,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TNT",
+            "confidence": 0.67,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 264.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.17,
+      "brandConfidence": 0.49,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlo Coke isa TNTng Del dalawa Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Juice Drink Four Seasons",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "DELMONTE-JUICE-DRINK-FOUR-SEASONS-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 81.9,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.432,
+      "brandConfidence": 0.621,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlo Coke isa TNTng Del dalawa Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TNT",
+      "productName": "TNT Load 100",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "TNT-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.67,
+      "brandConfidence": 0.74,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlo Coke isa TNTng Del dalawa Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 445.9,
+    "totalItems": 7,
+    "brandedAmount": 445.9,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "tatlo Coke isa TNTng Del dalawa Monte",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:25:42.605533.000Z"
+  },
+  "processingTime": 17.34,
+  "edgeVersion": "v2.0.0-stt-only"
+}

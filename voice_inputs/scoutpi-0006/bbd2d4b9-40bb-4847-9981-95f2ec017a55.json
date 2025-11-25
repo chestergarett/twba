@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "bbd2d4b9-40bb-4847-9981-95f2ec017a55",
+  "brandDetection": {
+    "detectedBrands": {
+      "Fudgee Bar": 0.77,
+      "Tiger": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Fudgee Bar",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Fudgee Bar isa Tiger po, please dalawa Fudgee Bar"
+      },
+      {
+        "brand": "Tiger",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Fudgee Bar isa Tiger po, please dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Fudgee Bar",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Tiger",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Fudgee Bar",
+      "productName": "Fudgee Bar Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "FUDGEE-BAR-CHOCO-42G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Fudgee Bar isa Tiger po, please dalawa Fudgee Bar'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tiger",
+      "productName": "Tiger Energy Biscuits",
+      "genericName": "Product",
+      "localName": "tiger",
+      "sku": "TIGER-ENERGY-35G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Fudgee Bar isa Tiger po, please dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 60.0,
+    "totalItems": 6,
+    "brandedAmount": 60.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.66,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Fudgee Bar isa Tiger po, please dalawa Fudgee Bar",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:25:32.052925.000Z"
+  },
+  "processingTime": 10.55,
+  "edgeVersion": "v2.0.0-stt-only"
+}

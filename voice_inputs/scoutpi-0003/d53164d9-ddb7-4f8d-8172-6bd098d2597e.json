@@ -1,0 +1,182 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "d53164d9-ddb7-4f8d-8172-6bd098d2597e",
+  "brandDetection": {
+    "detectedBrands": {
+      "TNT": 0.77,
+      "Nescafé": 0.77,
+      "Magic": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "TNT",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "tnt dalawa nescafé isa"
+      },
+      {
+        "brand": "Nescafé",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "tnt dalawa nescafé isa magic tatlo"
+      },
+      {
+        "brand": "Magic",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "dalawa nescafé isa magic tatlo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TNT",
+            "confidence": 0.77,
+            "quantity": 6
+          },
+          {
+            "brand": "Magic",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nescafé",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "TNT",
+      "productName": "TNT Load 100",
+      "genericName": "Product",
+      "localName": "tnt",
+      "sku": "TNT-LOAD-100",
+      "quantity": 6,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 600.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": true,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'tnt dalawa nescafé isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Nescafé",
+      "productName": "Nescafé Classic Resealable",
+      "genericName": "Product",
+      "localName": "nescafé",
+      "sku": "NESCAFE-CLASSIC-200G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 210.0,
+      "totalPrice": 630.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'tnt dalawa nescafé isa magic tatlo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Magic",
+      "productName": "Magic Chips Barbecue Big Pack",
+      "genericName": "Product",
+      "localName": "magic",
+      "sku": "MAGIC-CHIPS-BBQ-100G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.45,
+      "totalPrice": 76.35,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa nescafé isa magic tatlo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 1306.35,
+    "totalItems": 12,
+    "brandedAmount": 1306.35,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 12,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "tnt dalawa nescafé isa magic tatlo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T13:00:38.434664.000Z"
+  },
+  "processingTime": 16.8,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "e922c70e-7273-4cbf-9523-d6dcc3b34b87",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nissin": 0.95,
+      "Voice": 0.95,
+      "Chips Ahoy": 0.404
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nissin",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "nissin noodles po voice"
+      },
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "nissin noodles po voice chips isa meron"
+      },
+      {
+        "brand": "Chips Ahoy",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.404,
+        "detection_type": "exact_match",
+        "context": "nissin noodles po voice chips isa meron kayong nis..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Nissin",
+            "confidence": 0.95,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Voice",
+            "confidence": 0.95,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Chips Ahoy",
+            "confidence": 0.404,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nissin",
+      "productName": "Nissin Wafer Chocolate",
+      "genericName": "Product",
+      "localName": "noodles",
+      "sku": "NISSIN-WAFER-CHOCO-50G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'nissin noodles po voice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "noodles",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'nissin noodles po voice chips isa meron'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "noodles",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.404,
+      "brandConfidence": 0.607,
+      "suggestedBrands": null,
+      "notes": "STT: 'nissin noodles po voice chips isa meron kayong nis...'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 32.0,
+    "totalItems": 3,
+    "brandedAmount": 32.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 3.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "nissin noodles po voice chips isa meron kayong nissin?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T21:35:16.659237.000Z"
+  },
+  "processingTime": 15.48,
+  "edgeVersion": "v2.0.0-stt-only"
+}

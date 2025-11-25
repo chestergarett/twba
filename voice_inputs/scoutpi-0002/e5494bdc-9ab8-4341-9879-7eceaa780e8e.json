@@ -1,0 +1,182 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "e5494bdc-9ab8-4341-9879-7eceaa780e8e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Close Up": 0.77,
+      "Rejoice": 0.77,
+      "Pantene": 0.67
+    },
+    "explicitMentions": [
+      {
+        "brand": "Close Up",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "close up po rejoice na lang isa panteneng piraso"
+      },
+      {
+        "brand": "Rejoice",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "close up po rejoice na lang isa"
+      },
+      {
+        "brand": "Pantene",
+        "category": "Hair Care",
+        "subcategory": "shampoo",
+        "confidence": 0.67,
+        "detection_type": "exact_match",
+        "context": "na lang isa panteneng piraso"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Close Up",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Rejoice",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Pantene",
+            "confidence": 0.67,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Close Up",
+      "productName": "Close Up Ever Fresh Red Hot",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "CLOSE-UP-RED-145G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 75.0,
+      "totalPrice": 75.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'close up po rejoice na lang isa panteneng piraso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Rejoice",
+      "productName": "Rejoice Anti Hair Fall",
+      "genericName": "Product",
+      "localName": "rejoice",
+      "sku": "REJOICE-ANTI-FALL-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 125.0,
+      "totalPrice": 125.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'close up po rejoice na lang isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Pantene",
+      "productName": "Pantene Conditioner",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "PANTENE-CONDITIONER-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 135.0,
+      "totalPrice": 135.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.67,
+      "brandConfidence": 0.74,
+      "suggestedBrands": null,
+      "notes": "STT: 'na lang isa panteneng piraso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 335.0,
+    "totalItems": 3,
+    "brandedAmount": 335.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "close up po rejoice na lang isa panteneng piraso",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T08:52:12.575046.000Z"
+  },
+  "processingTime": 14.62,
+  "edgeVersion": "v2.0.0-stt-only"
+}

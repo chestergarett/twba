@@ -1,0 +1,143 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "132965a2-7a66-46ff-8456-9e2cd6322b28",
+  "brandDetection": {
+    "detectedBrands": {
+      "Camel": 0.77,
+      "Century Tuna": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Camel",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Camel Century Tuna dalawa"
+      },
+      {
+        "brand": "Century Tuna",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Camel Century Tuna dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Camel",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Century Tuna",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Camel",
+      "productName": "Camel Activate Purple 20s",
+      "genericName": "Product",
+      "localName": "camel",
+      "sku": "CAMEL-ACTIVATE-PURPLE-20S-20 STICKS",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 352.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Camel Century Tuna dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Century Tuna",
+      "productName": "Century Tuna Caldereta",
+      "genericName": "Product",
+      "localName": "century",
+      "sku": "CENTURY-TUNA-CALDERETA-180G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 90.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Camel Century Tuna dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 442.0,
+    "totalItems": 4,
+    "brandedAmount": 442.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "Camel Century Tuna dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T03:51:55.324757.000Z"
+  },
+  "processingTime": 9.65,
+  "edgeVersion": "v2.0.0-stt-only"
+}

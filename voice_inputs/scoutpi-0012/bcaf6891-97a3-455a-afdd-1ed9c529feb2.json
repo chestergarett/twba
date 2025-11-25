@@ -1,0 +1,143 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "bcaf6891-97a3-455a-afdd-1ed9c529feb2",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ariel": 0.83,
+      "Close Up": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ariel",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Ariel isa Close Up,"
+      },
+      {
+        "brand": "Close Up",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Ariel isa Close Up, pabili dalawa Ariel"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Ariel",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Close Up",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ariel",
+      "productName": "Ariel Powder",
+      "genericName": "Product",
+      "localName": "ariel",
+      "sku": "ARIEL-POWDER-90G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 15.0,
+      "totalPrice": 45.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ariel isa Close Up,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Close Up",
+      "productName": "Close Up Ever Fresh Red Hot",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "CLOSE-UP-RED-145G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 75.0,
+      "totalPrice": 225.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ariel isa Close Up, pabili dalawa Ariel'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 270.0,
+    "totalItems": 6,
+    "brandedAmount": 270.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "Ariel isa Close Up, pabili dalawa Ariel",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:33:16.905203.000Z"
+  },
+  "processingTime": 12.48,
+  "edgeVersion": "v2.0.0-stt-only"
+}

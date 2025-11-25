@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "dc341d3f-647f-4864-a05a-ab924e1ff3dd",
+  "brandDetection": {
+    "detectedBrands": {
+      "Piattos": 0.67,
+      "Dewberry": 0.77,
+      "Cream-O": 0.456
+    },
+    "explicitMentions": [
+      {
+        "brand": "Piattos",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.67,
+        "detection_type": "exact_match",
+        "context": "isa Piattosng tatlo Dewberry Cream"
+      },
+      {
+        "brand": "Dewberry",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Piattosng tatlo Dewberry Cream O, okay?"
+      },
+      {
+        "brand": "Cream-O",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.456,
+        "detection_type": "exact_match",
+        "context": "isa Piattosng tatlo Dewberry Cream O, okay?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Piattos",
+            "confidence": 0.67,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Dewberry",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Cream-O",
+            "confidence": 0.456,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Piattos",
+      "productName": "Piattos Cheese",
+      "genericName": "Product",
+      "localName": "piattos",
+      "sku": "PIATTOS-CHEESE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.95,
+      "totalPrice": 35.95,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.67,
+      "brandConfidence": 0.74,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Piattosng tatlo Dewberry Cream'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dewberry",
+      "productName": "Dewberry Blueberry",
+      "genericName": "Product",
+      "localName": "dewberry",
+      "sku": "DEWBERRY-BLUEBERRY-33G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 24.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Piattosng tatlo Dewberry Cream O, okay?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cream-O",
+      "productName": "Cream-O Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "CREAM-O-CHOCO-30G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 24.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.456,
+      "brandConfidence": 0.633,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Piattosng tatlo Dewberry Cream O, okay?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 83.95,
+    "totalItems": 7,
+    "brandedAmount": 83.95,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "isa Piattosng tatlo Dewberry Cream O, okay?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:31:39.637221.000Z"
+  },
+  "processingTime": 13.62,
+  "edgeVersion": "v2.0.0-stt-only"
+}

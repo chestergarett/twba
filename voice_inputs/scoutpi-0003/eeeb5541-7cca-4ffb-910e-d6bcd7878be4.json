@@ -1,0 +1,99 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "eeeb5541-7cca-4ffb-910e-d6bcd7878be4",
+  "brandDetection": {
+    "detectedBrands": {
+      "Choc-Nut": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Choc-Nut",
+        "category": "Candies & Sweets",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Pag-a-meh ang mong Choc-Nut"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Candies & Sweets": {
+        "branded": [
+          {
+            "brand": "Choc-Nut",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Choc-Nut",
+      "productName": "Choc-Nut Original",
+      "genericName": "Product",
+      "localName": "choc-nut",
+      "sku": "CHOC-NUT-ORIGINAL",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 15.0,
+      "totalPrice": 15.0,
+      "category": "Candies & Sweets",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.8,
+      "suggestedBrands": null,
+      "notes": "STT: 'Pag-a-meh ang mong Choc-Nut'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 15.0,
+    "totalItems": 1,
+    "brandedAmount": 15.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:02,000  \nPag-a-meh ang mukti niyo  \n\n2  \n00:00:02,000 --> 00:00:04,000  \nPag-a-meh ang mong Choc-Nut  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T14:28:10.809094.000Z"
+  },
+  "processingTime": 6.16,
+  "edgeVersion": "v2.0.0-stt-only"
+}

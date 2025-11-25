@@ -1,0 +1,99 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "f36c9b2e-1a60-43c6-b139-be682c908d2e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Century Tuna": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Century Tuna",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "great isa tasteng century tuna, [musika] pabili yu..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Century Tuna",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Century Tuna",
+      "productName": "Century Tuna Caldereta",
+      "genericName": "Product",
+      "localName": "century",
+      "sku": "CENTURY-TUNA-CALDERETA-180G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 45.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'great isa tasteng century tuna, [musika] pabili yu...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 45.0,
+    "totalItems": 1,
+    "brandedAmount": 45.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "great isa tasteng century tuna, [musika] pabili yung malaki, paki dagdag",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T15:40:44.162943.000Z"
+  },
+  "processingTime": 11.06,
+  "edgeVersion": "v2.0.0-stt-only"
+}

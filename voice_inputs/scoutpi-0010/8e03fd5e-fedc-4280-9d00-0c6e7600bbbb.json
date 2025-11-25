@@ -1,0 +1,182 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "8e03fd5e-fedc-4280-9d00-0c6e7600bbbb",
+  "brandDetection": {
+    "detectedBrands": {
+      "Roller Coaster": 0.8,
+      "Presto": 0.8,
+      "Voice": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Roller Coaster",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "meron kayong Roller Coaster? Presto chips, please ..."
+      },
+      {
+        "brand": "Presto",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "kayong Roller Coaster? Presto chips, please Voice"
+      },
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Presto chips, please Voice na lang po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Roller Coaster",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Presto",
+            "confidence": 0.8,
+            "quantity": 1
+          },
+          {
+            "brand": "Voice",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Roller Coaster",
+      "productName": "Roller Coaster Cheese Rings",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "ROLLERCOASTER-CHEESE-RINGS-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron kayong Roller Coaster? Presto chips, please ...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Presto",
+      "productName": "Presto Cream Chocolate",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "PRESTO-CHOCO-80G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 18.3,
+      "totalPrice": 18.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'kayong Roller Coaster? Presto chips, please Voice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Presto chips, please Voice na lang po'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 42.3,
+    "totalItems": 3,
+    "brandedAmount": 42.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "meron kayong Roller Coaster? Presto chips, please Voice na lang po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T03:40:49.131791.000Z"
+  },
+  "processingTime": 14.45,
+  "edgeVersion": "v2.0.0-stt-only"
+}

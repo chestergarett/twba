@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "2ff7acf4-d10f-4f0b-9c1b-33ea15833f69",
+  "brandDetection": {
+    "detectedBrands": {
+      "Selecta": 0.83,
+      "Coca-Cola": 0.23
+    },
+    "explicitMentions": [
+      {
+        "brand": "Selecta",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "selecta malamig coke isa"
+      },
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.23,
+        "detection_type": "exact_match",
+        "context": "selecta malamig coke isa soda dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Selecta",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.23,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Selecta",
+      "productName": "Selecta Fortified Milk Powder",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "SELECTA-FORTIFIED-MILK-POWDER-700G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 75.0,
+      "category": "Food & Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'selecta malamig coke isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 264.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.23,
+      "brandConfidence": 0.46,
+      "suggestedBrands": null,
+      "notes": "STT: 'selecta malamig coke isa soda dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 339.0,
+    "totalItems": 6,
+    "brandedAmount": 339.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "selecta malamig coke isa soda dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:30:28.090448.000Z"
+  },
+  "processingTime": 9.57,
+  "edgeVersion": "v2.0.0-stt-only"
+}

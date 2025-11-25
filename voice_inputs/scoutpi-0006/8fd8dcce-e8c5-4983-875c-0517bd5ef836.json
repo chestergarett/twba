@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "8fd8dcce-e8c5-4983-875c-0517bd5ef836",
+  "brandDetection": {
+    "detectedBrands": {
+      "Red Bull": 0.414
+    },
+    "explicitMentions": [
+      {
+        "brand": "Red Bull",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.414,
+        "detection_type": "exact_match",
+        "context": "kuya redbu meron pa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Red Bull",
+            "confidence": 0.414,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Red Bull",
+      "productName": "Red Bull Energy Drink",
+      "genericName": "Product",
+      "localName": "red",
+      "sku": "RED-BULL-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.414,
+      "brandConfidence": 0.557,
+      "suggestedBrands": null,
+      "notes": "STT: 'kuya redbu meron pa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 85.0,
+    "totalItems": 1,
+    "brandedAmount": 85.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 46.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "kuya redbu meron pa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:16:32.479085.000Z"
+  },
+  "processingTime": 5.42,
+  "edgeVersion": "v2.0.0-stt-only"
+}

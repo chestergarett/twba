@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "abb64d2b-fcdb-437b-bdbe-b9159b4d63a8",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.83,
+      "Datu Puti": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "alaska gatas datu puti"
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "alaska gatas datu puti suka dalawang alaska"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Powdered Milk Drink",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-POWDERED-MILK-DRINK-300G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 50.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas datu puti'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.81,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas datu puti suka dalawang alaska'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 85.0,
+    "totalItems": 3,
+    "brandedAmount": 85.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "alaska gatas datu puti suka dalawang alaska",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T06:48:10.604879.000Z"
+  },
+  "processingTime": 15.87,
+  "edgeVersion": "v2.0.0-stt-only"
+}

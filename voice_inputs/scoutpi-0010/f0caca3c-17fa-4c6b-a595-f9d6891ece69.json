@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "f0caca3c-17fa-4c6b-a595-f9d6891ece69",
+  "brandDetection": {
+    "detectedBrands": {
+      "Pantene": 0.86
+    },
+    "explicitMentions": [
+      {
+        "brand": "Pantene",
+        "category": "Hair Care",
+        "subcategory": "shampoo",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "pantene po ilang piraso?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Pantene",
+            "confidence": 0.86,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Pantene",
+      "productName": "Pantene Conditioner",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "PANTENE-CONDITIONER-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 135.0,
+      "totalPrice": 135.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.855,
+      "suggestedBrands": null,
+      "notes": "STT: 'pantene po ilang piraso?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 135.0,
+    "totalItems": 1,
+    "brandedAmount": 135.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 3.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "pantene po ilang piraso? pabili ng sabon",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T03:58:49.139275.000Z"
+  },
+  "processingTime": 5.02,
+  "edgeVersion": "v2.0.0-stt-only"
+}

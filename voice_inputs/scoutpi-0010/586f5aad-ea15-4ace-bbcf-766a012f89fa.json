@@ -1,0 +1,182 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "586f5aad-ea15-4ace-bbcf-766a012f89fa",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ovaltine": 0.77,
+      "Sprite": 0.77,
+      "Milo": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ovaltine",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cold Ovaltine isa Sprite dalawa"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cold Ovaltine isa Sprite dalawa Milo"
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Sprite dalawa Milo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Ovaltine",
+            "confidence": 0.77,
+            "quantity": 3
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ovaltine",
+      "productName": "Ovaltine Chocolate",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "OVALTINE-24G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold Ovaltine isa Sprite dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 56.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold Ovaltine isa Sprite dalawa Milo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 65.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Sprite dalawa Milo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 151.0,
+    "totalItems": 6,
+    "brandedAmount": 151.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.78,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "cold Ovaltine isa Sprite dalawa Milo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:31:52.785526.000Z"
+  },
+  "processingTime": 14.45,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "513068a4-7e66-4054-a68f-4211e9edf0e3",
+  "brandDetection": {
+    "detectedBrands": {
+      "Sting": 0.83,
+      "Tang": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Sting",
+        "category": "Candies & Sweets",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Sting malamig Tang isa"
+      },
+      {
+        "brand": "Tang",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Sting malamig Tang isa lang pabili"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Candies & Sweets": {
+        "branded": [
+          {
+            "brand": "Sting",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Tang",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Sting",
+      "productName": "Sting Energy Drink Red",
+      "genericName": "Product",
+      "localName": "sting",
+      "sku": "STING-RED-330ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 20.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Sting malamig Tang isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tang",
+      "productName": "Tang Orange",
+      "genericName": "Product",
+      "localName": "tang",
+      "sku": "TANG-ORANGE-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Sting malamig Tang isa lang pabili'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 30.0,
+    "totalItems": 2,
+    "brandedAmount": 30.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 9.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Sting malamig Tang isa lang pabili po ng Sting",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:45:47.166814.000Z"
+  },
+  "processingTime": 9.48,
+  "edgeVersion": "v2.0.0-stt-only"
+}

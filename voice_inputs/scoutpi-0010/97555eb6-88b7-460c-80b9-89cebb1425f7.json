@@ -1,0 +1,143 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "97555eb6-88b7-460c-80b9-89cebb1425f7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oishi": 0.77,
+      "Red Bull": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "oishi na lang red"
+      },
+      {
+        "brand": "Red Bull",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "oishi na lang red bull, please dalawa oishi po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Red Bull",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "oishi",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 54.6,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'oishi na lang red'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": true
+      }
+    },
+    {
+      "brandName": "Red Bull",
+      "productName": "Red Bull Energy Drink",
+      "genericName": "Product",
+      "localName": "red",
+      "sku": "RED-BULL-250ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 170.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'oishi na lang red bull, please dalawa oishi po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": true
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 224.6,
+    "totalItems": 4,
+    "brandedAmount": 224.6,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 8.6,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "oishi na lang red bull, please dalawa oishi po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T05:00:50.692822.000Z"
+  },
+  "processingTime": 14.29,
+  "edgeVersion": "v2.0.0-stt-only"
+}

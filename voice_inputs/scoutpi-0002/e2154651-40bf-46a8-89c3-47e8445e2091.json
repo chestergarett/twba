@@ -1,0 +1,187 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "e2154651-40bf-46a8-89c3-47e8445e2091",
+  "brandDetection": {
+    "detectedBrands": {
+      "Coca-Cola": 0.214,
+      "Silver Swan": 0.432,
+      "Magic": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "Coca tatlo Cola Silver isa Swan dalawa Magic"
+      },
+      {
+        "brand": "Silver Swan",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.432,
+        "detection_type": "exact_match",
+        "context": "Coca tatlo Cola Silver isa Swan dalawa Magic"
+      },
+      {
+        "brand": "Magic",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Swan dalawa Magic"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.214,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Silver Swan",
+            "confidence": 0.432,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Magic",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 264.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: 'Coca tatlo Cola Silver isa Swan dalawa Magic'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Silver Swan",
+      "productName": "Silver Swan Soy Sauce Large",
+      "genericName": "Product",
+      "localName": "silver",
+      "sku": "SILVER-SWAN-SOY-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 135.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.432,
+      "brandConfidence": 0.621,
+      "suggestedBrands": null,
+      "notes": "STT: 'Coca tatlo Cola Silver isa Swan dalawa Magic'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Magic",
+      "productName": "Magic Chips Barbecue Big Pack",
+      "genericName": "Product",
+      "localName": "magic",
+      "sku": "MAGIC-CHIPS-BBQ-100G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.45,
+      "totalPrice": 25.45,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Swan dalawa Magic'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 424.45,
+    "totalItems": 7,
+    "brandedAmount": 424.45,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.7,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Coca tatlo Cola Silver isa Swan dalawa Magic",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:48:47.243331.000Z"
+  },
+  "processingTime": 16.05,
+  "edgeVersion": "v2.0.0-stt-only"
+}

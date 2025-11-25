@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "ab9381b7-a7ba-4419-811a-18e3feafaacd",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oishi": 0.83,
+      "Star Margarine": 0.83,
+      "Colgate": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "oishi chips star margarine"
+      },
+      {
+        "brand": "Star Margarine",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "oishi chips star margarine isa colgate pang toothb..."
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "star margarine isa colgate pang toothbrush"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Star Margarine",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'oishi chips star margarine'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Star Margarine",
+      "productName": "Star Margarine Classic",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "STARMARGARINE-CLASSIC-250G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'oishi chips star margarine isa colgate pang toothb...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'star margarine isa colgate pang toothbrush'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 135.05,
+    "totalItems": 3,
+    "brandedAmount": 135.05,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "oishi chips star margarine isa colgate pang toothbrush",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:33:53.795327.000Z"
+  },
+  "processingTime": 13.81,
+  "edgeVersion": "v2.0.0-stt-only"
+}

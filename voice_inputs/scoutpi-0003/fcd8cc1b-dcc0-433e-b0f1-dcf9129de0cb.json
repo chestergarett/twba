@@ -1,0 +1,118 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "fcd8cc1b-dcc0-433e-b0f1-dcf9129de0cb",
+  "brandDetection": {
+    "detectedBrands": {
+      "Coca-Cola": 0.214,
+      "Silver Swan": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "coca cola isang bote silver swan po dalawang coke ..."
+      },
+      {
+        "brand": "Silver Swan",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "coca cola isang bote silver swan po dalawang coke ..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.214,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Silver Swan",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 264.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.452,
+      "suggestedBrands": null,
+      "notes": "STT: 'coca cola isang bote silver swan po dalawang coke ...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 264.0,
+    "totalItems": 3,
+    "brandedAmount": 264.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "coca cola isang bote silver swan po dalawang coke lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T16:26:25.033614.000Z"
+  },
+  "processingTime": 10.89,
+  "edgeVersion": "v2.0.0-stt-only"
+}

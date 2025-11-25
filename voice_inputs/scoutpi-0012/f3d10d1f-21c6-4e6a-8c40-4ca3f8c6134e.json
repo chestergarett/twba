@@ -1,0 +1,99 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "f3d10d1f-21c6-4e6a-8c40-4ca3f8c6134e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Leslie's": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Leslie's",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "Leslie's"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Leslie's",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Leslie's",
+      "productName": "Leslie's Clover Chips",
+      "genericName": "Product",
+      "localName": "leslie's",
+      "sku": "LESLIE'S-CLOVER-CHIPS-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.72,
+      "suggestedBrands": null,
+      "notes": "STT: 'Leslie's'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 16.0,
+    "totalItems": 1,
+    "brandedAmount": 16.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "Leslie's",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:33:06.038644.000Z"
+  },
+  "processingTime": 6.35,
+  "edgeVersion": "v2.0.0-stt-only"
+}

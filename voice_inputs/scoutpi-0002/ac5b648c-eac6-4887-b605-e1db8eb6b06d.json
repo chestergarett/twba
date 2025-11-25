@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ac5b648c-eac6-4887-b605-e1db8eb6b06d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Milo": 0.77,
+      "Star Margarine": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "milo dalawa star margarine"
+      },
+      {
+        "brand": "Star Margarine",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "milo dalawa star margarine"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Star Margarine",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "MILO-150G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 130.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'milo dalawa star margarine'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Star Margarine",
+      "productName": "Star Margarine Classic",
+      "genericName": "Product",
+      "localName": "star",
+      "sku": "STARMARGARINE-CLASSIC-250G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'milo dalawa star margarine'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 152.75,
+    "totalItems": 3,
+    "brandedAmount": 152.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "milo dalawa star margarine",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:06:37.292000.000Z"
+  },
+  "processingTime": 12.2,
+  "edgeVersion": "v2.0.0-stt-only"
+}

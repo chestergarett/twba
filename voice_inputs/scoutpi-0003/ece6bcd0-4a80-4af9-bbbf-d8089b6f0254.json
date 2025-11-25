@@ -1,0 +1,138 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "ece6bcd0-4a80-4af9-bbbf-d8089b6f0254",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cobra": 0.83,
+      "Birch Tree": 0.284
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cobra",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Cobra malamig Birch isa"
+      },
+      {
+        "brand": "Birch Tree",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.284,
+        "detection_type": "exact_match",
+        "context": "Cobra malamig Birch isa Tree pabili ng Cobra"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Cobra",
+            "confidence": 0.83,
+            "quantity": 1
+          },
+          {
+            "brand": "Birch Tree",
+            "confidence": 0.284,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 20.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Cobra malamig Birch isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Birch Tree",
+      "productName": "Birch Tree Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BIRCH-TREE-33G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.284,
+      "brandConfidence": 0.577,
+      "suggestedBrands": null,
+      "notes": "STT: 'Cobra malamig Birch isa Tree pabili ng Cobra'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 36.0,
+    "totalItems": 2,
+    "brandedAmount": 36.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Cobra malamig Birch isa Tree pabili ng Cobra",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T16:35:16.853153.000Z"
+  },
+  "processingTime": 12.23,
+  "edgeVersion": "v2.0.0-stt-only"
+}

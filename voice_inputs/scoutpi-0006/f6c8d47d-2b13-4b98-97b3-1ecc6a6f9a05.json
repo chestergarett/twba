@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "f6c8d47d-2b13-4b98-97b3-1ecc6a6f9a05",
+  "brandDetection": {
+    "detectedBrands": {
+      "3JM": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "3JM",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "00:00:02,000 Ito yung 3JM, bali 70 ito"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "3JM",
+            "confidence": 0.77,
+            "quantity": 70
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "3JM",
+      "productName": "3JM Raisins",
+      "genericName": "Product",
+      "localName": "3jm",
+      "sku": "3JM-RAISIN-100G",
+      "quantity": 70,
+      "unit": "pc",
+      "unitPrice": 23.05,
+      "totalPrice": 1613.5,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": true,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.8,
+      "suggestedBrands": null,
+      "notes": "STT: '00:00:02,000 Ito yung 3JM, bali 70 ito'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 1613.5,
+    "totalItems": 70,
+    "brandedAmount": 1613.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 70,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 10.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:02,000  \nIto yung 3JM, bali 70 ito yun  \n\n2  \n00:00:02,000 --> 00:00:04,000  \n70 ko?  \n\n3  \n00:00:04,000 --> 00:00:08,000  \nAt yung 2, magkano?  \n\n4  \n00:00:08,000 --> 00:00:10,000  \nTry ninyong i-take nila si isang  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:22:43.386470.000Z"
+  },
+  "processingTime": 5.7,
+  "edgeVersion": "v2.0.0-stt-only"
+}

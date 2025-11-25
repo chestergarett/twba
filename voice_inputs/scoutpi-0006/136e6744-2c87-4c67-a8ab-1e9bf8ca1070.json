@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "136e6744-2c87-4c67-a8ab-1e9bf8ca1070",
+  "brandDetection": {
+    "detectedBrands": {
+      "Royal": 0.89,
+      "Great Taste": 0.334,
+      "Oishi": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Royal",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "royal na tubig great"
+      },
+      {
+        "brand": "Great Taste",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.334,
+        "detection_type": "exact_match",
+        "context": "royal na tubig great dalawa [musika] taste oishi, ..."
+      },
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "dalawa [musika] taste oishi, meron pa ba?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Royal",
+            "confidence": 0.89,
+            "quantity": 2
+          },
+          {
+            "brand": "Great Taste",
+            "confidence": 0.334,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Royal",
+      "productName": "Royal Tru-Orange",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "ROYAL-TRUE-ORANGE-20G",
+      "quantity": 2,
+      "unit": "sachet",
+      "unitPrice": 8.0,
+      "totalPrice": 16.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'royal na tubig great'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Great Taste",
+      "productName": "Great Taste Premium Blend",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "GREAT-TASTE-PREMIUM-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 21.0,
+      "totalPrice": 21.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.334,
+      "brandConfidence": 0.532,
+      "suggestedBrands": null,
+      "notes": "STT: 'royal na tubig great dalawa [musika] taste oishi, ...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "oishi",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.84,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa [musika] taste oishi, meron pa ba?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 64.3,
+    "totalItems": 4,
+    "brandedAmount": 64.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.76,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "royal na tubig great dalawa [musika] taste oishi, meron pa ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T10:37:15.905962.000Z"
+  },
+  "processingTime": 14.57,
+  "edgeVersion": "v2.0.0-stt-only"
+}

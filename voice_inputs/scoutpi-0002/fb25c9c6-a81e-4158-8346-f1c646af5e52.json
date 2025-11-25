@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "fb25c9c6-a81e-4158-8346-f1c646af5e52",
+  "brandDetection": {
+    "detectedBrands": {
+      "Colgate": 0.8,
+      "Downy": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Colgate toothpaste Downy fabric"
+      },
+      {
+        "brand": "Downy",
+        "category": "Household & Cleaning Supplies",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Colgate toothpaste Downy fabric softener ilan"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Household & Cleaning Supplies": {
+        "branded": [
+          {
+            "brand": "Downy",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Colgate toothpaste Downy fabric'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Downy",
+      "productName": "Downy Garden Bloom",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "DOWNY-GARDEN-25ML",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Colgate toothpaste Downy fabric softener ilan'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 93.0,
+    "totalItems": 2,
+    "brandedAmount": 93.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Colgate toothpaste Downy fabric softener ilan po?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:38:50.615217.000Z"
+  },
+  "processingTime": 11.29,
+  "edgeVersion": "v2.0.0-stt-only"
+}

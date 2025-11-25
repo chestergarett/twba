@@ -1,0 +1,143 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "fbf86eb3-7f84-4644-8830-69ff5e0311f1",
+  "brandDetection": {
+    "detectedBrands": {
+      "Surf": 0.83,
+      "Colgate": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Surf",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "surf isa pong sachet"
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "isa pong sachet colgate, pang malaki dalawang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Surf",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Surf",
+      "productName": "Surf Powder Detergent Pack",
+      "genericName": "Product",
+      "localName": "surf",
+      "sku": "SURF-POWDER-500G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 195.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'surf isa pong sachet'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa pong sachet colgate, pang malaki dalawang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 280.0,
+    "totalItems": 4,
+    "brandedAmount": 280.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "surf isa pong sachet colgate, pang malaki dalawang surf please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T17:32:41.460302.000Z"
+  },
+  "processingTime": 10.3,
+  "edgeVersion": "v2.0.0-stt-only"
+}

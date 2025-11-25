@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "50dd3a28-d845-4a3b-8acf-ae378314f233",
+  "brandDetection": {
+    "detectedBrands": {
+      "C2": 0.83,
+      "Bear Brand": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "C2",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "c2 isang bote bear"
+      },
+      {
+        "brand": "Bear Brand",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "c2 isang bote bear brand dalawa meron ka pa c2"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "C2",
+            "confidence": 0.83,
+            "quantity": 3
+          },
+          {
+            "brand": "Bear Brand",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "C2",
+      "productName": "C2 Green Tea Apple 500ml",
+      "genericName": "Product",
+      "localName": "c2",
+      "sku": "C2-APPLE-500ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 33.0,
+      "totalPrice": 99.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'c2 isang bote bear'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Bear Brand",
+      "productName": "Bear Brand Junior Milk 150g",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BEAR-BRAND-JUNIOR-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 68.5,
+      "totalPrice": 205.5,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'c2 isang bote bear brand dalawa meron ka pa c2'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 304.5,
+    "totalItems": 6,
+    "brandedAmount": 304.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 11.64,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "c2 isang bote bear brand dalawa meron ka pa c2",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:39:09.444012.000Z"
+  },
+  "processingTime": 9.37,
+  "edgeVersion": "v2.0.0-stt-only"
+}

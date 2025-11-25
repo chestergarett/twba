@@ -1,0 +1,99 @@
+{
+  "storeId": "104",
+  "deviceId": "SCOUTPI-0004",
+  "timestamp": "",
+  "transactionId": "2a6ac9dc-5aff-451c-bc9f-d7319cb413c7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oishi": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "great dalawa taste oishi, pabili yung malaki,"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.89,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "oishi",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 54.6,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'great dalawa taste oishi, pabili yung malaki,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 54.6,
+    "totalItems": 2,
+    "brandedAmount": 54.6,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.64,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "great dalawa taste oishi, pabili yung malaki, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T00:43:28.984134.000Z"
+  },
+  "processingTime": 6.73,
+  "edgeVersion": "v2.0.0-stt-only"
+}

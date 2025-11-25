@@ -1,0 +1,187 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "29a7027a-d7ce-4c5d-9ced-b9d0061dfc42",
+  "brandDetection": {
+    "detectedBrands": {
+      "GOMO": 0.77,
+      "Datu Puti": 0.214,
+      "Piattos": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "GOMO",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "gomo tatlo datu isa"
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "gomo tatlo datu isa puti dalawa piattos"
+      },
+      {
+        "brand": "Piattos",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa puti dalawa piattos"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "GOMO",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.214,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Piattos",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "GOMO",
+      "productName": "GOMO Data Credit 99",
+      "genericName": "Product",
+      "localName": "gomo",
+      "sku": "GOMO-DATA-CREDIT-99",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 99.0,
+      "totalPrice": 99.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'gomo tatlo datu isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "datu",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: 'gomo tatlo datu isa puti dalawa piattos'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Piattos",
+      "productName": "Piattos Cheese",
+      "genericName": "Product",
+      "localName": "piattos",
+      "sku": "PIATTOS-CHEESE-85G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 35.95,
+      "totalPrice": 107.85,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa puti dalawa piattos'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 241.85,
+    "totalItems": 5,
+    "brandedAmount": 241.85,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "gomo tatlo datu isa puti dalawa piattos",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T03:56:58.032758.000Z"
+  },
+  "processingTime": 16.38,
+  "edgeVersion": "v2.0.0-stt-only"
+}

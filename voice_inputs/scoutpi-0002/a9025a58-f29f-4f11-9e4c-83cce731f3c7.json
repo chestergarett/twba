@@ -1,0 +1,138 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "a9025a58-f29f-4f11-9e4c-83cce731f3c7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cream Silk": 0.92,
+      "Palmolive": 0.92
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cream Silk",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "pabili ng Cream silk, yung malaki Palmolive na sab..."
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "silk, yung malaki Palmolive na sabon"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Cream Silk",
+            "confidence": 0.92,
+            "quantity": 1
+          },
+          {
+            "brand": "Palmolive",
+            "confidence": 0.92,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cream Silk",
+      "productName": "Cream Silk Hair Fall Defense",
+      "genericName": "Product",
+      "localName": "cream",
+      "sku": "CREAM-SILK-GREEN-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 115.0,
+      "totalPrice": 115.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.885,
+      "suggestedBrands": null,
+      "notes": "STT: 'pabili ng Cream silk, yung malaki Palmolive na sab...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.885,
+      "suggestedBrands": null,
+      "notes": "STT: 'silk, yung malaki Palmolive na sabon'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 140.0,
+    "totalItems": 2,
+    "brandedAmount": 140.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "pabili ng Cream silk, yung malaki Palmolive na sabon",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T06:47:32.961226.000Z"
+  },
+  "processingTime": 11.49,
+  "edgeVersion": "v2.0.0-stt-only"
+}

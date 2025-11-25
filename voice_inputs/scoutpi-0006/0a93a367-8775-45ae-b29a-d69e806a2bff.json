@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "0a93a367-8775-45ae-b29a-d69e806a2bff",
+  "brandDetection": {
+    "detectedBrands": {
+      "Piattos": 0.77,
+      "Star Margarine": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Piattos",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "piattos star margarine isang"
+      },
+      {
+        "brand": "Star Margarine",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "piattos star margarine isang piraso"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Piattos",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Star Margarine",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Piattos",
+      "productName": "Piattos Cheese",
+      "genericName": "Product",
+      "localName": "piattos",
+      "sku": "PIATTOS-CHEESE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.95,
+      "totalPrice": 35.95,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'piattos star margarine isang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Star Margarine",
+      "productName": "Star Margarine Classic",
+      "genericName": "Product",
+      "localName": "star",
+      "sku": "STARMARGARINE-CLASSIC-250G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'piattos star margarine isang piraso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 58.7,
+    "totalItems": 2,
+    "brandedAmount": 58.7,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "piattos star margarine isang piraso",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:49:36.705965.000Z"
+  },
+  "processingTime": 9.67,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,99 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "ff51b641-3133-4d26-a352-d046383c45ab",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "alaska softdrinks isa sige"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska softdrinks isa sige'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 35.0,
+    "totalItems": 1,
+    "brandedAmount": 35.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 1.08,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "alaska softdrinks isa sige",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T19:30:58.697574.000Z"
+  },
+  "processingTime": 5.74,
+  "edgeVersion": "v2.0.0-stt-only"
+}

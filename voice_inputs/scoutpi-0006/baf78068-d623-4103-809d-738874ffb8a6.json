@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "baf78068-d623-4103-809d-738874ffb8a6",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nido": 0.74,
+      "Extra Joss": 0.74,
+      "Oishi": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nido",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Nido malamig Extra Joss,"
+      },
+      {
+        "brand": "Extra Joss",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Nido malamig Extra Joss, please Oishi tubig"
+      },
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Extra Joss, please Oishi tubig"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Nido",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Extra Joss",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nido",
+      "productName": "Nido Fortified Milk Powder",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "NIDO-FORTIFIED-MILK-POWDER-700G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nido malamig Extra Joss,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Extra Joss",
+      "productName": "Extra Joss Energy Drink",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "EXTRA-JOSS-4G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nido malamig Extra Joss, please Oishi tubig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Extra Joss, please Oishi tubig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 59.3,
+    "totalItems": 3,
+    "brandedAmount": 59.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Nido malamig Extra Joss, please Oishi tubig",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T10:50:28.147607.000Z"
+  },
+  "processingTime": 17.34,
+  "edgeVersion": "v2.0.0-stt-only"
+}

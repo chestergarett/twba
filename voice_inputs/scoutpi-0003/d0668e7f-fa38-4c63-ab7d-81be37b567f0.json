@@ -1,0 +1,182 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "d0668e7f-fa38-4c63-ab7d-81be37b567f0",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ovaltine": 0.77,
+      "Blend 45": 0.77,
+      "Del Monte": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ovaltine",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ovaltine blend 45 del"
+      },
+      {
+        "brand": "Blend 45",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ovaltine blend 45 del monte"
+      },
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ovaltine blend 45 del monte"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Ovaltine",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Blend 45",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ovaltine",
+      "productName": "Ovaltine Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "OVALTINE-24G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'ovaltine blend 45 del'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Blend 45",
+      "productName": "Blend 45 Coffee",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "BLEND-45-COFFEE-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'ovaltine blend 45 del monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Fruit Cocktail",
+      "genericName": "Product",
+      "localName": "del",
+      "sku": "DELMONTE-FRUIT-COCKTAIL-432G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 42.0,
+      "totalPrice": 42.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'ovaltine blend 45 del monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 59.0,
+    "totalItems": 3,
+    "brandedAmount": 59.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "ovaltine blend 45 del monte",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T12:33:35.107287.000Z"
+  },
+  "processingTime": 16.74,
+  "edgeVersion": "v2.0.0-stt-only"
+}

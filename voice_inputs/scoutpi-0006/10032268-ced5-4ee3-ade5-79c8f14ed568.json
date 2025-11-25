@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "10032268-ced5-4ee3-ade5-79c8f14ed568",
+  "brandDetection": {
+    "detectedBrands": {
+      "Regent": 0.74,
+      "Tiger": 0.74,
+      "Bingo": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Regent",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "regent chips po tiger"
+      },
+      {
+        "brand": "Tiger",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "regent chips po tiger yun eh bingo"
+      },
+      {
+        "brand": "Bingo",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "tiger yun eh bingo snacks ba?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Regent",
+            "confidence": 0.74,
+            "quantity": 1
+          },
+          {
+            "brand": "Bingo",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Tiger",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Regent",
+      "productName": "Regent Sweet Corn",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "REGENT-SWEET-CORN-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'regent chips po tiger'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tiger",
+      "productName": "Tiger Energy Biscuits",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "TIGER-ENERGY-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'regent chips po tiger yun eh bingo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Bingo",
+      "productName": "Bingo Chocolate Cookies",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "BINGO-CHOCO-33G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'tiger yun eh bingo snacks ba?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 34.0,
+    "totalItems": 3,
+    "brandedAmount": 34.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.82,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "regent chips po tiger yun eh bingo snacks ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:33:13.191731.000Z"
+  },
+  "processingTime": 14.12,
+  "edgeVersion": "v2.0.0-stt-only"
+}

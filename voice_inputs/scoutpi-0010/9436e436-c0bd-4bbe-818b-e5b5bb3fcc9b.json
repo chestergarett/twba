@@ -1,0 +1,177 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "9436e436-c0bd-4bbe-818b-e5b5bb3fcc9b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Café Puro": 0.214,
+      "Cobra": 0.77,
+      "Blend 45": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Café Puro",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "cafe puro malamig cobra isang bote blend 45 po san..."
+      },
+      {
+        "brand": "Cobra",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cafe puro malamig cobra isang bote blend"
+      },
+      {
+        "brand": "Blend 45",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cafe puro malamig cobra isang bote blend 45 po san..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Café Puro",
+            "confidence": 0.214,
+            "quantity": 1
+          },
+          {
+            "brand": "Cobra",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Blend 45",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Café Puro",
+      "productName": "Café Puro Barako",
+      "genericName": "Product",
+      "localName": "café",
+      "sku": "CAFE-PURO-BARAKO",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: 'cafe puro malamig cobra isang bote blend 45 po san...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 20.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cafe puro malamig cobra isang bote blend'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Blend 45",
+      "productName": "Blend 45 Coffee",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "BLEND-45-COFFEE-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cafe puro malamig cobra isang bote blend 45 po san...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 39.0,
+    "totalItems": 3,
+    "brandedAmount": 39.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "cafe puro malamig cobra isang bote blend 45 po sana",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:57:15.728816.000Z"
+  },
+  "processingTime": 14.99,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "11b5fe92-fbec-4c84-9bfb-335665c93388",
+  "brandDetection": {
+    "detectedBrands": {
+      "Datu Puti": 0.77,
+      "C2": 0.77,
+      "Colgate": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "datu puti isa c2 dalawa colgate tatlo"
+      },
+      {
+        "brand": "C2",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "datu puti isa c2 dalawa colgate tatlo"
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa c2 dalawa colgate tatlo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "C2",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "datu",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 105.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'datu puti isa c2 dalawa colgate tatlo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "C2",
+      "productName": "C2 Green Tea Apple 500ml",
+      "genericName": "Product",
+      "localName": "c2",
+      "sku": "C2-APPLE-500ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 33.0,
+      "totalPrice": 99.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'datu puti isa c2 dalawa colgate tatlo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 255.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa c2 dalawa colgate tatlo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 459.0,
+    "totalItems": 9,
+    "brandedAmount": 459.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 16.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "datu puti isa c2 dalawa colgate tatlo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:39:43.664961.000Z"
+  },
+  "processingTime": 13.59,
+  "edgeVersion": "v2.0.0-stt-only"
+}

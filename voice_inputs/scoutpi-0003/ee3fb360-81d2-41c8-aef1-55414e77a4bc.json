@@ -1,0 +1,187 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "ee3fb360-81d2-41c8-aef1-55414e77a4bc",
+  "brandDetection": {
+    "detectedBrands": {
+      "Globe": 0.95,
+      "Great Taste": 0.394,
+      "Smart": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Globe",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "dalawa globe great isa taste"
+      },
+      {
+        "brand": "Great Taste",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.394,
+        "detection_type": "exact_match",
+        "context": "dalawa globe great isa taste smart, pabili na"
+      },
+      {
+        "brand": "Smart",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "great isa taste smart, pabili na"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Services": {
+        "branded": [
+          {
+            "brand": "Globe",
+            "confidence": 0.95,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Great Taste",
+            "confidence": 0.394,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Smart",
+            "confidence": 0.95,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Globe",
+      "productName": "Globe Load 100",
+      "genericName": "Product",
+      "localName": "globe",
+      "sku": "GLOBE-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa globe great isa taste'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Great Taste",
+      "productName": "Great Taste Premium Blend",
+      "genericName": "Product",
+      "localName": "great",
+      "sku": "GREAT-TASTE-PREMIUM-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 21.0,
+      "totalPrice": 21.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.394,
+      "brandConfidence": 0.632,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa globe great isa taste smart, pabili na'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Smart",
+      "productName": "Smart Load 100",
+      "genericName": "Product",
+      "localName": "smart",
+      "sku": "SMART-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'great isa taste smart, pabili na'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 621.0,
+    "totalItems": 7,
+    "brandedAmount": 621.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "dalawa globe great isa taste smart, pabili na",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T17:08:09.737280.000Z"
+  },
+  "processingTime": 16.04,
+  "edgeVersion": "v2.0.0-stt-only"
+}

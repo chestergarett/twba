@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "82fc7d5d-3f39-4985-8867-3af01cf2cfa9",
+  "brandDetection": {
+    "detectedBrands": {
+      "Kopiko": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Kopiko",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "kopiko dalawa isang soda"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Kopiko",
+            "confidence": 0.95,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Kopiko",
+      "productName": "Kopiko 78°C Coffee Latte",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "KOPIKO-78C-25G",
+      "quantity": 2,
+      "unit": "sachet",
+      "unitPrice": 9.0,
+      "totalPrice": 18.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'kopiko dalawa isang soda'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 18.0,
+    "totalItems": 2,
+    "brandedAmount": 18.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 22.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "kopiko dalawa isang soda meron kayong tubig?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:17:06.048175.000Z"
+  },
+  "processingTime": 4.86,
+  "edgeVersion": "v2.0.0-stt-only"
+}

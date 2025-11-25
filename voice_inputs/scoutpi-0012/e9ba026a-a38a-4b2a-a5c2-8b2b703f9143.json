@@ -1,0 +1,187 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "e9ba026a-a38a-4b2a-a5c2-8b2b703f9143",
+  "brandDetection": {
+    "detectedBrands": {
+      "Safeguard": 0.83,
+      "Smart": 0.83,
+      "Lucky Me": 0.504
+    },
+    "explicitMentions": [
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "safeguard tatlo smart lucky"
+      },
+      {
+        "brand": "Smart",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "safeguard tatlo smart lucky isa me"
+      },
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.504,
+        "detection_type": "exact_match",
+        "context": "safeguard tatlo smart lucky isa me"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.83,
+            "quantity": 4
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Smart",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.504,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 4,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 160.32,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard tatlo smart lucky'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Smart",
+      "productName": "Smart Load 100",
+      "genericName": "Product",
+      "localName": "smart",
+      "sku": "SMART-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard tatlo smart lucky isa me'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "pancit canton",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.504,
+      "brandConfidence": 0.657,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard tatlo smart lucky isa me'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 272.32,
+    "totalItems": 6,
+    "brandedAmount": 272.32,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "safeguard tatlo smart lucky isa me",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:32:04.717212.000Z"
+  },
+  "processingTime": 19.01,
+  "edgeVersion": "v2.0.0-stt-only"
+}

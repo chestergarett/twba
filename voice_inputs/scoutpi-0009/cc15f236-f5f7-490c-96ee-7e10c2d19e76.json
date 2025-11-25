@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "cc15f236-f5f7-490c-96ee-7e10c2d19e76",
+  "brandDetection": {
+    "detectedBrands": {
+      "C2": 0.83,
+      "Cherry Prepaid": 0.284
+    },
+    "explicitMentions": [
+      {
+        "brand": "C2",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "C2, dalawa Cherry isa"
+      },
+      {
+        "brand": "Cherry Prepaid",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.284,
+        "detection_type": "exact_match",
+        "context": "C2, dalawa Cherry isa Prepaid bote, please"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "C2",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Services": {
+        "branded": [
+          {
+            "brand": "Cherry Prepaid",
+            "confidence": 0.284,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "C2",
+      "productName": "C2 Green Tea Apple 500ml",
+      "genericName": "Product",
+      "localName": "c2",
+      "sku": "C2-APPLE-500ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 33.0,
+      "totalPrice": 99.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'C2, dalawa Cherry isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cherry Prepaid",
+      "productName": "Cherry Prepaid Load 100",
+      "genericName": "Product",
+      "localName": "cherry",
+      "sku": "CHERRYPREPAID-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.284,
+      "brandConfidence": 0.487,
+      "suggestedBrands": null,
+      "notes": "STT: 'C2, dalawa Cherry isa Prepaid bote, please'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 399.0,
+    "totalItems": 6,
+    "brandedAmount": 399.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "C2, dalawa Cherry isa Prepaid bote, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T07:54:51.973986.000Z"
+  },
+  "processingTime": 8.7,
+  "edgeVersion": "v2.0.0-stt-only"
+}

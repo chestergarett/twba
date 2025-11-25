@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "eafbde6e-d3a5-42cf-986b-d11cfb18ad0f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Safeguard": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "safeguard"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 40.08,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.72,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 40.08,
+    "totalItems": 1,
+    "brandedAmount": 40.08,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.78,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "safeguard",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:41:33.221105.000Z"
+  },
+  "processingTime": 5.39,
+  "edgeVersion": "v2.0.0-stt-only"
+}

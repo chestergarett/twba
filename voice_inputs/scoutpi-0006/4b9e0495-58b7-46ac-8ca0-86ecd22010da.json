@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "4b9e0495-58b7-46ac-8ca0-86ecd22010da",
+  "brandDetection": {
+    "detectedBrands": {
+      "Piattos": 0.77,
+      "Colgate": 0.77,
+      "Maggi": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Piattos",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "tatlo Piattos isa Colgate dalawa"
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "tatlo Piattos isa Colgate dalawa Maggi"
+      },
+      {
+        "brand": "Maggi",
+        "category": "Instant Foods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Colgate dalawa Maggi"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Piattos",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Maggi",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Piattos",
+      "productName": "Piattos Cheese",
+      "genericName": "Product",
+      "localName": "piattos",
+      "sku": "PIATTOS-CHEESE-85G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 35.95,
+      "totalPrice": 107.85,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlo Piattos isa Colgate dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlo Piattos isa Colgate dalawa Maggi'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Maggi",
+      "productName": "Maggi Magic Sarap Pack",
+      "genericName": "Product",
+      "localName": "noodles",
+      "sku": "MAGGI-SARAP-50G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 18.0,
+      "totalPrice": 36.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Colgate dalawa Maggi'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 228.85,
+    "totalItems": 6,
+    "brandedAmount": 228.85,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "tatlo Piattos isa Colgate dalawa Maggi",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:12:48.278405.000Z"
+  },
+  "processingTime": 15.16,
+  "edgeVersion": "v2.0.0-stt-only"
+}

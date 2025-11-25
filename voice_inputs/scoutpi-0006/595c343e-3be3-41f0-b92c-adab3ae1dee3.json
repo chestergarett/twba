@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "595c343e-3be3-41f0-b92c-adab3ae1dee3",
+  "brandDetection": {
+    "detectedBrands": {
+      "Colgate": 0.89,
+      "Milo": 0.89,
+      "Sprite": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "colgate dalawa milo, sprite"
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "colgate dalawa milo, sprite tatlo meron"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "colgate dalawa milo, sprite tatlo meron pa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.89,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Milo",
+            "confidence": 0.89,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 170.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'colgate dalawa milo, sprite'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 130.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'colgate dalawa milo, sprite tatlo meron'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 1.5L",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 79.0,
+      "totalPrice": 237.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'colgate dalawa milo, sprite tatlo meron pa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 537.0,
+    "totalItems": 7,
+    "brandedAmount": 537.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "colgate dalawa milo, sprite tatlo meron pa bang gatas?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T17:00:32.971963.000Z"
+  },
+  "processingTime": 15.17,
+  "edgeVersion": "v2.0.0-stt-only"
+}

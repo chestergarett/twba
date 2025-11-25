@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "1159af39-0aab-43f3-bc54-2e9051929b56",
+  "brandDetection": {
+    "detectedBrands": {
+      "Great Taste": 0.274,
+      "Milo": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Great Taste",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.274,
+        "detection_type": "exact_match",
+        "context": "Great dalawa Taste isa sugarng kilo meron pa bang ..."
+      },
+      {
+        "brand": "Milo",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "meron pa bang Milo?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Great Taste",
+            "confidence": 0.274,
+            "quantity": 3
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Great Taste",
+      "productName": "Great Taste White Crema 10-pack",
+      "genericName": "Product",
+      "localName": "great",
+      "sku": "GREAT-TASTE-WHITE-10PACK",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 77.78,
+      "totalPrice": 233.34,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.274,
+      "brandConfidence": 0.482,
+      "suggestedBrands": null,
+      "notes": "STT: 'Great dalawa Taste isa sugarng kilo meron pa bang ...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "MILO-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 195.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron pa bang Milo?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 428.34,
+    "totalItems": 6,
+    "brandedAmount": 428.34,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 14.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Great dalawa Taste isa sugarng kilo meron pa bang Milo?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:33:30.602346.000Z"
+  },
+  "processingTime": 9.24,
+  "edgeVersion": "v2.0.0-stt-only"
+}

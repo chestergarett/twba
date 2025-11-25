@@ -1,0 +1,162 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "c3fc835d-7567-4646-a8b3-af8e053089d2",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oishi": 0.98,
+      "Safeguard": 0.98,
+      "Globe": 0.98
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "Oishi chips po safeguard"
+      },
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "Oishi chips po safeguard na sabon Globe"
+      },
+      {
+        "brand": "Globe",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "safeguard na sabon Globe dalawa loadng daan"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Services": {
+        "branded": [
+          {
+            "brand": "Globe",
+            "confidence": 0.98,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.885,
+      "suggestedBrands": null,
+      "notes": "STT: 'Oishi chips po safeguard'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Globe",
+      "productName": "Globe Load 100",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "GLOBE-LOAD-100",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 200.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.925,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard na sabon Globe dalawa loadng daan'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 227.3,
+    "totalItems": 3,
+    "brandedAmount": 227.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 4.68,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Oishi chips po safeguard na sabon Globe dalawa loadng daan",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:02:55.828953.000Z"
+  },
+  "processingTime": 18.07,
+  "edgeVersion": "v2.0.0-stt-only"
+}

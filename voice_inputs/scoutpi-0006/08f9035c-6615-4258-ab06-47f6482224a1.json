@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "08f9035c-6615-4258-ab06-47f6482224a1",
+  "brandDetection": {
+    "detectedBrands": {
+      "Globe": 0.83,
+      "Maggi": 0.83,
+      "TM": 0.73
+    },
+    "explicitMentions": [
+      {
+        "brand": "Globe",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Globe? Maggi wala? isa"
+      },
+      {
+        "brand": "Maggi",
+        "category": "Instant Foods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Globe? Maggi wala? isa TMng"
+      },
+      {
+        "brand": "TM",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.73,
+        "detection_type": "exact_match",
+        "context": "Maggi wala? isa TMng piraso?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Services": {
+        "branded": [
+          {
+            "brand": "Globe",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Maggi",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "TM",
+            "confidence": 0.73,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Globe",
+      "productName": "Globe Load 100",
+      "genericName": "Product",
+      "localName": "globe",
+      "sku": "GLOBE-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Globe? Maggi wala? isa'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Maggi",
+      "productName": "Maggi Magic Sarap",
+      "genericName": "Product",
+      "localName": "noodles",
+      "sku": "MAGGI-SARAP-21G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Globe? Maggi wala? isa TMng'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TM",
+      "productName": "TM Load 100",
+      "genericName": "Product",
+      "localName": "tm",
+      "sku": "TM-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.73,
+      "brandConfidence": 0.77,
+      "suggestedBrands": null,
+      "notes": "STT: 'Maggi wala? isa TMng piraso?'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 212.0,
+    "totalItems": 3,
+    "brandedAmount": 212.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 8.68,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Globe? Maggi wala? isa TMng piraso?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:04:11.890918.000Z"
+  },
+  "processingTime": 13.98,
+  "edgeVersion": "v2.0.0-stt-only"
+}

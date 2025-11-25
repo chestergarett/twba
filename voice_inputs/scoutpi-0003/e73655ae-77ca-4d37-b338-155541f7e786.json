@@ -1,0 +1,143 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "e73655ae-77ca-4d37-b338-155541f7e786",
+  "brandDetection": {
+    "detectedBrands": {
+      "Sprite": 0.77,
+      "Milo": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "sprite malamig isang sprite"
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isang sprite dalawa milo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 1.5L",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 79.0,
+      "totalPrice": 237.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'sprite malamig isang sprite'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 65.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isang sprite dalawa milo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 302.0,
+    "totalItems": 4,
+    "brandedAmount": 302.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "sprite malamig isang sprite dalawa milo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T19:14:42.014462.000Z"
+  },
+  "processingTime": 10.33,
+  "edgeVersion": "v2.0.0-stt-only"
+}

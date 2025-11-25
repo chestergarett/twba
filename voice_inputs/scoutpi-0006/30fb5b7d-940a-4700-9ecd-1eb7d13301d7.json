@@ -1,0 +1,177 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "30fb5b7d-940a-4700-9ecd-1eb7d13301d7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Red Bull": 0.83,
+      "Extra Joss": 0.83,
+      "Cowhead": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Red Bull",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "red bull po extra joss isa cowhead isang lata"
+      },
+      {
+        "brand": "Extra Joss",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "red bull po extra joss isa cowhead isang lata"
+      },
+      {
+        "brand": "Cowhead",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "extra joss isa cowhead isang lata"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Red Bull",
+            "confidence": 0.83,
+            "quantity": 1
+          },
+          {
+            "brand": "Extra Joss",
+            "confidence": 0.83,
+            "quantity": 1
+          },
+          {
+            "brand": "Cowhead",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Red Bull",
+      "productName": "Red Bull Energy Drink",
+      "genericName": "Product",
+      "localName": "red",
+      "sku": "RED-BULL-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'red bull po extra joss isa cowhead isang lata'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Extra Joss",
+      "productName": "Extra Joss Energy Drink",
+      "genericName": "Product",
+      "localName": "extra",
+      "sku": "EXTRA-JOSS-4G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'red bull po extra joss isa cowhead isang lata'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cowhead",
+      "productName": "Cowhead Pure Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "COWHEAD-PURE-MILK-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'extra joss isa cowhead isang lata'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 117.0,
+    "totalItems": 3,
+    "brandedAmount": 117.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "red bull po extra joss isa cowhead isang lata",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:34:40.304320.000Z"
+  },
+  "processingTime": 13.4,
+  "edgeVersion": "v2.0.0-stt-only"
+}

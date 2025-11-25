@@ -1,0 +1,187 @@
+{
+  "storeId": "104",
+  "deviceId": "SCOUTPI-0004",
+  "timestamp": "",
+  "transactionId": "9e617f8c-6c48-459c-b4c0-73c0d465aee9",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.89,
+      "Datu Puti": 0.89,
+      "Camel": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Alaska isang gatas Datu"
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Alaska isang gatas Datu Puti suka Camel sigarilyo ..."
+      },
+      {
+        "brand": "Camel",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Datu Puti suka Camel sigarilyo po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Camel",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Alaska isang gatas Datu'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Alaska isang gatas Datu Puti suka Camel sigarilyo ...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Camel",
+      "productName": "Camel Activate Purple 20s",
+      "genericName": "Product",
+      "localName": "camel",
+      "sku": "CAMEL-ACTIVATE-PURPLE-20S-20 STICKS",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 176.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Datu Puti suka Camel sigarilyo po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 246.0,
+    "totalItems": 3,
+    "brandedAmount": 246.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 10.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Alaska isang gatas Datu Puti suka Camel sigarilyo po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T00:55:59.562808.000Z"
+  },
+  "processingTime": 27.24,
+  "edgeVersion": "v2.0.0-stt-only"
+}

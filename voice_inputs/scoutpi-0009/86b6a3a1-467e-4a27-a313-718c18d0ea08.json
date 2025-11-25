@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "86b6a3a1-467e-4a27-a313-718c18d0ea08",
+  "brandDetection": {
+    "detectedBrands": {
+      "Bravo": 0.83,
+      "Voice": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Bravo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "mga chips Bravo dalawa Voice"
+      },
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "chips Bravo dalawa Voice"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Bravo",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Voice",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Bravo",
+      "productName": "Bravo Sweet Crackers",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "BRAVO-ORIGINAL-30G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 7.0,
+      "totalPrice": 14.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'mga chips Bravo dalawa Voice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 16.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'chips Bravo dalawa Voice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 30.0,
+    "totalItems": 4,
+    "brandedAmount": 30.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.84,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "mga chips Bravo dalawa Voice",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T06:35:26.919365.000Z"
+  },
+  "processingTime": 9.53,
+  "edgeVersion": "v2.0.0-stt-only"
+}

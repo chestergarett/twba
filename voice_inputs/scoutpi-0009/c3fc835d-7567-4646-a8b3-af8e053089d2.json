@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "c3fc835d-7567-4646-a8b3-af8e053089d2",
+  "brandDetection": {
+    "detectedBrands": {
+      "Close Up": 0.83,
+      "Palmolive": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Close Up",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Close Up isa dalawa Palmolive po yung malaking Clo..."
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Up isa dalawa Palmolive po yung malaking"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Close Up",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palmolive",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Close Up",
+      "productName": "Close Up Ever Fresh Red Hot",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "CLOSE-UP-RED-145G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 75.0,
+      "totalPrice": 225.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'Close Up isa dalawa Palmolive po yung malaking Clo...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "palmolive",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Up isa dalawa Palmolive po yung malaking'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 250.0,
+    "totalItems": 4,
+    "brandedAmount": 250.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 4.68,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Close Up isa dalawa Palmolive po yung malaking Close Up",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T03:39:03.356198.000Z"
+  },
+  "processingTime": 9.96,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "fd2f6682-42c1-420a-a1f0-5fbd605b28d3",
+  "brandDetection": {
+    "detectedBrands": {
+      "Close Up": 0.77,
+      "Tide": 0.77,
+      "Palmolive": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Close Up",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Close Up isa Tide dalawa Palmolive"
+      },
+      {
+        "brand": "Tide",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Close Up isa Tide dalawa Palmolive"
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Tide dalawa Palmolive"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Close Up",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Tide",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palmolive",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Close Up",
+      "productName": "Close Up Ever Fresh Red Hot",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "CLOSE-UP-RED-145G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 75.0,
+      "totalPrice": 75.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Close Up isa Tide dalawa Palmolive'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tide",
+      "productName": "Tide Detergent Bar",
+      "genericName": "Product",
+      "localName": "tide",
+      "sku": "TIDE-BAR-125G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 15.0,
+      "totalPrice": 45.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Close Up isa Tide dalawa Palmolive'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "palmolive",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 75.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Tide dalawa Palmolive'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 195.0,
+    "totalItems": 7,
+    "brandedAmount": 195.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Close Up isa Tide dalawa Palmolive",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T04:26:02.458158.000Z"
+  },
+  "processingTime": 13.89,
+  "edgeVersion": "v2.0.0-stt-only"
+}

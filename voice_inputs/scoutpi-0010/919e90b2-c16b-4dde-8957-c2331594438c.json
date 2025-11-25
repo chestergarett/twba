@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "919e90b2-c16b-4dde-8957-c2331594438c",
+  "brandDetection": {
+    "detectedBrands": {
+      "TM": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "TM",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "meron ba kayong TM"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "TM",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "TM",
+      "productName": "TM Load 100",
+      "genericName": "Product",
+      "localName": "tm",
+      "sku": "TM-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.75,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron ba kayong TM'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 100.0,
+    "totalItems": 1,
+    "brandedAmount": 100.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 20.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "meron ba kayong TM",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T05:22:32.029623.000Z"
+  },
+  "processingTime": 5.88,
+  "edgeVersion": "v2.0.0-stt-only"
+}

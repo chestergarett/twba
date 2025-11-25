@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ea81971e-6580-44f7-b152-a01f24333e52",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oishi": 0.98,
+      "Ovaltine": 0.98
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "oishi chips gusto ko"
+      },
+      {
+        "brand": "Ovaltine",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "gusto ko ng ovaltine dalawang softdrinks"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Ovaltine",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.915,
+      "suggestedBrands": null,
+      "notes": "STT: 'oishi chips gusto ko'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Ovaltine",
+      "productName": "Ovaltine Chocolate",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "OVALTINE-24G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.915,
+      "suggestedBrands": null,
+      "notes": "STT: 'gusto ko ng ovaltine dalawang softdrinks'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 37.3,
+    "totalItems": 2,
+    "brandedAmount": 37.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.68,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "oishi chips gusto ko ng ovaltine dalawang softdrinks",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T08:34:57.893825.000Z"
+  },
+  "processingTime": 10.09,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "34e9c93f-a2bd-4a45-8ece-b7e8d1792278",
+  "brandDetection": {
+    "detectedBrands": {
+      "Surf": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Surf",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "\"Uy, kuya, yung Surf"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Surf",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Surf",
+      "productName": "Surf Bar Kalamansi Large",
+      "genericName": "Product",
+      "localName": "surf",
+      "sku": "SURF-BAR-KALAMANSI-360G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 21.74,
+      "totalPrice": 21.74,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.72,
+      "suggestedBrands": null,
+      "notes": "STT: '\"Uy, kuya, yung Surf'",
+      "customerRequest": {
+        "requestType": "point",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 21.74,
+    "totalItems": 1,
+    "brandedAmount": 21.74,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "\"Uy, kuya, yung Surf",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T10:32:13.166554.000Z"
+  },
+  "processingTime": 4.77,
+  "edgeVersion": "v2.0.0-stt-only"
+}

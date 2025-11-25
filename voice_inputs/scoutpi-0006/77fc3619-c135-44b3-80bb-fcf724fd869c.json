@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "77fc3619-c135-44b3-80bb-fcf724fd869c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Gatorade": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Gatorade",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "gatorade"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Gatorade",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Gatorade",
+      "productName": "Gatorade Blue Bolt",
+      "genericName": "Product",
+      "localName": "gatorade",
+      "sku": "GATORADE-BLUE-500ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 45.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.72,
+      "suggestedBrands": null,
+      "notes": "STT: 'gatorade'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 45.0,
+    "totalItems": 1,
+    "brandedAmount": 45.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 3.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "gatorade",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:34:27.571469.000Z"
+  },
+  "processingTime": 5.11,
+  "edgeVersion": "v2.0.0-stt-only"
+}

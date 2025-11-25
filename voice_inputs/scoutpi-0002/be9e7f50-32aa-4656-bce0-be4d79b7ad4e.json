@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "be9e7f50-32aa-4656-bce0-be4d79b7ad4e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Globe": 0.89,
+      "Jack 'n Jill": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Globe",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Globe, cherry jack 'n"
+      },
+      {
+        "brand": "Jack 'n Jill",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Globe, cherry jack 'n jill, prepaid dalawa isa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Services": {
+        "branded": [
+          {
+            "brand": "Globe",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Jack 'n Jill",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Globe",
+      "productName": "Globe Load 100",
+      "genericName": "Product",
+      "localName": "globe",
+      "sku": "GLOBE-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Globe, cherry jack 'n'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Jack 'n Jill",
+      "productName": "V-Cut Potato Chips BBQ",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "JACK-VCUT-BBQ-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.0,
+      "totalPrice": 66.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Globe, cherry jack 'n jill, prepaid dalawa isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 366.0,
+    "totalItems": 6,
+    "brandedAmount": 366.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 12.54,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Globe, cherry jack 'n jill, prepaid dalawa isa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T06:59:43.774799.000Z"
+  },
+  "processingTime": 10.9,
+  "edgeVersion": "v2.0.0-stt-only"
+}

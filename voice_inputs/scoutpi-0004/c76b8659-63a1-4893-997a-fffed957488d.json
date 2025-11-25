@@ -1,0 +1,143 @@
+{
+  "storeId": "104",
+  "deviceId": "SCOUTPI-0004",
+  "timestamp": "",
+  "transactionId": "c76b8659-63a1-4893-997a-fffed957488d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marca Leon": 0.284,
+      "Star Margarine": 0.494
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.284,
+        "detection_type": "exact_match",
+        "context": "isa margarineng piraso Marca dalawa Leon Star, pab..."
+      },
+      {
+        "brand": "Star Margarine",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.494,
+        "detection_type": "exact_match",
+        "context": "isa margarineng piraso Marca dalawa Leon Star, pab..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.284,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Star Margarine",
+            "confidence": 0.494,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "marca",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 68.25,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.284,
+      "brandConfidence": 0.517,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa margarineng piraso Marca dalawa Leon Star, pab...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Star Margarine",
+      "productName": "Star Margarine Classic",
+      "genericName": "Product",
+      "localName": "star",
+      "sku": "STARMARGARINE-CLASSIC-250G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 68.25,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.494,
+      "brandConfidence": 0.622,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa margarineng piraso Marca dalawa Leon Star, pab...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 136.5,
+    "totalItems": 6,
+    "brandedAmount": 136.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.7,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "isa margarineng piraso Marca dalawa Leon Star, pabili na",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T00:45:29.855538.000Z"
+  },
+  "processingTime": 12.61,
+  "edgeVersion": "v2.0.0-stt-only"
+}

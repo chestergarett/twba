@@ -1,0 +1,99 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "e0215c0c-bc9c-48d8-8da5-af6824fb337b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cobra": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cobra",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "cobra malamig isa soda"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Cobra",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 60.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cobra malamig isa soda'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 60.0,
+    "totalItems": 3,
+    "brandedAmount": 60.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cobra malamig isa soda dalawa tubig",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T20:43:20.918208.000Z"
+  },
+  "processingTime": 7.04,
+  "edgeVersion": "v2.0.0-stt-only"
+}

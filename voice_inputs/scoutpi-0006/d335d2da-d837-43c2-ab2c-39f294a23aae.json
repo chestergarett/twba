@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d335d2da-d837-43c2-ab2c-39f294a23aae",
+  "brandDetection": {
+    "detectedBrands": {
+      "Lucky Me": 0.74,
+      "Del Monte": 0.74,
+      "Safeguard": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Lucky Me Del Monte? Safeguard, meron?"
+      },
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Lucky Me Del Monte? Safeguard, meron?"
+      },
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "Me Del Monte? Safeguard, meron?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "pancit canton",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Lucky Me Del Monte? Safeguard, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Fruit Cocktail",
+      "genericName": "Product",
+      "localName": "del",
+      "sku": "DELMONTE-FRUIT-COCKTAIL-432G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 42.0,
+      "totalPrice": 42.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Lucky Me Del Monte? Safeguard, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 40.08,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'Me Del Monte? Safeguard, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 94.08,
+    "totalItems": 3,
+    "brandedAmount": 94.08,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Lucky Me Del Monte? Safeguard, meron?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:16:53.790962.000Z"
+  },
+  "processingTime": 14.38,
+  "edgeVersion": "v2.0.0-stt-only"
+}

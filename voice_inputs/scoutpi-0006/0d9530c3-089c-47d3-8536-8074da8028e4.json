@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "0d9530c3-089c-47d3-8536-8074da8028e4",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marlboro": 0.79,
+      "Great Taste": 0.89,
+      "TM": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marlboro",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.79,
+        "detection_type": "exact_match",
+        "context": "bang TM? isa Marlborong pack Great Taste,"
+      },
+      {
+        "brand": "Great Taste",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "meron bang TM? isa Marlborong pack Great Taste, ma..."
+      },
+      {
+        "brand": "TM",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "meron bang TM? isa Marlborong pack"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Marlboro",
+            "confidence": 0.79,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Great Taste",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TM",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marlboro",
+      "productName": "Marlboro Gold Round Corner 20's",
+      "genericName": "Product",
+      "localName": "marlboro",
+      "sku": "MARLBORO-GOLD-20S",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 176.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.79,
+      "brandConfidence": 0.83,
+      "suggestedBrands": null,
+      "notes": "STT: 'bang TM? isa Marlborong pack Great Taste,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Great Taste",
+      "productName": "Great Taste Premium Blend",
+      "genericName": "Product",
+      "localName": "great",
+      "sku": "GREAT-TASTE-PREMIUM-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 21.0,
+      "totalPrice": 21.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang TM? isa Marlborong pack Great Taste, ma...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TM",
+      "productName": "TM Load 100",
+      "genericName": "Product",
+      "localName": "tm",
+      "sku": "TM-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang TM? isa Marlborong pack'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 297.0,
+    "totalItems": 3,
+    "brandedAmount": 297.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 8.56,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron bang TM? isa Marlborong pack Great Taste, may stock?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:22:56.586942.000Z"
+  },
+  "processingTime": 13.32,
+  "edgeVersion": "v2.0.0-stt-only"
+}

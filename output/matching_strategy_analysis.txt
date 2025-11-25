@@ -1,0 +1,23 @@
+MATCHING STRATEGY ANALYSIS
+============================================================
+
+Direct Match:
+  Key: InteractionID = transactionId
+  Matches: 2,242 (18.57% of voice records)
+
+Canonical Match:
+  Key: canonical_tx_id (normalized) = transactionId (normalized)
+  Matches: 2,242 (18.57% of voice records)
+
+Composite Match:
+  Key: StoreID + DeviceID + Date proximity (1 hour)
+  Matches: 4 (0.03% of voice records)
+
+Text Similarity Note:
+  TranscriptionText ≈ audioTranscript (requires fuzzy matching)
+  Note: Could match remaining records using text similarity between TranscriptionText and audioTranscript
+
+
+BEST STRATEGY: Direct Match
+  Match Rate: 18.57%
+  Key Used: InteractionID = transactionId

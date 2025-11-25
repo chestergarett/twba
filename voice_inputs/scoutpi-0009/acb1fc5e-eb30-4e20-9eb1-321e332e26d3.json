@@ -1,0 +1,182 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "acb1fc5e-eb30-4e20-9eb1-321e332e26d3",
+  "brandDetection": {
+    "detectedBrands": {
+      "Presto": 0.74,
+      "Voice": 0.74,
+      "Chips Ahoy": 0.194
+    },
+    "explicitMentions": [
+      {
+        "brand": "Presto",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "presto voice chips lang"
+      },
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "presto voice chips lang"
+      },
+      {
+        "brand": "Chips Ahoy",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.194,
+        "detection_type": "exact_match",
+        "context": "presto voice chips lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Presto",
+            "confidence": 0.74,
+            "quantity": 1
+          },
+          {
+            "brand": "Voice",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Chips Ahoy",
+            "confidence": 0.194,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Presto",
+      "productName": "Presto Cream Chocolate",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "PRESTO-CHOCO-80G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 18.3,
+      "totalPrice": 18.3,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'presto voice chips lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'presto voice chips lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.194,
+      "brandConfidence": 0.462,
+      "suggestedBrands": null,
+      "notes": "STT: 'presto voice chips lang'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 38.3,
+    "totalItems": 3,
+    "brandedAmount": 38.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "presto voice chips lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T06:27:33.862398.000Z"
+  },
+  "processingTime": 13.03,
+  "edgeVersion": "v2.0.0-stt-only"
+}

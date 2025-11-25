@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "e9cc8ca6-51c1-4bee-a1b1-8c1642c12464",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ariel": 0.83,
+      "Palmolive": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ariel",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "pabili ng Ariel isa Tideng piraso"
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "isa Tideng piraso Palmolive, maliit lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Ariel",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palmolive",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ariel",
+      "productName": "Ariel Powder",
+      "genericName": "Product",
+      "localName": "ariel",
+      "sku": "ARIEL-POWDER-90G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 15.0,
+      "totalPrice": 15.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'pabili ng Ariel isa Tideng piraso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "palmolive",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Tideng piraso Palmolive, maliit lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 40.0,
+    "totalItems": 2,
+    "brandedAmount": 40.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "pabili ng Ariel isa Tideng piraso Palmolive, maliit lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:52:16.985384.000Z"
+  },
+  "processingTime": 8.98,
+  "edgeVersion": "v2.0.0-stt-only"
+}

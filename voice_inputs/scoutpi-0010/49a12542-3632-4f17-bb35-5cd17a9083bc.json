@@ -1,0 +1,182 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "49a12542-3632-4f17-bb35-5cd17a9083bc",
+  "brandDetection": {
+    "detectedBrands": {
+      "Voice": 0.83,
+      "SkyFlakes": 0.83,
+      "Dewberry": 0.73
+    },
+    "explicitMentions": [
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "meron ba kayong Voice? SkyFlakes tatlong piraso"
+      },
+      {
+        "brand": "SkyFlakes",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "ba kayong Voice? SkyFlakes tatlong piraso isa"
+      },
+      {
+        "brand": "Dewberry",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.73,
+        "detection_type": "exact_match",
+        "context": "tatlong piraso isa Dewberryng pack lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Voice",
+            "confidence": 0.83,
+            "quantity": 1
+          },
+          {
+            "brand": "Dewberry",
+            "confidence": 0.73,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "SkyFlakes",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "voice",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron ba kayong Voice? SkyFlakes tatlong piraso'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "SkyFlakes",
+      "productName": "SkyFlakes Crackers Box",
+      "genericName": "Product",
+      "localName": "skyflakes",
+      "sku": "SKYFLAKES-250G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 55.0,
+      "totalPrice": 165.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'ba kayong Voice? SkyFlakes tatlong piraso isa'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dewberry",
+      "productName": "Dewberry Blueberry",
+      "genericName": "Product",
+      "localName": "dewberry",
+      "sku": "DEWBERRY-BLUEBERRY-33G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.73,
+      "brandConfidence": 0.77,
+      "suggestedBrands": null,
+      "notes": "STT: 'tatlong piraso isa Dewberryng pack lang'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 181.0,
+    "totalItems": 5,
+    "brandedAmount": 181.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.56,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "meron ba kayong Voice? SkyFlakes tatlong piraso isa Dewberryng pack lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:29:50.461030.000Z"
+  },
+  "processingTime": 15.8,
+  "edgeVersion": "v2.0.0-stt-only"
+}

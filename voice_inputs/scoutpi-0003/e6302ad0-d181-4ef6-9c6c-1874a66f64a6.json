@@ -1,0 +1,143 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "e6302ad0-d181-4ef6-9c6c-1874a66f64a6",
+  "brandDetection": {
+    "detectedBrands": {
+      "V-Cut": 0.35,
+      "Combi": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "V-Cut",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.35,
+        "detection_type": "exact_match",
+        "context": "V Cut Combi takan lang"
+      },
+      {
+        "brand": "Combi",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "V Cut Combi takan lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "V-Cut",
+            "confidence": 0.35,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Combi",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "V-Cut",
+      "productName": "V-Cut Barbecue Chips",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "V-CUT-BARBECUE-CHIPS-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.35,
+      "brandConfidence": 0.54,
+      "suggestedBrands": null,
+      "notes": "STT: 'V Cut Combi takan lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Combi",
+      "productName": "Combi Vanilla",
+      "genericName": "Product",
+      "localName": "combi",
+      "sku": "COMBI-VANILLA-39G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Candies & Sweets",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'V Cut Combi takan lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 24.0,
+    "totalItems": 2,
+    "brandedAmount": 24.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 1.1,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "V Cut Combi takan lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T13:12:57.231497.000Z"
+  },
+  "processingTime": 10.48,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "b636eb7d-88de-4e2d-b655-9920f74b4fd0",
+  "brandDetection": {
+    "detectedBrands": {
+      "TNT": 0.83,
+      "Datu Puti": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "TNT",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "tnt dalawa datu puti"
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "tnt dalawa datu puti isang litro pabili ng tnt"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TNT",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "TNT",
+      "productName": "TNT Load 100",
+      "genericName": "Product",
+      "localName": "tnt",
+      "sku": "TNT-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'tnt dalawa datu puti'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "datu",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'tnt dalawa datu puti isang litro pabili ng tnt'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 335.0,
+    "totalItems": 4,
+    "brandedAmount": 335.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 23.4,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "tnt dalawa datu puti isang litro pabili ng tnt",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T03:56:28.036360.000Z"
+  },
+  "processingTime": 9.67,
+  "edgeVersion": "v2.0.0-stt-only"
+}

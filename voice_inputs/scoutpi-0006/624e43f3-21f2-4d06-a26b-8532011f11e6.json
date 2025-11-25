@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "624e43f3-21f2-4d06-a26b-8532011f11e6",
+  "brandDetection": {
+    "detectedBrands": {
+      "Pepsi": 0.83,
+      "Jimm's": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Pepsi",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "malamig meron kayong pepsi? isang jimm's lang"
+      },
+      {
+        "brand": "Jimm's",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "jimm's malamig meron kayong"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Pepsi",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Jimm's",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Pepsi",
+      "productName": "Pepsi 355ml Can",
+      "genericName": "Product",
+      "localName": "pepsi",
+      "sku": "PEPSI-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'malamig meron kayong pepsi? isang jimm's lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Jimm's",
+      "productName": "Jimm's Coffee Mix",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "JIMMS-COFFEE-20G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 6.0,
+      "totalPrice": 6.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'jimm's malamig meron kayong'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 34.0,
+    "totalItems": 2,
+    "brandedAmount": 34.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "jimm's malamig meron kayong pepsi? isang jimm's lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T11:18:16.163346.000Z"
+  },
+  "processingTime": 9.03,
+  "edgeVersion": "v2.0.0-stt-only"
+}

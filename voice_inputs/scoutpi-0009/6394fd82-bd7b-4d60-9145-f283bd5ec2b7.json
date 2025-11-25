@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "6394fd82-bd7b-4d60-9145-f283bd5ec2b7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cream-O": 0.516,
+      "Nova": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cream-O",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.516,
+        "detection_type": "exact_match",
+        "context": "cream o dalawa nova meron ba? voice isang piraso"
+      },
+      {
+        "brand": "Nova",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "cream o dalawa nova meron ba? voice"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Cream-O",
+            "confidence": 0.516,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Nova",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cream-O",
+      "productName": "Cream-O Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "CREAM-O-CHOCO-30G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 24.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.516,
+      "brandConfidence": 0.603,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream o dalawa nova meron ba? voice isang piraso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Nova",
+      "productName": "Nova Cheddar",
+      "genericName": "Product",
+      "localName": "nova",
+      "sku": "NOVA-CHEDDAR-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream o dalawa nova meron ba? voice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 40.0,
+    "totalItems": 4,
+    "brandedAmount": 40.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cream o dalawa nova meron ba? voice isang piraso",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T07:39:51.774003.000Z"
+  },
+  "processingTime": 9.8,
+  "edgeVersion": "v2.0.0-stt-only"
+}

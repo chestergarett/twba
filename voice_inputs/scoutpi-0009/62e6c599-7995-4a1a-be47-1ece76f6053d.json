@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "62e6c599-7995-4a1a-be47-1ece76f6053d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Safeguard": 0.77,
+      "Lucky Me": 0.444,
+      "Datu Puti": 0.214
+    },
+    "explicitMentions": [
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "safeguard lucky tatlo me"
+      },
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.444,
+        "detection_type": "exact_match",
+        "context": "safeguard lucky tatlo me datu isa puting"
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "safeguard lucky tatlo me datu isa puting"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.444,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.214,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 40.08,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard lucky tatlo me'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "pancit canton",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.444,
+      "brandConfidence": 0.627,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard lucky tatlo me datu isa puting'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "datu",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard lucky tatlo me datu isa puting'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 87.08,
+    "totalItems": 3,
+    "brandedAmount": 87.08,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "safeguard lucky tatlo me datu isa puting",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T08:02:05.244987.000Z"
+  },
+  "processingTime": 14.32,
+  "edgeVersion": "v2.0.0-stt-only"
+}

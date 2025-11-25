@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "fd5c6eaf-a139-4fdf-b890-86908f0de67d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cream Silk": 0.89,
+      "Head & Shoulders": 0.554
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cream Silk",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "cream silk po head and isa shoulders pabili ng sha..."
+      },
+      {
+        "brand": "Head & Shoulders",
+        "category": "Hair Care",
+        "subcategory": "anti_dandruff_shampoo",
+        "confidence": 0.554,
+        "detection_type": "exact_match",
+        "context": "cream silk po head and isa shoulders pabili ng sha..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Cream Silk",
+            "confidence": 0.89,
+            "quantity": 1
+          },
+          {
+            "brand": "Head & Shoulders",
+            "confidence": 0.554,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cream Silk",
+      "productName": "Cream Silk Hair Fall Defense",
+      "genericName": "Product",
+      "localName": "cream",
+      "sku": "CREAM-SILK-GREEN-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 115.0,
+      "totalPrice": 115.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream silk po head and isa shoulders pabili ng sha...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Head & Shoulders",
+      "productName": "Head & Shoulders Classic Clean",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "HEAD-SHOULDERS-CLASSIC-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 145.0,
+      "totalPrice": 145.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.554,
+      "brandConfidence": 0.712,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream silk po head and isa shoulders pabili ng sha...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 260.0,
+    "totalItems": 2,
+    "brandedAmount": 260.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cream silk po head and isa shoulders pabili ng shampoo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T11:55:30.138115.000Z"
+  },
+  "processingTime": 9.51,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "11160127-c173-4ed3-ae3e-7ca89119c027",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.68,
+      "Magnolia": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "alam mo, cold Alaska Magnolia"
+      },
+      {
+        "brand": "Magnolia",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "mo, cold Alaska Magnolia"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.68,
+            "quantity": 1
+          },
+          {
+            "brand": "Magnolia",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "alaska",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'alam mo, cold Alaska Magnolia'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Magnolia",
+      "productName": "Magnolia Full Cream Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "MAGNOLIA-FULL-CREAM-MILK-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'mo, cold Alaska Magnolia'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 60.0,
+    "totalItems": 2,
+    "brandedAmount": 60.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 8.46,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "mangga alam mo, cold Alaska Magnolia",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:25:39.856631.000Z"
+  },
+  "processingTime": 9.84,
+  "edgeVersion": "v2.0.0-stt-only"
+}

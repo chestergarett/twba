@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "2c657a01-6b8e-4148-8266-4d84bf1cf44a",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marlboro": 0.89,
+      "Kopiko": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marlboro",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "marlboro kopiko tatlo tubig"
+      },
+      {
+        "brand": "Kopiko",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "marlboro kopiko tatlo tubig isa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Marlboro",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Kopiko",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marlboro",
+      "productName": "Marlboro Gold Round Corner 20's",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "MARLBORO-GOLD-20S",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 528.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'marlboro kopiko tatlo tubig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Kopiko",
+      "productName": "Kopiko 78°C Coffee Latte",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "KOPIKO-78C-25G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 9.0,
+      "totalPrice": 27.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'marlboro kopiko tatlo tubig isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 555.0,
+    "totalItems": 6,
+    "brandedAmount": 555.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "marlboro kopiko tatlo tubig isa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T11:19:02.068880.000Z"
+  },
+  "processingTime": 9.56,
+  "edgeVersion": "v2.0.0-stt-only"
+}

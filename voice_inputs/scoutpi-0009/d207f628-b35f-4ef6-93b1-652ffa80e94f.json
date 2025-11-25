@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "d207f628-b35f-4ef6-93b1-652ffa80e94f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ariel": 0.8,
+      "Rejoice": 0.8,
+      "Close Up": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ariel",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Ariel panglaba Rejoice po,"
+      },
+      {
+        "brand": "Rejoice",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Ariel panglaba Rejoice po, shampoo Close"
+      },
+      {
+        "brand": "Close Up",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "Ariel panglaba Rejoice po, shampoo Close Up, tooth..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Ariel",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Rejoice",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Close Up",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ariel",
+      "productName": "Ariel Powder",
+      "genericName": "Product",
+      "localName": "ariel",
+      "sku": "ARIEL-POWDER-90G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 15.0,
+      "totalPrice": 15.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ariel panglaba Rejoice po,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Rejoice",
+      "productName": "Rejoice Anti Hair Fall",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "REJOICE-ANTI-FALL-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 125.0,
+      "totalPrice": 125.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ariel panglaba Rejoice po, shampoo Close'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Close Up",
+      "productName": "Close Up Ever Fresh Red Hot",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "CLOSE-UP-RED-145G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 75.0,
+      "totalPrice": 75.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ariel panglaba Rejoice po, shampoo Close Up, tooth...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 215.0,
+    "totalItems": 3,
+    "brandedAmount": 215.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Ariel panglaba Rejoice po, shampoo Close Up, toothpaste [noise]",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T03:35:59.789006.000Z"
+  },
+  "processingTime": 15.38,
+  "edgeVersion": "v2.0.0-stt-only"
+}

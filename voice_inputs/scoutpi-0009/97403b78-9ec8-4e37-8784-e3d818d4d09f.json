@@ -1,0 +1,99 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "97403b78-9ec8-4e37-8784-e3d818d4d09f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Chips Ahoy": 0.194
+    },
+    "explicitMentions": [
+      {
+        "brand": "Chips Ahoy",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.194,
+        "detection_type": "exact_match",
+        "context": "chips"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Chips Ahoy",
+            "confidence": 0.194,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.194,
+      "brandConfidence": 0.447,
+      "suggestedBrands": null,
+      "notes": "STT: 'chips'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 12.0,
+    "totalItems": 1,
+    "brandedAmount": 12.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "chips",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T04:20:07.471321.000Z"
+  },
+  "processingTime": 5.17,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "207350c8-0f24-4772-8333-5f92db46c233",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marca Leon": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "marca leon meron ba? isa lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "marca",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'marca leon meron ba? isa lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 22.75,
+    "totalItems": 1,
+    "brandedAmount": 22.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.6,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "marca leon meron ba? isa lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:53:18.138850.000Z"
+  },
+  "processingTime": 11.01,
+  "edgeVersion": "v2.0.0-stt-only"
+}

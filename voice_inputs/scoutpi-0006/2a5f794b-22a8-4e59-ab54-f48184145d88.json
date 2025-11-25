@@ -1,0 +1,221 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "2a5f794b-22a8-4e59-ab54-f48184145d88",
+  "brandDetection": {
+    "detectedBrands": {
+      "Magic": 0.86,
+      "Chips Ahoy": 0.314,
+      "Voice": 0.86,
+      "Dewberry": 0.548
+    },
+    "explicitMentions": [
+      {
+        "brand": "Magic",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "magic chips voice softdrink"
+      },
+      {
+        "brand": "Chips Ahoy",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.314,
+        "detection_type": "exact_match",
+        "context": "magic chips voice softdrink dewb…berry?"
+      },
+      {
+        "brand": "Voice",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "magic chips voice softdrink dewb…berry?"
+      },
+      {
+        "brand": "Dewberry",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.548,
+        "detection_type": "exact_match",
+        "context": "magic chips voice softdrink dewb…berry?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Magic",
+            "confidence": 0.86,
+            "quantity": 1
+          },
+          {
+            "brand": "Voice",
+            "confidence": 0.86,
+            "quantity": 1
+          },
+          {
+            "brand": "Dewberry",
+            "confidence": 0.548,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Chips Ahoy",
+            "confidence": 0.314,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Magic",
+      "productName": "Magic Chips Barbecue Big Pack",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "MAGIC-CHIPS-BBQ-100G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.45,
+      "totalPrice": 25.45,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips voice softdrink'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.314,
+      "brandConfidence": 0.522,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips voice softdrink dewb…berry?'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Voice",
+      "productName": "Voice Combo Sandwich",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "VOICE-COMBO-35G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips voice softdrink dewb…berry?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dewberry",
+      "productName": "Dewberry Blueberry",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "DEWBERRY-BLUEBERRY-33G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.548,
+      "brandConfidence": 0.639,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips voice softdrink dewb…berry?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 53.45,
+    "totalItems": 4,
+    "brandedAmount": 53.45,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 4
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "magic chips voice softdrink dewb…berry?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T11:43:23.929302.000Z"
+  },
+  "processingTime": 18.93,
+  "edgeVersion": "v2.0.0-stt-only"
+}

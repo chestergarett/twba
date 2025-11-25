@@ -1,0 +1,182 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "d2403cd5-04a3-44ea-8364-3f29e37ad323",
+  "brandDetection": {
+    "detectedBrands": {
+      "Bear Brand": 0.264,
+      "Magic": 0.83,
+      "GOMO": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Bear Brand",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.264,
+        "detection_type": "exact_match",
+        "context": "gusto ko ng Bear dalawa Magic please isa GOMO lang"
+      },
+      {
+        "brand": "Magic",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "ng Bear dalawa Magic please isa GOMO"
+      },
+      {
+        "brand": "GOMO",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Magic please isa GOMO lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Bear Brand",
+            "confidence": 0.264,
+            "quantity": 3
+          },
+          {
+            "brand": "Magic",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "GOMO",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Bear Brand",
+      "productName": "Bear Brand Junior Milk 150g",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BEAR-BRAND-JUNIOR-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 68.5,
+      "totalPrice": 205.5,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.264,
+      "brandConfidence": 0.507,
+      "suggestedBrands": null,
+      "notes": "STT: 'gusto ko ng Bear dalawa Magic please isa GOMO lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Magic",
+      "productName": "Magic Chips Barbecue Big Pack",
+      "genericName": "Product",
+      "localName": "magic",
+      "sku": "MAGIC-CHIPS-BBQ-100G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.45,
+      "totalPrice": 25.45,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'ng Bear dalawa Magic please isa GOMO'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "GOMO",
+      "productName": "GOMO Data Credit 99",
+      "genericName": "Product",
+      "localName": "gomo",
+      "sku": "GOMO-DATA-CREDIT-99",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 99.0,
+      "totalPrice": 99.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'Magic please isa GOMO lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 329.95,
+    "totalItems": 5,
+    "brandedAmount": 329.95,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.76,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "gusto ko ng Bear dalawa Magic please isa GOMO lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T14:55:27.960087.000Z"
+  },
+  "processingTime": 24.13,
+  "edgeVersion": "v2.0.0-stt-only"
+}

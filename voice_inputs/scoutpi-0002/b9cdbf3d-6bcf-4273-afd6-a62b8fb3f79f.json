@@ -1,0 +1,138 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "b9cdbf3d-6bcf-4273-afd6-a62b8fb3f79f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ariel": 0.77,
+      "Surf": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ariel",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ariel surf sampung piso"
+      },
+      {
+        "brand": "Surf",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ariel surf sampung piso"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Ariel",
+            "confidence": 0.77,
+            "quantity": 10
+          },
+          {
+            "brand": "Surf",
+            "confidence": 0.77,
+            "quantity": 10
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ariel",
+      "productName": "Ariel Powder",
+      "genericName": "Product",
+      "localName": "ariel",
+      "sku": "ARIEL-POWDER-90G",
+      "quantity": 10,
+      "unit": "sachet",
+      "unitPrice": 15.0,
+      "totalPrice": 150.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": true,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'ariel surf sampung piso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Surf",
+      "productName": "Surf Powder Detergent Pack",
+      "genericName": "Product",
+      "localName": "surf",
+      "sku": "SURF-POWDER-500G",
+      "quantity": 10,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 650.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": true,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'ariel surf sampung piso'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 800.0,
+    "totalItems": 20,
+    "brandedAmount": 800.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 20,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "ariel surf sampung piso",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T05:32:25.001431.000Z"
+  },
+  "processingTime": 10.84,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "258b5436-e646-4e5d-b52c-87e1b225427c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Marca Leon": 0.83,
+      "Lucky Me": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "sinigang Marca Leon Lucky Me dalawa"
+      },
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "sinigang Marca Leon Lucky Me dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "marca",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 45.5,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'sinigang Marca Leon Lucky Me dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "pancit canton",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 24.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'sinigang Marca Leon Lucky Me dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 69.5,
+    "totalItems": 4,
+    "brandedAmount": 69.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 28.78,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "sinigang Marca Leon Lucky Me dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:47:36.633415.000Z"
+  },
+  "processingTime": 9.47,
+  "edgeVersion": "v2.0.0-stt-only"
+}

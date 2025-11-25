@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "93b2ee89-acec-4efa-9506-179085ed044f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Smart": 0.8,
+      "Sprite": 0.8,
+      "Coca-Cola": 0.186
+    },
+    "explicitMentions": [
+      {
+        "brand": "Smart",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "sige na smart lang ano ba"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "yun, yung ano, sprite? kuya, may coke"
+      },
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.186,
+        "detection_type": "exact_match",
+        "context": "sige na smart lang ano ba yun, yung ano, sprite? k..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Smart",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.8,
+            "quantity": 1
+          },
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.186,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Smart",
+      "productName": "Smart Load 100",
+      "genericName": "Product",
+      "localName": "smart",
+      "sku": "SMART-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'sige na smart lang ano ba'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'yun, yung ano, sprite? kuya, may coke'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola 355ml Can",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "COKE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.186,
+      "brandConfidence": 0.488,
+      "suggestedBrands": null,
+      "notes": "STT: 'sige na smart lang ano ba yun, yung ano, sprite? k...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 156.0,
+    "totalItems": 3,
+    "brandedAmount": 156.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "sige na smart lang ano ba yun, yung ano, sprite? kuya, may coke ka ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:13:50.613755.000Z"
+  },
+  "processingTime": 13.03,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,118 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "13169fa3-ce6e-420a-b7b3-4b3b693c77be",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nescafé": 0.77,
+      "Jack 'n Jill": 0.19
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nescafé",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Nescafé tatlong piraso Jack"
+      },
+      {
+        "brand": "Jack 'n Jill",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.19,
+        "detection_type": "exact_match",
+        "context": "Nescafé tatlong piraso Jack 'n isa Jill dalawang N..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nescafé",
+            "confidence": 0.77,
+            "quantity": 5
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Jack 'n Jill",
+            "confidence": 0.19,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nescafé",
+      "productName": "Nescafé Classic Resealable",
+      "genericName": "Product",
+      "localName": "nescafé",
+      "sku": "NESCAFE-CLASSIC-200G",
+      "quantity": 5,
+      "unit": "pc",
+      "unitPrice": 210.0,
+      "totalPrice": 1050.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nescafé tatlong piraso Jack'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 1050.0,
+    "totalItems": 5,
+    "brandedAmount": 1050.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.82,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Nescafé tatlong piraso Jack 'n isa Jill dalawang Nescafé, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T17:15:56.952077.000Z"
+  },
+  "processingTime": 9.04,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "259de12d-d040-4c2b-9182-93a047b34fca",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nova": 0.77,
+      "Piattos": 0.77,
+      "Hansel": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nova",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Nova isa Piattos dalawa"
+      },
+      {
+        "brand": "Piattos",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Nova isa Piattos dalawa Hansel"
+      },
+      {
+        "brand": "Hansel",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Piattos dalawa Hansel"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Nova",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Piattos",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Hansel",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nova",
+      "productName": "Nova Cheddar",
+      "genericName": "Product",
+      "localName": "nova",
+      "sku": "NOVA-CHEDDAR-40G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nova isa Piattos dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Piattos",
+      "productName": "Piattos Cheese",
+      "genericName": "Product",
+      "localName": "piattos",
+      "sku": "PIATTOS-CHEESE-85G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 35.95,
+      "totalPrice": 107.85,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nova isa Piattos dalawa Hansel'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Hansel",
+      "productName": "Hansel Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "HANSEL-CHOCO-32G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 24.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Piattos dalawa Hansel'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 179.85,
+    "totalItems": 9,
+    "brandedAmount": 179.85,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Nova isa Piattos dalawa Hansel",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T04:37:52.531429.000Z"
+  },
+  "processingTime": 16.12,
+  "edgeVersion": "v2.0.0-stt-only"
+}

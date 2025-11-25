@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "c73af26e-4120-4df7-aef2-22ca80c9e387",
+  "brandDetection": {
+    "detectedBrands": {
+      "V-Cut": 0.5
+    },
+    "explicitMentions": [
+      {
+        "brand": "V-Cut",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.5,
+        "detection_type": "exact_match",
+        "context": "V Cut isang pack tubig"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "V-Cut",
+            "confidence": 0.5,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "V-Cut",
+      "productName": "V-Cut Barbecue Chips",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "V-CUT-BARBECUE-CHIPS-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.5,
+      "brandConfidence": 0.655,
+      "suggestedBrands": null,
+      "notes": "STT: 'V Cut isang pack tubig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 16.0,
+    "totalItems": 1,
+    "brandedAmount": 16.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 2.78,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "V Cut isang pack tubig",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:17:11.845223.000Z"
+  },
+  "processingTime": 5.72,
+  "edgeVersion": "v2.0.0-stt-only"
+}

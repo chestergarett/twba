@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "09c4bbd5-268a-4019-9c5f-08ae9b36d564",
+  "brandDetection": {
+    "detectedBrands": {
+      "SkyFlakes": 0.8,
+      "Lucky Me": 0.8,
+      "Chips Ahoy": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "SkyFlakes",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "SkyFlakes Lucky Me, ah"
+      },
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "SkyFlakes Lucky Me, ah Chips Ahoy, meron?"
+      },
+      {
+        "brand": "Chips Ahoy",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "SkyFlakes Lucky Me, ah Chips Ahoy, meron?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "SkyFlakes",
+            "confidence": 0.8,
+            "quantity": 1
+          },
+          {
+            "brand": "Chips Ahoy",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "SkyFlakes",
+      "productName": "SkyFlakes Crackers Box",
+      "genericName": "Product",
+      "localName": "skyflakes",
+      "sku": "SKYFLAKES-250G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 55.0,
+      "totalPrice": 55.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'SkyFlakes Lucky Me, ah'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'SkyFlakes Lucky Me, ah Chips Ahoy, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'SkyFlakes Lucky Me, ah Chips Ahoy, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 79.0,
+    "totalItems": 3,
+    "brandedAmount": 79.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.76,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "SkyFlakes Lucky Me, ah Chips Ahoy, meron?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:13:38.592930.000Z"
+  },
+  "processingTime": 13.79,
+  "edgeVersion": "v2.0.0-stt-only"
+}

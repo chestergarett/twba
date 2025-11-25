@@ -1,0 +1,182 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "e99bdb1a-30be-443f-a196-322b19bd3b38",
+  "brandDetection": {
+    "detectedBrands": {
+      "Coca-Cola": 0.214,
+      "Marca Leon": 0.224,
+      "Sprite": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "Coca tatlo Colang Marca isa Leon dalawa Sprite"
+      },
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.224,
+        "detection_type": "exact_match",
+        "context": "Coca tatlo Colang Marca isa Leon dalawa Sprite"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa Leon dalawa Sprite"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.214,
+            "quantity": 3
+          },
+          {
+            "brand": "Sprite",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.224,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 264.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: 'Coca tatlo Colang Marca isa Leon dalawa Sprite'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 68.25,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.224,
+      "brandConfidence": 0.517,
+      "suggestedBrands": null,
+      "notes": "STT: 'Coca tatlo Colang Marca isa Leon dalawa Sprite'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Leon dalawa Sprite'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 360.25,
+    "totalItems": 7,
+    "brandedAmount": 360.25,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Coca tatlo Colang Marca isa Leon dalawa Sprite",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T13:00:53.546152.000Z"
+  },
+  "processingTime": 16.11,
+  "edgeVersion": "v2.0.0-stt-only"
+}

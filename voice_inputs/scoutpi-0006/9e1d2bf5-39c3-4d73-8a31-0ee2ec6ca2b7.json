@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "9e1d2bf5-39c3-4d73-8a31-0ee2ec6ca2b7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.8,
+      "Camel": 0.8,
+      "TNT": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "alaska gatas tnt po"
+      },
+      {
+        "brand": "Camel",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "gatas tnt po camel sigarilyo"
+      },
+      {
+        "brand": "TNT",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "alaska gatas tnt po camel sigarilyo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Camel",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TNT",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "Food & Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas tnt po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Camel",
+      "productName": "Camel Activate Purple 20s",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "CAMEL-ACTIVATE-PURPLE-20S-20 STICKS",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 176.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'gatas tnt po camel sigarilyo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TNT",
+      "productName": "TNT Load 100",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "TNT-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas tnt po camel sigarilyo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 311.0,
+    "totalItems": 3,
+    "brandedAmount": 311.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.2,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "alaska gatas tnt po camel sigarilyo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:06:18.802933.000Z"
+  },
+  "processingTime": 13.69,
+  "edgeVersion": "v2.0.0-stt-only"
+}

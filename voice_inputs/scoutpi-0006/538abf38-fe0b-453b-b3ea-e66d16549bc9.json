@@ -1,0 +1,157 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "538abf38-fe0b-453b-b3ea-e66d16549bc9",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oreo": 0.68,
+      "Hansel": 0.68,
+      "Hello": 0.68
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oreo",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "oreo hansel hello, wala?"
+      },
+      {
+        "brand": "Hansel",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "oreo hansel hello, wala?"
+      },
+      {
+        "brand": "Hello",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "oreo hansel hello, wala?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Oreo",
+            "confidence": 0.68,
+            "quantity": 1
+          },
+          {
+            "brand": "Hansel",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Hello",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Hansel",
+      "productName": "Hansel Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "HANSEL-CHOCO-32G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'oreo hansel hello, wala?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Hello",
+      "productName": "Hello Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "HELLO-CHOCOLATE-38G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'oreo hansel hello, wala?'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 16.0,
+    "totalItems": 2,
+    "brandedAmount": 16.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "oreo hansel hello, wala?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:03:21.961608.000Z"
+  },
+  "processingTime": 15.52,
+  "edgeVersion": "v2.0.0-stt-only"
+}

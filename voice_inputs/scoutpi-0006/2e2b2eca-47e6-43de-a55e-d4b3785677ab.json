@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "2e2b2eca-47e6-43de-a55e-d4b3785677ab",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nescafé": 0.77,
+      "Sprite": 0.77,
+      "Milo": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nescafé",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Nescafé dalawa pabilo po,"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "dalawa pabilo po, sprite isang Milo lang"
+      },
+      {
+        "brand": "Milo",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "po, sprite isang Milo lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nescafé",
+            "confidence": 0.77,
+            "quantity": 2
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nescafé",
+      "productName": "Nescafé Classic Resealable",
+      "genericName": "Product",
+      "localName": "nescafé",
+      "sku": "NESCAFE-CLASSIC-200G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 210.0,
+      "totalPrice": 420.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Nescafé dalawa pabilo po,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa pabilo po, sprite isang Milo lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 65.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'po, sprite isang Milo lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 513.0,
+    "totalItems": 4,
+    "brandedAmount": 513.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Nescafé dalawa pabilo po, sprite isang Milo lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T16:21:55.700610.000Z"
+  },
+  "processingTime": 13.98,
+  "edgeVersion": "v2.0.0-stt-only"
+}

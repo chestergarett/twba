@@ -1,0 +1,143 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "f81a2d0c-87e8-4e18-8713-92d354c085f5",
+  "brandDetection": {
+    "detectedBrands": {
+      "Silver Swan": 0.74,
+      "TNT": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Silver Swan",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "meron bang Silver Swan TNT, kuha na lang wala na b..."
+      },
+      {
+        "brand": "TNT",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "bang Silver Swan TNT, kuha na lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Silver Swan",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TNT",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Silver Swan",
+      "productName": "Silver Swan Soy Sauce 500ml",
+      "genericName": "Product",
+      "localName": "silver",
+      "sku": "SILVER-SWAN-SOY-500ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 29.5,
+      "totalPrice": 29.5,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang Silver Swan TNT, kuha na lang wala na b...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TNT",
+      "productName": "TNT Load 100",
+      "genericName": "Product",
+      "localName": "tnt",
+      "sku": "TNT-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'bang Silver Swan TNT, kuha na lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 129.5,
+    "totalItems": 2,
+    "brandedAmount": 129.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.84,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron bang Silver Swan TNT, kuha na lang wala na ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T03:40:47.839206.000Z"
+  },
+  "processingTime": 9.06,
+  "edgeVersion": "v2.0.0-stt-only"
+}

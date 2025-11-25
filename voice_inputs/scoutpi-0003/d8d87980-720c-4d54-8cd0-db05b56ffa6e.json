@@ -1,0 +1,177 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "d8d87980-720c-4d54-8cd0-db05b56ffa6e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.92,
+      "Eight O'Clock": 0.92,
+      "Royal": 0.92
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "alaska gatas royal na"
+      },
+      {
+        "brand": "Eight O'Clock",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "alaska gatas royal na softdrinks eight o'clock cof..."
+      },
+      {
+        "brand": "Royal",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "alaska gatas royal na softdrinks eight"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.92,
+            "quantity": 1
+          },
+          {
+            "brand": "Eight O'Clock",
+            "confidence": 0.92,
+            "quantity": 1
+          },
+          {
+            "brand": "Royal",
+            "confidence": 0.92,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.855,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas royal na'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Royal",
+      "productName": "Royal Tru-Orange",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "ROYAL-TRUE-ORANGE-20G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.855,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas royal na softdrinks eight'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Eight O'Clock",
+      "productName": "Eight O'Clock Orange",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "EIGHT-OCLOCK-ORANGE-20G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.855,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas royal na softdrinks eight o'clock cof...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 50.0,
+    "totalItems": 3,
+    "brandedAmount": 50.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "alaska gatas royal na softdrinks eight o'clock coffee",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T16:51:52.586701.000Z"
+  },
+  "processingTime": 17.3,
+  "edgeVersion": "v2.0.0-stt-only"
+}

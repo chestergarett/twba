@@ -1,0 +1,182 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "10d3ced4-1f37-4b1f-9b3f-fc3e3a3b9e29",
+  "brandDetection": {
+    "detectedBrands": {
+      "Safeguard": 0.77,
+      "Dove": 0.77,
+      "Head & Shoulders": 0.224
+    },
+    "explicitMentions": [
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "safeguard dove isang head"
+      },
+      {
+        "brand": "Dove",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "safeguard dove isang head shoulder"
+      },
+      {
+        "brand": "Head & Shoulders",
+        "category": "Hair Care",
+        "subcategory": "anti_dandruff_shampoo",
+        "confidence": 0.224,
+        "detection_type": "exact_match",
+        "context": "safeguard dove isang head shoulder"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Dove",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Head & Shoulders",
+            "confidence": 0.224,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 40.08,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard dove isang head'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dove",
+      "productName": "Dove Beauty Bar Pink",
+      "genericName": "Product",
+      "localName": "soap",
+      "sku": "DOVE-PINK-135G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 78.0,
+      "totalPrice": 78.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard dove isang head shoulder'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Head & Shoulders",
+      "productName": "Head & Shoulders Classic Clean",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "HEAD-SHOULDERS-CLASSIC-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 145.0,
+      "totalPrice": 145.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.224,
+      "brandConfidence": 0.517,
+      "suggestedBrands": null,
+      "notes": "STT: 'safeguard dove isang head shoulder'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 263.08,
+    "totalItems": 3,
+    "brandedAmount": 263.08,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "safeguard dove isang head shoulder",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:47:11.647369.000Z"
+  },
+  "processingTime": 13.83,
+  "edgeVersion": "v2.0.0-stt-only"
+}

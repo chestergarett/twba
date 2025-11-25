@@ -1,0 +1,143 @@
+{
+  "storeId": "104",
+  "deviceId": "SCOUTPI-0004",
+  "timestamp": "",
+  "transactionId": "248052e8-1608-4aa5-9fd4-92ced3a9919e",
+  "brandDetection": {
+    "detectedBrands": {
+      "Bravo": 0.74,
+      "SkyFlakes": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Bravo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "meron bang Bravo yung Rebisco po"
+      },
+      {
+        "brand": "SkyFlakes",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "yung Rebisco po SkyFlakes na lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Bravo",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "SkyFlakes",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Bravo",
+      "productName": "Bravo Sweet Crackers",
+      "genericName": "Product",
+      "localName": "bravo",
+      "sku": "BRAVO-ORIGINAL-30G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang Bravo yung Rebisco po'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": true
+      }
+    },
+    {
+      "brandName": "SkyFlakes",
+      "productName": "SkyFlakes Crackers Box",
+      "genericName": "Product",
+      "localName": "skyflakes",
+      "sku": "SKYFLAKES-250G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 55.0,
+      "totalPrice": 55.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'yung Rebisco po SkyFlakes na lang'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": true
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 62.0,
+    "totalItems": 2,
+    "brandedAmount": 62.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.4,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron bang Bravo yung Rebisco po SkyFlakes na lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T00:54:34.216592.000Z"
+  },
+  "processingTime": 15.69,
+  "edgeVersion": "v2.0.0-stt-only"
+}

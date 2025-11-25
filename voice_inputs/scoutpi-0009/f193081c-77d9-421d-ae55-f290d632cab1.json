@@ -1,0 +1,138 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "f193081c-77d9-421d-ae55-f290d632cab1",
+  "brandDetection": {
+    "detectedBrands": {
+      "Bear Brand": 0.8,
+      "Milo": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Bear Brand",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "bear brand po meron ba kayong milo? yung malaki na..."
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "meron ba kayong milo? yung malaki na"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Bear Brand",
+            "confidence": 0.8,
+            "quantity": 1
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Bear Brand",
+      "productName": "Bear Brand Junior Milk 150g",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BEAR-BRAND-JUNIOR-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 68.5,
+      "totalPrice": 68.5,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'bear brand po meron ba kayong milo? yung malaki na...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "MILO-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 65.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron ba kayong milo? yung malaki na'",
+      "customerRequest": {
+        "requestType": "point",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 133.5,
+    "totalItems": 2,
+    "brandedAmount": 133.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.7,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "bear brand po meron ba kayong milo? yung malaki na bear",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T07:49:05.887181.000Z"
+  },
+  "processingTime": 9.15,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,177 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "19e02ded-c154-4c9b-9453-ad4fe2068e8d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Selecta": 0.77,
+      "Magnolia": 0.77,
+      "Milo": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Selecta",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "selecta malamig magnolia isang"
+      },
+      {
+        "brand": "Magnolia",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "selecta malamig magnolia isang milo dalawa"
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "malamig magnolia isang milo dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Selecta",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Magnolia",
+            "confidence": 0.77,
+            "quantity": 3
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Selecta",
+      "productName": "Selecta Fortified Milk Powder",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "SELECTA-FORTIFIED-MILK-POWDER-700G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'selecta malamig magnolia isang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Magnolia",
+      "productName": "Magnolia Full Cream Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "MAGNOLIA-FULL-CREAM-MILK-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 75.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'selecta malamig magnolia isang milo dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "MILO-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 195.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'malamig magnolia isang milo dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 295.0,
+    "totalItems": 7,
+    "brandedAmount": 295.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "selecta malamig magnolia isang milo dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:07:41.539546.000Z"
+  },
+  "processingTime": 14.1,
+  "edgeVersion": "v2.0.0-stt-only"
+}

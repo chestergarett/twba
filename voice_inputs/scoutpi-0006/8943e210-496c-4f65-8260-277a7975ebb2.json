@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "8943e210-496c-4f65-8260-277a7975ebb2",
+  "brandDetection": {
+    "detectedBrands": {
+      "Alaska": 0.98,
+      "Marlboro": 0.98,
+      "TM": 0.98
+    },
+    "explicitMentions": [
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "marlboro isang pack alaska gatas po tm"
+      },
+      {
+        "brand": "Marlboro",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "marlboro isang pack alaska"
+      },
+      {
+        "brand": "TM",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "alaska gatas po tm load pabili"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Marlboro",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "TM",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Marlboro",
+      "productName": "Marlboro Gold Round Corner 20's",
+      "genericName": "Product",
+      "localName": "marlboro",
+      "sku": "MARLBORO-GOLD-20S",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 176.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.955,
+      "suggestedBrands": null,
+      "notes": "STT: 'marlboro isang pack alaska'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Condensada",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-CONDENSED-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 35.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.955,
+      "suggestedBrands": null,
+      "notes": "STT: 'marlboro isang pack alaska gatas po tm'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "TM",
+      "productName": "TM Load 100",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "TM-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.955,
+      "suggestedBrands": null,
+      "notes": "STT: 'alaska gatas po tm load pabili'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 311.0,
+    "totalItems": 3,
+    "brandedAmount": 311.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 17.54,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "marlboro isang pack alaska gatas po tm load pabili",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T10:33:02.119221.000Z"
+  },
+  "processingTime": 13.09,
+  "edgeVersion": "v2.0.0-stt-only"
+}

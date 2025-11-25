@@ -1,0 +1,221 @@
+{
+  "storeId": "104",
+  "deviceId": "SCOUTPI-0004",
+  "timestamp": "",
+  "transactionId": "84feb439-98a4-48be-830a-5c56775c4daa",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nescafé": 0.89,
+      "Milo": 0.89,
+      "Sprite": 0.89,
+      "Coca-Cola": 0.276
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nescafé",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "nasa harap ng Nescafé, cherry prepaid ba?"
+      },
+      {
+        "brand": "Milo",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "ano, parang… isang milo tsaka sprite kailangan"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "isang milo tsaka sprite kailangan ko rin"
+      },
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.276,
+        "detection_type": "exact_match",
+        "context": "nasa harap ng Nescafé, cherry prepaid ba? saka yun..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nescafé",
+            "confidence": 0.89,
+            "quantity": 1
+          },
+          {
+            "brand": "Milo",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.89,
+            "quantity": 1
+          },
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.276,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nescafé",
+      "productName": "Nescafé 3in1 Creamy Latte",
+      "genericName": "Product",
+      "localName": "nescafé",
+      "sku": "NESCAFE-3IN1-LATTE-27.5G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 8.75,
+      "totalPrice": 8.75,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'nasa harap ng Nescafé, cherry prepaid ba?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 65.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'ano, parang… isang milo tsaka sprite kailangan'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'isang milo tsaka sprite kailangan ko rin'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola 355ml Can",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.276,
+      "brandConfidence": 0.543,
+      "suggestedBrands": null,
+      "notes": "STT: 'nasa harap ng Nescafé, cherry prepaid ba? saka yun...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 129.75,
+    "totalItems": 4,
+    "brandedAmount": 129.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 4
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "nasa harap ng Nescafé, cherry prepaid ba? saka yung ano, parang… isang milo tsaka sprite kailangan ko rin ng coke, eh, meron ka bang…?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T00:42:29.523114.000Z"
+  },
+  "processingTime": 26.93,
+  "edgeVersion": "v2.0.0-stt-only"
+}

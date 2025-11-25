@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "e27e8bcd-53ca-4a9f-aa10-440343e2175d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Presto": 0.83,
+      "Hansel": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Presto",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Presto chips Hansel biskwit"
+      },
+      {
+        "brand": "Hansel",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Presto chips Hansel biskwit dalawa, please"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Presto",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Hansel",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Presto",
+      "productName": "Presto Cream Chocolate",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "PRESTO-CHOCO-80G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 18.3,
+      "totalPrice": 36.6,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Presto chips Hansel biskwit'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Hansel",
+      "productName": "Hansel Chocolate",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "HANSEL-CHOCO-32G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 16.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Presto chips Hansel biskwit dalawa, please'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 52.6,
+    "totalItems": 4,
+    "brandedAmount": 52.6,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Presto chips Hansel biskwit dalawa, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T09:10:21.457310.000Z"
+  },
+  "processingTime": 10.74,
+  "edgeVersion": "v2.0.0-stt-only"
+}

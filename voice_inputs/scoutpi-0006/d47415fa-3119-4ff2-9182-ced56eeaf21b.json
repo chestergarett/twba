@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d47415fa-3119-4ff2-9182-ced56eeaf21b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Downy": 0.77,
+      "Palmolive": 0.77,
+      "Dove": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Downy",
+        "category": "Household & Cleaning Supplies",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "downy palmolive dove dalawa"
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "downy palmolive dove dalawa"
+      },
+      {
+        "brand": "Dove",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "downy palmolive dove dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Household & Cleaning Supplies": {
+        "branded": [
+          {
+            "brand": "Downy",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palmolive",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Dove",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Downy",
+      "productName": "Downy Garden Bloom",
+      "genericName": "Product",
+      "localName": "downy",
+      "sku": "DOWNY-GARDEN-25ML",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'downy palmolive dove dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "palmolive",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'downy palmolive dove dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dove",
+      "productName": "Dove Beauty Bar Pink",
+      "genericName": "Product",
+      "localName": "soap",
+      "sku": "DOVE-PINK-135G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 78.0,
+      "totalPrice": 156.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'downy palmolive dove dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 189.0,
+    "totalItems": 4,
+    "brandedAmount": 189.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 4.58,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "downy palmolive dove dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:19:16.544666.000Z"
+  },
+  "processingTime": 14.75,
+  "edgeVersion": "v2.0.0-stt-only"
+}

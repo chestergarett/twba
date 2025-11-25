@@ -1,0 +1,162 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "809871a1-86c5-4073-ba3b-0162dc79618b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Colgate": 0.95,
+      "Marlboro": 0.85,
+      "Magic": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "meron bang colgate isa marlborong pack"
+      },
+      {
+        "brand": "Marlboro",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.85,
+        "detection_type": "exact_match",
+        "context": "bang colgate isa marlborong pack magic na"
+      },
+      {
+        "brand": "Magic",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "isa marlborong pack magic na gatas"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.95,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Marlboro",
+            "confidence": 0.85,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Magic",
+            "confidence": 0.95,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang colgate isa marlborong pack'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Marlboro",
+      "productName": "Marlboro Gold Round Corner 20's",
+      "genericName": "Product",
+      "localName": "marlboro",
+      "sku": "MARLBORO-GOLD-20S",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 176.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.85,
+      "brandConfidence": 0.83,
+      "suggestedBrands": null,
+      "notes": "STT: 'bang colgate isa marlborong pack magic na'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 261.0,
+    "totalItems": 2,
+    "brandedAmount": 261.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.66,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron bang colgate isa marlborong pack magic na gatas",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:21:43.063253.000Z"
+  },
+  "processingTime": 14.72,
+  "edgeVersion": "v2.0.0-stt-only"
+}

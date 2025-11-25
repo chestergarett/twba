@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "aefc46c0-bf3b-4e18-be2b-36a4636ed4c7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cherry Prepaid": 0.89,
+      "Marlboro": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cherry Prepaid",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "cherry prepaid tatlo marlboro"
+      },
+      {
+        "brand": "Marlboro",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "cherry prepaid tatlo marlboro"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Services": {
+        "branded": [
+          {
+            "brand": "Cherry Prepaid",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Marlboro",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cherry Prepaid",
+      "productName": "Cherry Prepaid Load 100",
+      "genericName": "Product",
+      "localName": "cherry",
+      "sku": "CHERRYPREPAID-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'cherry prepaid tatlo marlboro'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Marlboro",
+      "productName": "Marlboro Gold Round Corner 20's",
+      "genericName": "Product",
+      "localName": "marlboro",
+      "sku": "MARLBORO-GOLD-20S",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 528.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'cherry prepaid tatlo marlboro'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 828.0,
+    "totalItems": 6,
+    "brandedAmount": 828.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 11.6,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cherry prepaid tatlo marlboro",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T18:34:06.769672.000Z"
+  },
+  "processingTime": 9.99,
+  "edgeVersion": "v2.0.0-stt-only"
+}

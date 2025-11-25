@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "090585e0-9d61-424f-a301-0ba94d7204c8",
+  "brandDetection": {
+    "detectedBrands": {
+      "Century Tuna": 0.95,
+      "Sprite": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Century Tuna",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "century tuna dalawa pabilin po ng sprite yung mala..."
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "pabilin po ng sprite yung malaki na"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Century Tuna",
+            "confidence": 0.95,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.95,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Century Tuna",
+      "productName": "Century Tuna Caldereta",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "CENTURY-TUNA-CALDERETA-180G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 90.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.94,
+      "suggestedBrands": null,
+      "notes": "STT: 'century tuna dalawa pabilin po ng sprite yung mala...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.9,
+      "suggestedBrands": null,
+      "notes": "STT: 'pabilin po ng sprite yung malaki na'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 118.0,
+    "totalItems": 3,
+    "brandedAmount": 118.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "century tuna dalawa pabilin po ng sprite yung malaki na gatas",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T14:59:39.878255.000Z"
+  },
+  "processingTime": 8.83,
+  "edgeVersion": "v2.0.0-stt-only"
+}

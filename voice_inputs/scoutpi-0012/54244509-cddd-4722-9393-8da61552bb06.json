@@ -1,0 +1,143 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "54244509-cddd-4722-9393-8da61552bb06",
+  "brandDetection": {
+    "detectedBrands": {
+      "C2": 0.89,
+      "Del Monte": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "C2",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "C2 tatlo Del Monte"
+      },
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "C2 tatlo Del Monte isa softdrinks dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "C2",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "C2",
+      "productName": "C2 Green Tea Apple 500ml",
+      "genericName": "Product",
+      "localName": "c2",
+      "sku": "C2-APPLE-500ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 33.0,
+      "totalPrice": 99.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'C2 tatlo Del Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Juice Drink Four Seasons",
+      "genericName": "Product",
+      "localName": "softdrink",
+      "sku": "DELMONTE-JUICE-DRINK-FOUR-SEASONS-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 81.9,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'C2 tatlo Del Monte isa softdrinks dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 180.9,
+    "totalItems": 6,
+    "brandedAmount": 180.9,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "C2 tatlo Del Monte isa softdrinks dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:33:49.980955.000Z"
+  },
+  "processingTime": 11.56,
+  "edgeVersion": "v2.0.0-stt-only"
+}

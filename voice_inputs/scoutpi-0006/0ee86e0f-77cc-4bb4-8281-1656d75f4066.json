@@ -1,0 +1,182 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "0ee86e0f-77cc-4bb4-8281-1656d75f4066",
+  "brandDetection": {
+    "detectedBrands": {
+      "Star Margarine": 0.83,
+      "Lucky Me": 0.83,
+      "Datu Puti": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Star Margarine",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Star margarine isa Lucky me dalawa Datu puti pabil..."
+      },
+      {
+        "brand": "Lucky Me",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Star margarine isa Lucky me dalawa Datu puti pabil..."
+      },
+      {
+        "brand": "Datu Puti",
+        "category": "Cooking Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Star margarine isa Lucky me dalawa Datu puti pabil..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Cooking Essentials": {
+        "branded": [
+          {
+            "brand": "Star Margarine",
+            "confidence": 0.83,
+            "quantity": 3
+          },
+          {
+            "brand": "Datu Puti",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Lucky Me",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Star Margarine",
+      "productName": "Star Margarine Classic",
+      "genericName": "Product",
+      "localName": "star",
+      "sku": "STARMARGARINE-CLASSIC-250G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 68.25,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Star margarine isa Lucky me dalawa Datu puti pabil...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Lucky Me",
+      "productName": "Lucky Me Beef na Beef",
+      "genericName": "Product",
+      "localName": "pancit canton",
+      "sku": "LUCKY-BEEF-MAMI-70G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 36.0,
+      "category": "Instant Foods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Star margarine isa Lucky me dalawa Datu puti pabil...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Datu Puti",
+      "productName": "Datu Puti Vinegar Large",
+      "genericName": "Product",
+      "localName": "datu",
+      "sku": "DATU-PUTI-VINEGAR-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 35.0,
+      "totalPrice": 105.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Star margarine isa Lucky me dalawa Datu puti pabil...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 209.25,
+    "totalItems": 9,
+    "brandedAmount": 209.25,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Star margarine isa Lucky me dalawa Datu puti pabili po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:21:48.706754.000Z"
+  },
+  "processingTime": 13.29,
+  "edgeVersion": "v2.0.0-stt-only"
+}

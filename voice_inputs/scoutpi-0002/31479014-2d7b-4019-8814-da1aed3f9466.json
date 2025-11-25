@@ -1,0 +1,99 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "31479014-2d7b-4019-8814-da1aed3f9466",
+  "brandDetection": {
+    "detectedBrands": {
+      "Globe": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Globe",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "globe tatlo may globe"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Services": {
+        "branded": [
+          {
+            "brand": "Globe",
+            "confidence": 0.89,
+            "quantity": 5
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Globe",
+      "productName": "Globe Load 100",
+      "genericName": "Product",
+      "localName": "globe",
+      "sku": "GLOBE-LOAD-100",
+      "quantity": 5,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 500.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'globe tatlo may globe'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 500.0,
+    "totalItems": 5,
+    "brandedAmount": 500.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.72,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "globe tatlo may globe ba? sige dalawa globe",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T07:17:52.430794.000Z"
+  },
+  "processingTime": 5.89,
+  "edgeVersion": "v2.0.0-stt-only"
+}

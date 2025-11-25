@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ef43931e-d510-437b-9f27-2cdab2c974d5",
+  "brandDetection": {
+    "detectedBrands": {
+      "Century Tuna": 0.77,
+      "Bear Brand": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Century Tuna",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "century tuna isa bear brand tatlo dalawang century..."
+      },
+      {
+        "brand": "Bear Brand",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "century tuna isa bear brand tatlo dalawang century..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Century Tuna",
+            "confidence": 0.77,
+            "quantity": 5
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Bear Brand",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Century Tuna",
+      "productName": "Century Tuna Caldereta",
+      "genericName": "Product",
+      "localName": "century",
+      "sku": "CENTURY-TUNA-CALDERETA-180G",
+      "quantity": 5,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 225.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'century tuna isa bear brand tatlo dalawang century...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Bear Brand",
+      "productName": "Bear Brand Junior Milk 150g",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BEAR-BRAND-JUNIOR-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 68.5,
+      "totalPrice": 205.5,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'century tuna isa bear brand tatlo dalawang century...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 430.5,
+    "totalItems": 8,
+    "brandedAmount": 430.5,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 8,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "century tuna isa bear brand tatlo dalawang century tuna",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T09:12:10.098656.000Z"
+  },
+  "processingTime": 11.73,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,168 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d4e5e7d9-a292-47de-b166-c193c133c206",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ariel": 0.79,
+      "Palmolive": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ariel",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.79,
+        "detection_type": "exact_match",
+        "context": "isa arielng pack tide, mas"
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "tide, mas malaki palmolive, pang shampoo"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Ariel",
+            "confidence": 0.79,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palmolive",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ariel",
+      "productName": "Ariel Powder",
+      "genericName": "Product",
+      "localName": "ariel",
+      "sku": "ARIEL-POWDER-90G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 15.0,
+      "totalPrice": 15.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.79,
+      "brandConfidence": 0.8,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa arielng pack tide, mas'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'tide, mas malaki palmolive, pang shampoo'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tide",
+      "productName": "Tide Detergent Bar",
+      "genericName": "Product",
+      "localName": "tide",
+      "sku": "TIDE-BAR-125G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 15.0,
+      "totalPrice": 15.0,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa arielng pack tide, mas malaki palmolive,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 55.0,
+    "totalItems": 3,
+    "brandedAmount": 55.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 8.66,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "isa arielng pack tide, mas malaki palmolive, pang shampoo",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:15:33.073411.000Z"
+  },
+  "processingTime": 13.53,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,182 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "b0b29b17-9fe3-4b4e-900d-3f679cb27a3f",
+  "brandDetection": {
+    "detectedBrands": {
+      "Del Monte": 0.83,
+      "Sprite": 0.83,
+      "Coca-Cola": 0.22
+    },
+    "explicitMentions": [
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "del monte juice dalawang sprite isang coke lang"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "monte juice dalawang sprite isang coke lang"
+      },
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.22,
+        "detection_type": "exact_match",
+        "context": "del monte juice dalawang sprite isang coke lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.83,
+            "quantity": 3
+          },
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.22,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Fruit Cocktail",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "DELMONTE-FRUIT-COCKTAIL-432G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 42.0,
+      "totalPrice": 42.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'del monte juice dalawang sprite isang coke lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 1.5L",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 79.0,
+      "totalPrice": 237.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'monte juice dalawang sprite isang coke lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola 355ml Can",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "COKE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.22,
+      "brandConfidence": 0.515,
+      "suggestedBrands": null,
+      "notes": "STT: 'del monte juice dalawang sprite isang coke lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 307.0,
+    "totalItems": 5,
+    "brandedAmount": 307.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "del monte juice dalawang sprite isang coke lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T09:11:48.723371.000Z"
+  },
+  "processingTime": 15.96,
+  "edgeVersion": "v2.0.0-stt-only"
+}

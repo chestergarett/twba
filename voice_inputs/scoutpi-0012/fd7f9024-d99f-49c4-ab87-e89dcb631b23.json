@@ -1,0 +1,99 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "fd7f9024-d99f-49c4-ab87-e89dcb631b23",
+  "brandDetection": {
+    "detectedBrands": {
+      "Del Monte": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "may Del Monte"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Fruit Cocktail",
+      "genericName": "Product",
+      "localName": "del",
+      "sku": "DELMONTE-FRUIT-COCKTAIL-432G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 42.0,
+      "totalPrice": 42.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.78,
+      "suggestedBrands": null,
+      "notes": "STT: 'may Del Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 42.0,
+    "totalItems": 1,
+    "brandedAmount": 42.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "may Del Monte",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:24:58.268067.000Z"
+  },
+  "processingTime": 6.05,
+  "edgeVersion": "v2.0.0-stt-only"
+}

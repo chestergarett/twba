@@ -1,0 +1,138 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "db4e8db2-040a-4ea4-a39f-4ed63e9d8d98",
+  "brandDetection": {
+    "detectedBrands": {
+      "Century Tuna": 0.77,
+      "Marca Leon": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Century Tuna",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "mga dalawa po Century Tuna isa yung Marca Leon"
+      },
+      {
+        "brand": "Marca Leon",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "mga dalawa po Century Tuna isa yung Marca Leon"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Century Tuna",
+            "confidence": 0.77,
+            "quantity": 3
+          },
+          {
+            "brand": "Marca Leon",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Century Tuna",
+      "productName": "Century Tuna Caldereta",
+      "genericName": "Product",
+      "localName": "century",
+      "sku": "CENTURY-TUNA-CALDERETA-180G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 135.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'mga dalawa po Century Tuna isa yung Marca Leon'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Marca Leon",
+      "productName": "Marca Leon Canola Oil",
+      "genericName": "Product",
+      "localName": "marca",
+      "sku": "MARCALEON-CANOLA-OIL-1L",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.75,
+      "totalPrice": 22.75,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'mga dalawa po Century Tuna isa yung Marca Leon'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 157.75,
+    "totalItems": 4,
+    "brandedAmount": 157.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "mga dalawa po Century Tuna isa yung Marca Leon",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T16:57:57.186753.000Z"
+  },
+  "processingTime": 10.66,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,99 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "f6706db8-1ea5-4163-9e1d-209ee517a93c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cobra": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cobra",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cobra tatlo lang po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Cobra",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 60.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.805,
+      "suggestedBrands": null,
+      "notes": "STT: 'cobra tatlo lang po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 60.0,
+    "totalItems": 3,
+    "brandedAmount": 60.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 11.5,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cobra tatlo lang po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:06:05.188005.000Z"
+  },
+  "processingTime": 5.98,
+  "edgeVersion": "v2.0.0-stt-only"
+}

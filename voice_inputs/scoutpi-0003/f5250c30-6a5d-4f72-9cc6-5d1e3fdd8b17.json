@@ -1,0 +1,143 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "f5250c30-6a5d-4f72-9cc6-5d1e3fdd8b17",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oreo": 0.83,
+      "Bravo": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oreo",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "bang bravo yung oreo po dalawa oreo,"
+      },
+      {
+        "brand": "Bravo",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "meron bang bravo yung oreo po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Oreo",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Bravo",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oreo",
+      "productName": "Oreo Original",
+      "genericName": "Product",
+      "localName": "oreo",
+      "sku": "OREO-ORIGINAL-33G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 20.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'bang bravo yung oreo po dalawa oreo,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Bravo",
+      "productName": "Bravo Sweet Crackers",
+      "genericName": "Product",
+      "localName": "bravo",
+      "sku": "BRAVO-ORIGINAL-30G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.81,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron bang bravo yung oreo po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 27.0,
+    "totalItems": 3,
+    "brandedAmount": 27.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.76,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron bang bravo yung oreo po dalawa oreo, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T15:42:35.969230.000Z"
+  },
+  "processingTime": 17.08,
+  "edgeVersion": "v2.0.0-stt-only"
+}

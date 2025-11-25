@@ -1,0 +1,187 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "64fc9879-6af3-45d3-8245-8374c2face55",
+  "brandDetection": {
+    "detectedBrands": {
+      "Del Monte": 0.98,
+      "Oishi": 0.98,
+      "Eight O'Clock": 0.98
+    },
+    "explicitMentions": [
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "del monte na juice oishi chips meron eight o'clock..."
+      },
+      {
+        "brand": "Oishi",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "monte na juice oishi chips meron eight"
+      },
+      {
+        "brand": "Eight O'Clock",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.98,
+        "detection_type": "exact_match",
+        "context": "del monte na juice oishi chips meron eight o'clock..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Oishi",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Eight O'Clock",
+            "confidence": 0.98,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Fruit Cocktail",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "DELMONTE-FRUIT-COCKTAIL-432G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 42.0,
+      "totalPrice": 42.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.925,
+      "suggestedBrands": null,
+      "notes": "STT: 'del monte na juice oishi chips meron eight o'clock...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Oishi",
+      "productName": "Oishi Choco Chug",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "OISHI-CHOCO-CHUG-250ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.925,
+      "suggestedBrands": null,
+      "notes": "STT: 'monte na juice oishi chips meron eight'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Eight O'Clock",
+      "productName": "Eight O'Clock Orange",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "EIGHT-OCLOCK-ORANGE-20G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.98,
+      "brandConfidence": 0.925,
+      "suggestedBrands": null,
+      "notes": "STT: 'del monte na juice oishi chips meron eight o'clock...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 76.3,
+    "totalItems": 3,
+    "brandedAmount": 76.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "del monte na juice oishi chips meron eight o'clock kape isa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T05:02:09.594271.000Z"
+  },
+  "processingTime": 14.78,
+  "edgeVersion": "v2.0.0-stt-only"
+}

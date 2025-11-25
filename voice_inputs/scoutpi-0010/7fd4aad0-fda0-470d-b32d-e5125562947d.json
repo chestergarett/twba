@@ -1,0 +1,182 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "7fd4aad0-fda0-470d-b32d-e5125562947d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Dole": 0.74,
+      "Eight O'Clock": 0.74,
+      "Tang": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Dole",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "cold tang dole tubig eight o'clock"
+      },
+      {
+        "brand": "Eight O'Clock",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "cold tang dole tubig eight o'clock malamig"
+      },
+      {
+        "brand": "Tang",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "cold tang dole tubig eight"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Dole",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Eight O'Clock",
+            "confidence": 0.74,
+            "quantity": 1
+          },
+          {
+            "brand": "Tang",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Dole",
+      "productName": "Dole Pineapple Juice",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "DOLE-PINEAPPLE-JUICE-240ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 27.3,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold tang dole tubig eight o'clock'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Eight O'Clock",
+      "productName": "Eight O'Clock Orange",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "EIGHT-OCLOCK-ORANGE-20G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold tang dole tubig eight o'clock malamig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Tang",
+      "productName": "Tang Orange",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "TANG-ORANGE-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold tang dole tubig eight'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 44.3,
+    "totalItems": 3,
+    "brandedAmount": 44.3,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "cold tang dole tubig eight o'clock malamig",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:06:44.490863.000Z"
+  },
+  "processingTime": 14.85,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,138 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "a1bfc003-991d-49eb-9f15-1aac9b71d4b0",
+  "brandDetection": {
+    "detectedBrands": {
+      "Milkmaid": 0.8,
+      "Birch Tree": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Milkmaid",
+        "category": "Pantry Staples & Groceries",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "cold drinks Milkmaid Birch Tree"
+      },
+      {
+        "brand": "Birch Tree",
+        "category": "Pantry Staples & Groceries",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "cold drinks Milkmaid Birch Tree"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Pantry Staples & Groceries": {
+        "branded": [
+          {
+            "brand": "Milkmaid",
+            "confidence": 0.8,
+            "quantity": 1
+          },
+          {
+            "brand": "Birch Tree",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Milkmaid",
+      "productName": "Milkmaid Condensed Milk",
+      "genericName": "Product",
+      "localName": "milk",
+      "sku": "MILKMAID-CONDENSED-MILK-300ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 25.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold drinks Milkmaid Birch Tree'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Birch Tree",
+      "productName": "Birch Tree Milk",
+      "genericName": "Product",
+      "localName": "milk",
+      "sku": "BIRCH-TREE-33G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold drinks Milkmaid Birch Tree'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 41.0,
+    "totalItems": 2,
+    "brandedAmount": 41.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "cold drinks Milkmaid Birch Tree",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:52:19.182056.000Z"
+  },
+  "processingTime": 11.0,
+  "edgeVersion": "v2.0.0-stt-only"
+}

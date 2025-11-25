@@ -1,0 +1,157 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "d1499d2a-769c-42d7-b7cd-b39199202054",
+  "brandDetection": {
+    "detectedBrands": {
+      "Combi": 0.68,
+      "Nissin": 0.68,
+      "Dewberry": 0.134
+    },
+    "explicitMentions": [
+      {
+        "brand": "Combi",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "combi ba yan? nissin"
+      },
+      {
+        "brand": "Nissin",
+        "category": "Instant Foods",
+        "subcategory": "instant_noodles",
+        "confidence": 0.68,
+        "detection_type": "exact_match",
+        "context": "combi ba yan? nissin wala na eh,"
+      },
+      {
+        "brand": "Dewberry",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.134,
+        "detection_type": "exact_match",
+        "context": "combi ba yan? nissin wala na eh, dewb"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Combi",
+            "confidence": 0.68,
+            "quantity": 1
+          },
+          {
+            "brand": "Dewberry",
+            "confidence": 0.134,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Instant Foods": {
+        "branded": [
+          {
+            "brand": "Nissin",
+            "confidence": 0.68,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Combi",
+      "productName": "Combi Vanilla",
+      "genericName": "Product",
+      "localName": "combi",
+      "sku": "COMBI-VANILLA-39G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Candies & Sweets",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.68,
+      "brandConfidence": 0.735,
+      "suggestedBrands": null,
+      "notes": "STT: 'combi ba yan? nissin'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Dewberry",
+      "productName": "Dewberry Blueberry",
+      "genericName": "Product",
+      "localName": "dewberry",
+      "sku": "DEWBERRY-BLUEBERRY-33G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.134,
+      "brandConfidence": 0.432,
+      "suggestedBrands": null,
+      "notes": "STT: 'combi ba yan? nissin wala na eh, dewb'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 16.0,
+    "totalItems": 2,
+    "brandedAmount": 16.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 3.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "combi ba yan? nissin wala na eh, dewb",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T13:52:39.421624.000Z"
+  },
+  "processingTime": 13.82,
+  "edgeVersion": "v2.0.0-stt-only"
+}

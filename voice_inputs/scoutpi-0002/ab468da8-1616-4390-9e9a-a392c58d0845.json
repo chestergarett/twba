@@ -1,0 +1,187 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ab468da8-1616-4390-9e9a-a392c58d0845",
+  "brandDetection": {
+    "detectedBrands": {
+      "Jack 'n Jill": 0.86,
+      "Smart": 0.86,
+      "Safeguard": 0.86
+    },
+    "explicitMentions": [
+      {
+        "brand": "Jack 'n Jill",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "meron ba Jack 'n Jill Smart na prepaid yung Safegu..."
+      },
+      {
+        "brand": "Smart",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "Jack 'n Jill Smart na prepaid yung"
+      },
+      {
+        "brand": "Safeguard",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.86,
+        "detection_type": "exact_match",
+        "context": "na prepaid yung Safeguard, meron?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Jack 'n Jill",
+            "confidence": 0.86,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Smart",
+            "confidence": 0.86,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Safeguard",
+            "confidence": 0.86,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Jack 'n Jill",
+      "productName": "V-Cut Potato Chips BBQ",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "JACK-VCUT-BBQ-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 22.0,
+      "totalPrice": 22.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'meron ba Jack 'n Jill Smart na prepaid yung Safegu...'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Smart",
+      "productName": "Smart Load 100",
+      "genericName": "Product",
+      "localName": "smart",
+      "sku": "SMART-LOAD-100",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 100.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'Jack 'n Jill Smart na prepaid yung'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Safeguard",
+      "productName": "Safeguard Classic Beige",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "SAFEGUARD-BEIGE-85G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 40.08,
+      "totalPrice": 40.08,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.86,
+      "brandConfidence": 0.825,
+      "suggestedBrands": null,
+      "notes": "STT: 'na prepaid yung Safeguard, meron?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 162.08,
+    "totalItems": 3,
+    "brandedAmount": 162.08,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "meron ba Jack 'n Jill Smart na prepaid yung Safeguard, meron?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T05:55:50.034047.000Z"
+  },
+  "processingTime": 17.28,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,157 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "b207981e-a22f-4eed-b772-483fbf85a143",
+  "brandDetection": {
+    "detectedBrands": {
+      "Coca-Cola": 0.214,
+      "C2": 0.77,
+      "Pepsi": 0.67
+    },
+    "explicitMentions": [
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "Coca tatlo Colang isa Pepsing C2, dalawa"
+      },
+      {
+        "brand": "C2",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Colang isa Pepsing C2, dalawa"
+      },
+      {
+        "brand": "Pepsi",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.67,
+        "detection_type": "exact_match",
+        "context": "tatlo Colang isa Pepsing C2, dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.214,
+            "quantity": 4
+          },
+          {
+            "brand": "Pepsi",
+            "confidence": 0.67,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "C2",
+            "confidence": 0.77,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola Regular 1.5L",
+      "genericName": "Product",
+      "localName": "pepsi",
+      "sku": "COKE-REG-1.5L",
+      "quantity": 4,
+      "unit": "pc",
+      "unitPrice": 88.0,
+      "totalPrice": 352.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.452,
+      "suggestedBrands": null,
+      "notes": "STT: 'Coca tatlo Colang isa Pepsing C2, dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "C2",
+      "productName": "C2 Green Tea Apple 355ml",
+      "genericName": "Product",
+      "localName": "pepsi",
+      "sku": "C2-APPLE-355ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 54.6,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Colang isa Pepsing C2, dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 406.6,
+    "totalItems": 6,
+    "brandedAmount": 406.6,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Coca tatlo Colang isa Pepsing C2, dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T07:10:16.651585.000Z"
+  },
+  "processingTime": 14.63,
+  "edgeVersion": "v2.0.0-stt-only"
+}

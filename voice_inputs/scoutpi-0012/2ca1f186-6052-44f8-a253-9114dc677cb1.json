@@ -1,0 +1,143 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "2ca1f186-6052-44f8-a253-9114dc677cb1",
+  "brandDetection": {
+    "detectedBrands": {
+      "Gatorade": 0.77,
+      "Del Monte": 0.432
+    },
+    "explicitMentions": [
+      {
+        "brand": "Gatorade",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "dalawa Gatorade Extra isa Joss"
+      },
+      {
+        "brand": "Del Monte",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.432,
+        "detection_type": "exact_match",
+        "context": "dalawa Gatorade Extra isa Joss Del tatlo Monte"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Gatorade",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Del Monte",
+            "confidence": 0.432,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Gatorade",
+      "productName": "Gatorade Blue Bolt",
+      "genericName": "Product",
+      "localName": "gatorade",
+      "sku": "GATORADE-BLUE-500ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 45.0,
+      "totalPrice": 135.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa Gatorade Extra isa Joss'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Del Monte",
+      "productName": "Del Monte Juice Drink Four Seasons",
+      "genericName": "Product",
+      "localName": "del",
+      "sku": "DELMONTE-JUICE-DRINK-FOUR-SEASONS-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 81.9,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.432,
+      "brandConfidence": 0.621,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa Gatorade Extra isa Joss Del tatlo Monte'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 216.9,
+    "totalItems": 6,
+    "brandedAmount": 216.9,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "dalawa Gatorade Extra isa Joss Del tatlo Monte",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:35:55.930723.000Z"
+  },
+  "processingTime": 11.15,
+  "edgeVersion": "v2.0.0-stt-only"
+}

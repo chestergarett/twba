@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "cca81035-c75b-4e34-9d5e-26807e56ba0c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Nestea": 0.74,
+      "Café Puro": 0.74
+    },
+    "explicitMentions": [
+      {
+        "brand": "Nestea",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "sige Nestea Café Puro, cold"
+      },
+      {
+        "brand": "Café Puro",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.74,
+        "detection_type": "exact_match",
+        "context": "sige Nestea Café Puro, cold yung malaki Nestea"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nestea",
+            "confidence": 0.74,
+            "quantity": 1
+          },
+          {
+            "brand": "Café Puro",
+            "confidence": 0.74,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Nestea",
+      "productName": "Nestea Apple Iced Tea",
+      "genericName": "Product",
+      "localName": "nestea",
+      "sku": "NESTEA-APPLE-25G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 9.0,
+      "totalPrice": 9.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'sige Nestea Café Puro, cold'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Café Puro",
+      "productName": "Café Puro Barako",
+      "genericName": "Product",
+      "localName": "café",
+      "sku": "CAFE-PURO-BARAKO",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.74,
+      "brandConfidence": 0.765,
+      "suggestedBrands": null,
+      "notes": "STT: 'sige Nestea Café Puro, cold yung malaki Nestea'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 21.0,
+    "totalItems": 2,
+    "brandedAmount": 21.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "sige Nestea Café Puro, cold yung malaki Nestea",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T10:53:57.071881.000Z"
+  },
+  "processingTime": 9.33,
+  "edgeVersion": "v2.0.0-stt-only"
+}

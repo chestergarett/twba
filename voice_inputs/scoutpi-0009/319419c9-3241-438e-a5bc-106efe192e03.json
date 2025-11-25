@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "319419c9-3241-438e-a5bc-106efe192e03",
+  "brandDetection": {
+    "detectedBrands": {
+      "Bravo": 0.77,
+      "Cream-O": 0.456,
+      "V-Cut": 0.44
+    },
+    "explicitMentions": [
+      {
+        "brand": "Bravo",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Bravo? Cream O, wala?"
+      },
+      {
+        "brand": "Cream-O",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.456,
+        "detection_type": "exact_match",
+        "context": "Bravo? Cream O, wala? V isa Cut lang"
+      },
+      {
+        "brand": "V-Cut",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.44,
+        "detection_type": "exact_match",
+        "context": "Bravo? Cream O, wala? V isa Cut lang"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Bravo",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Cream-O",
+            "confidence": 0.456,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "V-Cut",
+            "confidence": 0.44,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Bravo",
+      "productName": "Bravo Sweet Crackers",
+      "genericName": "Product",
+      "localName": "bravo",
+      "sku": "BRAVO-ORIGINAL-30G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 7.0,
+      "totalPrice": 7.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'Bravo? Cream O, wala?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cream-O",
+      "productName": "Cream-O Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "CREAM-O-CHOCO-30G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 8.0,
+      "totalPrice": 8.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.456,
+      "brandConfidence": 0.633,
+      "suggestedBrands": null,
+      "notes": "STT: 'Bravo? Cream O, wala? V isa Cut lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "V-Cut",
+      "productName": "V-Cut Barbecue Chips",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "V-CUT-BARBECUE-CHIPS-60G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.44,
+      "brandConfidence": 0.625,
+      "suggestedBrands": null,
+      "notes": "STT: 'Bravo? Cream O, wala? V isa Cut lang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 31.0,
+    "totalItems": 3,
+    "brandedAmount": 31.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.82,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Bravo? Cream O, wala? V isa Cut lang",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T05:07:05.558555.000Z"
+  },
+  "processingTime": 17.92,
+  "edgeVersion": "v2.0.0-stt-only"
+}

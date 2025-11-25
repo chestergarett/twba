@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "77e50b27-b1ad-4692-9d3b-37c885a0fb4c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Birch Tree": 0.89,
+      "Milo": 0.89,
+      "Sprite": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Birch Tree",
+        "category": "Pantry Staples & Groceries",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "birch tree isang milo dalawa po sprite, tubig mero..."
+      },
+      {
+        "brand": "Milo",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "birch tree isang milo dalawa po sprite,"
+      },
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "milo dalawa po sprite, tubig meron"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Pantry Staples & Groceries": {
+        "branded": [
+          {
+            "brand": "Birch Tree",
+            "confidence": 0.89,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Milo",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Birch Tree",
+      "productName": "Birch Tree Milk",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "BIRCH-TREE-33G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 16.0,
+      "totalPrice": 16.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'birch tree isang milo dalawa po sprite, tubig mero...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Milo",
+      "productName": "Milo Chocolate Drink Pack",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "MILO-150G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 65.0,
+      "totalPrice": 195.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'birch tree isang milo dalawa po sprite,'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 1.5L",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 79.0,
+      "totalPrice": 237.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'milo dalawa po sprite, tubig meron'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 448.0,
+    "totalItems": 7,
+    "brandedAmount": 448.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 7,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 8.6,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "birch tree isang milo dalawa po sprite, tubig meron",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T12:54:56.568760.000Z"
+  },
+  "processingTime": 13.61,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,187 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "784532f4-dc83-44bd-8117-fa2c1edd5c9d",
+  "brandDetection": {
+    "detectedBrands": {
+      "Head & Shoulders": 0.494,
+      "Surf": 0.83,
+      "Colgate": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Head & Shoulders",
+        "category": "Hair Care",
+        "subcategory": "anti_dandruff_shampoo",
+        "confidence": 0.494,
+        "detection_type": "exact_match",
+        "context": "head and shoulders surf isang pack colgate toothpa..."
+      },
+      {
+        "brand": "Surf",
+        "category": "Laundry",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "head and shoulders surf isang pack colgate"
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "surf isang pack colgate toothpaste"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Head & Shoulders",
+            "confidence": 0.494,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Laundry": {
+        "branded": [
+          {
+            "brand": "Surf",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Head & Shoulders",
+      "productName": "Head & Shoulders Classic Clean",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "HEAD-SHOULDERS-CLASSIC-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 145.0,
+      "totalPrice": 145.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.494,
+      "brandConfidence": 0.652,
+      "suggestedBrands": null,
+      "notes": "STT: 'head and shoulders surf isang pack colgate toothpa...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Surf",
+      "productName": "Surf Bar Kalamansi Large",
+      "genericName": "Product",
+      "localName": "surf",
+      "sku": "SURF-BAR-KALAMANSI-360G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 21.74,
+      "totalPrice": 21.74,
+      "category": "Laundry",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'head and shoulders surf isang pack colgate'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'surf isang pack colgate toothpaste'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 251.74,
+    "totalItems": 3,
+    "brandedAmount": 251.74,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.74,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "head and shoulders surf isang pack colgate toothpaste",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:50:50.886860.000Z"
+  },
+  "processingTime": 13.43,
+  "edgeVersion": "v2.0.0-stt-only"
+}

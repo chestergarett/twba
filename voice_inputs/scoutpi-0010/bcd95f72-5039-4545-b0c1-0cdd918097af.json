@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "bcd95f72-5039-4545-b0c1-0cdd918097af",
+  "brandDetection": {
+    "detectedBrands": {
+      "V-Cut": 0.568
+    },
+    "explicitMentions": [
+      {
+        "brand": "V-Cut",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.568,
+        "detection_type": "exact_match",
+        "context": "pabilo ng vcut dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "V-Cut",
+            "confidence": 0.568,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "V-Cut",
+      "productName": "V-Cut Barbecue Chips",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "V-CUT-BARBECUE-CHIPS-60G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 32.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.568,
+      "brandConfidence": 0.689,
+      "suggestedBrands": null,
+      "notes": "STT: 'pabilo ng vcut dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 32.0,
+    "totalItems": 2,
+    "brandedAmount": 32.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "pabilo ng vcut dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:27:39.463233.000Z"
+  },
+  "processingTime": 7.33,
+  "edgeVersion": "v2.0.0-stt-only"
+}

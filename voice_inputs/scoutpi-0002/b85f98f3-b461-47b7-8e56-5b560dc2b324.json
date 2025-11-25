@@ -1,0 +1,182 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "b85f98f3-b461-47b7-8e56-5b560dc2b324",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cream Silk": 0.77,
+      "Colgate": 0.77,
+      "Head & Shoulders": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cream Silk",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cream silk po colgate isang piraso head & shoulder..."
+      },
+      {
+        "brand": "Colgate",
+        "category": "Oral Care",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cream silk po colgate isang piraso head"
+      },
+      {
+        "brand": "Head & Shoulders",
+        "category": "Hair Care",
+        "subcategory": "anti_dandruff_shampoo",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "cream silk po colgate isang piraso head & shoulder..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Cream Silk",
+            "confidence": 0.77,
+            "quantity": 1
+          },
+          {
+            "brand": "Head & Shoulders",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Oral Care": {
+        "branded": [
+          {
+            "brand": "Colgate",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cream Silk",
+      "productName": "Cream Silk Hair Fall Defense",
+      "genericName": "Product",
+      "localName": "cream",
+      "sku": "CREAM-SILK-GREEN-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 115.0,
+      "totalPrice": 115.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream silk po colgate isang piraso head & shoulder...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Colgate",
+      "productName": "Colgate Max Fresh",
+      "genericName": "Product",
+      "localName": "toothpaste",
+      "sku": "COLGATE-MAX-FRESH-150G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 85.0,
+      "totalPrice": 85.0,
+      "category": "Oral Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream silk po colgate isang piraso head'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Head & Shoulders",
+      "productName": "Head & Shoulders Classic Clean",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "HEAD-SHOULDERS-CLASSIC-180ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 145.0,
+      "totalPrice": 145.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'cream silk po colgate isang piraso head & shoulder...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 345.0,
+    "totalItems": 3,
+    "brandedAmount": 345.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 5.9,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cream silk po colgate isang piraso head & shoulders ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:56:42.554288.000Z"
+  },
+  "processingTime": 15.57,
+  "edgeVersion": "v2.0.0-stt-only"
+}

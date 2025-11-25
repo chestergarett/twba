@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d4c8d77e-65e5-445b-b77a-10be6bb3ba0b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Pepsi": 0.67,
+      "Nescafé": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Pepsi",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.67,
+        "detection_type": "exact_match",
+        "context": "isa pepsing nasaan nescafé? dalawang"
+      },
+      {
+        "brand": "Nescafé",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "isa pepsing nasaan nescafé? dalawang ice cold"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Pepsi",
+            "confidence": 0.67,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Nescafé",
+            "confidence": 0.77,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Pepsi",
+      "productName": "Pepsi Regular 1.5L",
+      "genericName": "Product",
+      "localName": "pepsi",
+      "sku": "PEPSI-REG-1.5L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 79.0,
+      "totalPrice": 237.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.67,
+      "brandConfidence": 0.68,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa pepsing nasaan nescafé? dalawang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Nescafé",
+      "productName": "Nescafé 3in1 Creamy Latte",
+      "genericName": "Product",
+      "localName": "pepsi",
+      "sku": "NESCAFE-3IN1-LATTE-27.5G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 8.75,
+      "totalPrice": 8.75,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa pepsing nasaan nescafé? dalawang ice cold'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 245.75,
+    "totalItems": 4,
+    "brandedAmount": 245.75,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.68,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "isa pepsing nasaan nescafé? dalawang ice cold",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:49:35.142486.000Z"
+  },
+  "processingTime": 9.61,
+  "edgeVersion": "v2.0.0-stt-only"
+}

@@ -1,0 +1,138 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "008fd782-0e80-41b5-a585-efa3bd8a8105",
+  "brandDetection": {
+    "detectedBrands": {
+      "Pantene": 0.95,
+      "Palmolive": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Pantene",
+        "category": "Hair Care",
+        "subcategory": "shampoo",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "pantene yung malaki palmolive"
+      },
+      {
+        "brand": "Palmolive",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "pantene yung malaki palmolive sabon po dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Pantene",
+            "confidence": 0.95,
+            "quantity": 2
+          },
+          {
+            "brand": "Palmolive",
+            "confidence": 0.95,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Pantene",
+      "productName": "Pantene Conditioner",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "PANTENE-CONDITIONER-180ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 135.0,
+      "totalPrice": 270.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'pantene yung malaki palmolive'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Palmolive",
+      "productName": "Palmolive Aloe & Olive",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "PALMOLIVE-ALOE-115G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 50.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'pantene yung malaki palmolive sabon po dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 320.0,
+    "totalItems": 4,
+    "brandedAmount": 320.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "pantene yung malaki palmolive sabon po dalawa pantene, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T04:19:20.160085.000Z"
+  },
+  "processingTime": 10.05,
+  "edgeVersion": "v2.0.0-stt-only"
+}

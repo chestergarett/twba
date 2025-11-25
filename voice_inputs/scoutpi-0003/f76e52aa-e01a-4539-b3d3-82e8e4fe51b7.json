@@ -1,0 +1,143 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "f76e52aa-e01a-4539-b3d3-82e8e4fe51b7",
+  "brandDetection": {
+    "detectedBrands": {
+      "Camel": 0.83,
+      "Cherry Prepaid": 0.284
+    },
+    "explicitMentions": [
+      {
+        "brand": "Camel",
+        "category": "Tobacco Products",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "camel po cherry isa"
+      },
+      {
+        "brand": "Cherry Prepaid",
+        "category": "Services",
+        "subcategory": "unspecified",
+        "confidence": 0.284,
+        "detection_type": "exact_match",
+        "context": "camel po cherry isa prepaid dalawa, please"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Tobacco Products": {
+        "branded": [
+          {
+            "brand": "Camel",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Services": {
+        "branded": [
+          {
+            "brand": "Cherry Prepaid",
+            "confidence": 0.284,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Camel",
+      "productName": "Camel Activate Purple 20s",
+      "genericName": "Product",
+      "localName": "camel",
+      "sku": "CAMEL-ACTIVATE-PURPLE-20S-20 STICKS",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 176.0,
+      "totalPrice": 528.0,
+      "category": "Tobacco Products",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'camel po cherry isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cherry Prepaid",
+      "productName": "Cherry Prepaid Load 100",
+      "genericName": "Product",
+      "localName": "cherry",
+      "sku": "CHERRYPREPAID-LOAD-100",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 100.0,
+      "totalPrice": 300.0,
+      "category": "Services",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.284,
+      "brandConfidence": 0.487,
+      "suggestedBrands": null,
+      "notes": "STT: 'camel po cherry isa prepaid dalawa, please'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 828.0,
+    "totalItems": 6,
+    "brandedAmount": 828.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "camel po cherry isa prepaid dalawa, please",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T20:04:53.475638.000Z"
+  },
+  "processingTime": 10.87,
+  "edgeVersion": "v2.0.0-stt-only"
+}

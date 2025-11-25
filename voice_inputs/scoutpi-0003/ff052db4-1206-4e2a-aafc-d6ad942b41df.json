@@ -1,0 +1,99 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "ff052db4-1206-4e2a-aafc-d6ad942b41df",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ovaltine": 0.8
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ovaltine",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.8,
+        "detection_type": "exact_match",
+        "context": "cold drinks Ovaltine ice tubig"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Ovaltine",
+            "confidence": 0.8,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ovaltine",
+      "productName": "Ovaltine Chocolate",
+      "genericName": "Product",
+      "localName": "tubig",
+      "sku": "OVALTINE-24G",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 10.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.8,
+      "brandConfidence": 0.795,
+      "suggestedBrands": null,
+      "notes": "STT: 'cold drinks Ovaltine ice tubig'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 10.0,
+    "totalItems": 1,
+    "brandedAmount": 10.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "cold drinks Ovaltine ice tubig",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T15:13:01.397047.000Z"
+  },
+  "processingTime": 9.3,
+  "edgeVersion": "v2.0.0-stt-only"
+}

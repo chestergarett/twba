@@ -1,0 +1,187 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "a643c783-e6cc-470b-8aa2-0e1f48cafefa",
+  "brandDetection": {
+    "detectedBrands": {
+      "Leslie's": 0.77,
+      "Nova": 0.77,
+      "Presto": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "Leslie's",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Leslie's Nova Presto, snacks"
+      },
+      {
+        "brand": "Nova",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Leslie's Nova Presto, snacks dalawa"
+      },
+      {
+        "brand": "Presto",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "Leslie's Nova Presto, snacks dalawa isa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Leslie's",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Nova",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Presto",
+            "confidence": 0.77,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Leslie's",
+      "productName": "Leslie's Clover Chips",
+      "genericName": "Product",
+      "localName": "leslie's",
+      "sku": "LESLIE'S-CLOVER-CHIPS-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Leslie's Nova Presto, snacks'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Nova",
+      "productName": "Nova Cheddar",
+      "genericName": "Product",
+      "localName": "nova",
+      "sku": "NOVA-CHEDDAR-40G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Leslie's Nova Presto, snacks dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Presto",
+      "productName": "Presto Cream Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "PRESTO-CHOCO-80G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 18.3,
+      "totalPrice": 54.9,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: 'Leslie's Nova Presto, snacks dalawa isa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 150.9,
+    "totalItems": 9,
+    "brandedAmount": 150.9,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Leslie's Nova Presto, snacks dalawa isa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T06:19:10.919818.000Z"
+  },
+  "processingTime": 13.88,
+  "edgeVersion": "v2.0.0-stt-only"
+}

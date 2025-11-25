@@ -1,0 +1,182 @@
+{
+  "storeId": "103",
+  "deviceId": "SCOUTPI-0003",
+  "timestamp": "",
+  "transactionId": "f20bfe89-71f6-490b-b213-73d33e1021bc",
+  "brandDetection": {
+    "detectedBrands": {
+      "Cobra": 0.83,
+      "Alaska": 0.73,
+      "Extra Joss": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Cobra",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Cobra isa isa Alaskang"
+      },
+      {
+        "brand": "Alaska",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.73,
+        "detection_type": "exact_match",
+        "context": "Cobra isa isa Alaskang lata Extra Joss"
+      },
+      {
+        "brand": "Extra Joss",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Cobra isa isa Alaskang lata Extra Joss dalawa"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Cobra",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Alaska",
+            "confidence": 0.73,
+            "quantity": 3
+          },
+          {
+            "brand": "Extra Joss",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 60.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'Cobra isa isa Alaskang'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Alaska",
+      "productName": "Alaska Fresh Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "ALASKA-FRESH-MILK-1L",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 75.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.73,
+      "brandConfidence": 0.71,
+      "suggestedBrands": null,
+      "notes": "STT: 'Cobra isa isa Alaskang lata Extra Joss'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Extra Joss",
+      "productName": "Extra Joss Energy Drink",
+      "genericName": "Product",
+      "localName": "extra",
+      "sku": "EXTRA-JOSS-4G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 7.0,
+      "totalPrice": 21.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'Cobra isa isa Alaskang lata Extra Joss dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 156.0,
+    "totalItems": 9,
+    "brandedAmount": 156.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Cobra isa isa Alaskang lata Extra Joss dalawa",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T17:43:06.581668.000Z"
+  },
+  "processingTime": 15.57,
+  "edgeVersion": "v2.0.0-stt-only"
+}

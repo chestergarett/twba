@@ -1,0 +1,138 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "5914260a-e02f-44ee-a4f8-57a07c74f445",
+  "brandDetection": {
+    "detectedBrands": {
+      "Selecta": 0.77,
+      "Great Taste": 0.214
+    },
+    "explicitMentions": [
+      {
+        "brand": "Selecta",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "[inaudible] Selecta isang litro Great"
+      },
+      {
+        "brand": "Great Taste",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.214,
+        "detection_type": "exact_match",
+        "context": "[inaudible] Selecta isang litro Great dalawa Taste..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Selecta",
+            "confidence": 0.77,
+            "quantity": 3
+          },
+          {
+            "brand": "Great Taste",
+            "confidence": 0.214,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Selecta",
+      "productName": "Selecta Fortified Milk Powder",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "SELECTA-FORTIFIED-MILK-POWDER-700G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 75.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.76,
+      "suggestedBrands": null,
+      "notes": "STT: '[inaudible] Selecta isang litro Great'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Great Taste",
+      "productName": "Great Taste White Crema 10-pack",
+      "genericName": "Product",
+      "localName": "great",
+      "sku": "GREAT-TASTE-WHITE-10PACK",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 77.78,
+      "totalPrice": 155.56,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.214,
+      "brandConfidence": 0.512,
+      "suggestedBrands": null,
+      "notes": "STT: '[inaudible] Selecta isang litro Great dalawa Taste...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 230.56,
+    "totalItems": 5,
+    "brandedAmount": 230.56,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 8.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "[inaudible] Selecta isang litro Great dalawa Taste kasi mainit eh",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T05:31:35.846853.000Z"
+  },
+  "processingTime": 9.83,
+  "edgeVersion": "v2.0.0-stt-only"
+}

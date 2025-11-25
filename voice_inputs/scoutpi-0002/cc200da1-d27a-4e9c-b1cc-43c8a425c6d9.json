@@ -1,0 +1,124 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "cc200da1-d27a-4e9c-b1cc-43c8a425c6d9",
+  "brandDetection": {
+    "detectedBrands": {
+      "V-Cut": 0.56
+    },
+    "explicitMentions": [
+      {
+        "brand": "V-Cut",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.56,
+        "detection_type": "exact_match",
+        "context": "[musika] v cut po dalawa paborito meron pa bang ch..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "V-Cut",
+            "confidence": 0.56,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "V-Cut",
+      "productName": "V-Cut Barbecue Chips",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "V-CUT-BARBECUE-CHIPS-60G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 32.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.56,
+      "brandConfidence": 0.685,
+      "suggestedBrands": null,
+      "notes": "STT: '[musika] v cut po dalawa paborito meron pa bang ch...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chips Ahoy",
+      "productName": "Chips Ahoy Cookies",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "CHIPS-AHOY-40G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.344,
+      "brandConfidence": 0.537,
+      "suggestedBrands": null,
+      "notes": "STT: '[musika] v cut po dalawa paborito meron pa bang ch...'",
+      "customerRequest": {
+        "requestType": "unbranded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 44.0,
+    "totalItems": 3,
+    "brandedAmount": 44.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 3,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "[musika] v cut po dalawa paborito meron pa bang chips",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:06:10.868049.000Z"
+  },
+  "processingTime": 11.25,
+  "edgeVersion": "v2.0.0-stt-only"
+}

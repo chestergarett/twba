@@ -1,0 +1,143 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "30a2cd59-7603-42ee-91c0-641b56cbde63",
+  "brandDetection": {
+    "detectedBrands": {
+      "Fudgee Bar": 0.83,
+      "Chippy": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Fudgee Bar",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "fudgee bar isa meron pa ba? dalawang chippy po"
+      },
+      {
+        "brand": "Chippy",
+        "category": "Salty Snacks (Chichirya)",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "pa ba? dalawang chippy po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Fudgee Bar",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Salty Snacks (Chichirya)": {
+        "branded": [
+          {
+            "brand": "Chippy",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Fudgee Bar",
+      "productName": "Fudgee Bar Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "FUDGEE-BAR-CHOCO-42G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'fudgee bar isa meron pa ba? dalawang chippy po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Chippy",
+      "productName": "Chippy BBQ Corn Chips",
+      "genericName": "Product",
+      "localName": "chippy",
+      "sku": "CHIPPY-BBQ-CORN-CHIPS-110G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 32.0,
+      "category": "Salty Snacks (Chichirya)",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'pa ba? dalawang chippy po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 62.0,
+    "totalItems": 5,
+    "brandedAmount": 62.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 5,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 25.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "fudgee bar isa meron pa ba? dalawang chippy po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T17:09:19.540569.000Z"
+  },
+  "processingTime": 9.95,
+  "edgeVersion": "v2.0.0-stt-only"
+}

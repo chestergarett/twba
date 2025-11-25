@@ -1,0 +1,99 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "a57f2f8f-6fc0-40a4-b84f-596c56a54b46",
+  "brandDetection": {
+    "detectedBrands": {
+      "Dove": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Dove",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "dove sabon yung malaki"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Dove",
+            "confidence": 0.95,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Dove",
+      "productName": "Dove Beauty Bar Pink",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "DOVE-PINK-135G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 78.0,
+      "totalPrice": 156.0,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'dove sabon yung malaki'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 156.0,
+    "totalItems": 2,
+    "brandedAmount": 156.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "dove sabon yung malaki dalawang dove",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T05:01:55.025208.000Z"
+  },
+  "processingTime": 6.46,
+  "edgeVersion": "v2.0.0-stt-only"
+}

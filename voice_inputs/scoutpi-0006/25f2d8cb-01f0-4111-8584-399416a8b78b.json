@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "25f2d8cb-01f0-4111-8584-399416a8b78b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Dove": 0.83,
+      "Pantene": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Dove",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "dove shampoo pantene dalawa"
+      },
+      {
+        "brand": "Pantene",
+        "category": "Hair Care",
+        "subcategory": "shampoo",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "dove shampoo pantene dalawa kailangan ko"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Dove",
+            "confidence": 0.83,
+            "quantity": 2
+          },
+          {
+            "brand": "Pantene",
+            "confidence": 0.83,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Dove",
+      "productName": "Dove Beauty Bar Pink",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "DOVE-PINK-135G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 78.0,
+      "totalPrice": 156.0,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'dove shampoo pantene dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Pantene",
+      "productName": "Pantene Conditioner",
+      "genericName": "Product",
+      "localName": "shampoo",
+      "sku": "PANTENE-CONDITIONER-180ML",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 135.0,
+      "totalPrice": 270.0,
+      "category": "Hair Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'dove shampoo pantene dalawa kailangan ko'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 426.0,
+    "totalItems": 4,
+    "brandedAmount": 426.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 4,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 19.9,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "dove shampoo pantene dalawa kailangan ko ng dove",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:58:47.957620.000Z"
+  },
+  "processingTime": 8.8,
+  "edgeVersion": "v2.0.0-stt-only"
+}

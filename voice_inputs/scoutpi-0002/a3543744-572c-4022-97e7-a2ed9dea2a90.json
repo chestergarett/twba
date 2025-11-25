@@ -1,0 +1,177 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "a3543744-572c-4022-97e7-a2ed9dea2a90",
+  "brandDetection": {
+    "detectedBrands": {
+      "Ovaltine": 0.89,
+      "Cobra": 0.79,
+      "Selecta": 0.89
+    },
+    "explicitMentions": [
+      {
+        "brand": "Ovaltine",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "Ovaltine isang piraso dalawa"
+      },
+      {
+        "brand": "Cobra",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.79,
+        "detection_type": "exact_match",
+        "context": "isang piraso dalawa Cobrang lata Selecta, pabili"
+      },
+      {
+        "brand": "Selecta",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "dalawa Cobrang lata Selecta, pabili po"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Ovaltine",
+            "confidence": 0.89,
+            "quantity": 3
+          },
+          {
+            "brand": "Cobra",
+            "confidence": 0.79,
+            "quantity": 3
+          },
+          {
+            "brand": "Selecta",
+            "confidence": 0.89,
+            "quantity": 2
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Ovaltine",
+      "productName": "Ovaltine Chocolate",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "OVALTINE-24G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Ovaltine isang piraso dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Cobra",
+      "productName": "Cobra Energy Drink Original",
+      "genericName": "Product",
+      "localName": "cobra",
+      "sku": "COBRA-ORIGINAL-350ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 20.0,
+      "totalPrice": 60.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.79,
+      "brandConfidence": 0.77,
+      "suggestedBrands": null,
+      "notes": "STT: 'isang piraso dalawa Cobrang lata Selecta, pabili'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Selecta",
+      "productName": "Selecta Fortified Milk Powder",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "SELECTA-FORTIFIED-MILK-POWDER-700G",
+      "quantity": 2,
+      "unit": "pc",
+      "unitPrice": 25.0,
+      "totalPrice": 50.0,
+      "category": "unspecified",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.91,
+      "suggestedBrands": null,
+      "notes": "STT: 'dalawa Cobrang lata Selecta, pabili po'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 140.0,
+    "totalItems": 8,
+    "brandedAmount": 140.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 8,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 4.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "Ovaltine isang piraso dalawa Cobrang lata Selecta, pabili po",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T06:15:44.170066.000Z"
+  },
+  "processingTime": 17.42,
+  "edgeVersion": "v2.0.0-stt-only"
+}

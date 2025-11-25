@@ -1,0 +1,187 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "c1276cad-b35a-44d2-9afd-4bce44027b2c",
+  "brandDetection": {
+    "detectedBrands": {
+      "Oreo": 0.73,
+      "Jack 'n Jill": 0.83,
+      "Leslie's": 0.284
+    },
+    "explicitMentions": [
+      {
+        "brand": "Oreo",
+        "category": "Biscuits & Crackers",
+        "subcategory": "unspecified",
+        "confidence": 0.73,
+        "detection_type": "exact_match",
+        "context": "isa Oreong Leslie'dalawa s Jack"
+      },
+      {
+        "brand": "Jack 'n Jill",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "isa Oreong Leslie'dalawa s Jack 'n Jill, pabili"
+      },
+      {
+        "brand": "Leslie's",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.284,
+        "detection_type": "exact_match",
+        "context": "isa Oreong Leslie'dalawa s Jack 'n Jill, pabili"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Biscuits & Crackers": {
+        "branded": [
+          {
+            "brand": "Oreo",
+            "confidence": 0.73,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Jack 'n Jill",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Leslie's",
+            "confidence": 0.284,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Oreo",
+      "productName": "Oreo Original",
+      "genericName": "Product",
+      "localName": "oreo",
+      "sku": "OREO-ORIGINAL-33G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 10.0,
+      "totalPrice": 30.0,
+      "category": "Biscuits & Crackers",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.73,
+      "brandConfidence": 0.74,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Oreong Leslie'dalawa s Jack'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Jack 'n Jill",
+      "productName": "V-Cut Potato Chips BBQ",
+      "genericName": "Product",
+      "localName": "v-cut",
+      "sku": "JACK-VCUT-BBQ-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.0,
+      "totalPrice": 66.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Oreong Leslie'dalawa s Jack 'n Jill, pabili'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Leslie's",
+      "productName": "Leslie's Clover Chips",
+      "genericName": "Product",
+      "localName": "leslie's",
+      "sku": "LESLIE'S-CLOVER-CHIPS-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.284,
+      "brandConfidence": 0.517,
+      "suggestedBrands": null,
+      "notes": "STT: 'isa Oreong Leslie'dalawa s Jack 'n Jill, pabili'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 144.0,
+    "totalItems": 9,
+    "brandedAmount": 144.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 9,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 3
+  },
+  "transactionContext": {
+    "duration": 1.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "isa Oreong Leslie'dalawa s Jack 'n Jill, pabili",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T05:18:30.992950.000Z"
+  },
+  "processingTime": 16.06,
+  "edgeVersion": "v2.0.0-stt-only"
+}

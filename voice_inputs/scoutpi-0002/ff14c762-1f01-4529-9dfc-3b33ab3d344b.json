@@ -1,0 +1,99 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ff14c762-1f01-4529-9dfc-3b33ab3d344b",
+  "brandDetection": {
+    "detectedBrands": {
+      "Café Puro": 0.124
+    },
+    "explicitMentions": [
+      {
+        "brand": "Café Puro",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.124,
+        "detection_type": "exact_match",
+        "context": "café"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Café Puro",
+            "confidence": 0.124,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Café Puro",
+      "productName": "Café Puro Barako",
+      "genericName": "Product",
+      "localName": "café",
+      "sku": "CAFE-PURO-BARAKO",
+      "quantity": 1,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 12.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.124,
+      "brandConfidence": 0.412,
+      "suggestedBrands": null,
+      "notes": "STT: 'café'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 12.0,
+    "totalItems": 1,
+    "brandedAmount": 12.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 2.3,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "café",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T07:08:46.272506.000Z"
+  },
+  "processingTime": 6.24,
+  "edgeVersion": "v2.0.0-stt-only"
+}

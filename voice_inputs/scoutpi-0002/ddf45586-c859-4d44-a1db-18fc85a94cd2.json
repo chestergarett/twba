@@ -1,0 +1,143 @@
+{
+  "storeId": "102",
+  "deviceId": "SCOUTPI-0002",
+  "timestamp": "",
+  "transactionId": "ddf45586-c859-4d44-a1db-18fc85a94cd2",
+  "brandDetection": {
+    "detectedBrands": {
+      "Café Puro": 0.83,
+      "Birch Tree": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Café Puro",
+        "category": "unspecified",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "café puro isa birch tree dalawang tama, meron ba?"
+      },
+      {
+        "brand": "Birch Tree",
+        "category": "Pantry Staples & Groceries",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "café puro isa birch tree dalawang tama, meron ba?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "unspecified": {
+        "branded": [
+          {
+            "brand": "Café Puro",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Pantry Staples & Groceries": {
+        "branded": [
+          {
+            "brand": "Birch Tree",
+            "confidence": 0.83,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Café Puro",
+      "productName": "Café Puro Barako",
+      "genericName": "Product",
+      "localName": "café",
+      "sku": "CAFE-PURO-BARAKO",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 36.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'café puro isa birch tree dalawang tama, meron ba?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Birch Tree",
+      "productName": "Birch Tree Milk",
+      "genericName": "Product",
+      "localName": "gatas",
+      "sku": "BIRCH-TREE-33G",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Pantry Staples & Groceries",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.79,
+      "suggestedBrands": null,
+      "notes": "STT: 'café puro isa birch tree dalawang tama, meron ba?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 84.0,
+    "totalItems": 6,
+    "brandedAmount": 84.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 2.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "café puro isa birch tree dalawang tama, meron ba?",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-13T04:22:55.571823.000Z"
+  },
+  "processingTime": 11.62,
+  "edgeVersion": "v2.0.0-stt-only"
+}

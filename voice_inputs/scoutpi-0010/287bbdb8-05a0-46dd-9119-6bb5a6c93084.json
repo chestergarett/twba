@@ -1,0 +1,143 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "287bbdb8-05a0-46dd-9119-6bb5a6c93084",
+  "brandDetection": {
+    "detectedBrands": {
+      "Dole": 0.95,
+      "Café Puro": 0.95
+    },
+    "explicitMentions": [
+      {
+        "brand": "Dole",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "Dole isang lata Café"
+      },
+      {
+        "brand": "Café Puro",
+        "category": "Beverages",
+        "subcategory": "unspecified",
+        "confidence": 0.95,
+        "detection_type": "exact_match",
+        "context": "Dole isang lata Café Puro kape dalawang Dole juice"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "Dole",
+            "confidence": 0.95,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Beverages": {
+        "branded": [
+          {
+            "brand": "Café Puro",
+            "confidence": 0.95,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Dole",
+      "productName": "Dole Pineapple Juice",
+      "genericName": "Product",
+      "localName": "dole",
+      "sku": "DOLE-PINEAPPLE-JUICE-240ML",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 27.3,
+      "totalPrice": 81.9,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Dole isang lata Café'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Café Puro",
+      "productName": "Café Puro Barako",
+      "genericName": "Product",
+      "localName": "kape",
+      "sku": "CAFE-PURO-BARAKO",
+      "quantity": 3,
+      "unit": "sachet",
+      "unitPrice": 12.0,
+      "totalPrice": 36.0,
+      "category": "Beverages",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.95,
+      "brandConfidence": 0.85,
+      "suggestedBrands": null,
+      "notes": "STT: 'Dole isang lata Café Puro kape dalawang Dole juice'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 117.9,
+    "totalItems": 6,
+    "brandedAmount": 117.9,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 6,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "Dole isang lata Café Puro kape dalawang Dole juice",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T03:44:39.369986.000Z"
+  },
+  "processingTime": 10.94,
+  "edgeVersion": "v2.0.0-stt-only"
+}

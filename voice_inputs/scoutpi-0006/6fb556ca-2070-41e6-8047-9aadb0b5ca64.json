@@ -1,0 +1,138 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "6fb556ca-2070-41e6-8047-9aadb0b5ca64",
+  "brandDetection": {
+    "detectedBrands": {
+      "Sprite": 0.83,
+      "Coca-Cola": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Sprite",
+        "category": "Non-Alcoholic",
+        "subcategory": "lemon_lime_soda",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "00:00:01,000 --> 00:00:04,000 Sprite meron? 3 00:00:04,000"
+      },
+      {
+        "brand": "Coca-Cola",
+        "category": "Non-Alcoholic",
+        "subcategory": "carbonated_soft_drink",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "00:00:04,000 --> 00:00:06,000 Coca-Cola? 4 00:00:06,000 -->"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Non-Alcoholic": {
+        "branded": [
+          {
+            "brand": "Sprite",
+            "confidence": 0.83,
+            "quantity": 1
+          },
+          {
+            "brand": "Coca-Cola",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Sprite",
+      "productName": "Sprite 355ml",
+      "genericName": "Product",
+      "localName": "sprite",
+      "sku": "SPRITE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.83,
+      "suggestedBrands": null,
+      "notes": "STT: '00:00:01,000 --> 00:00:04,000 Sprite meron? 3 00:00:04,000'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Coca-Cola",
+      "productName": "Coca-Cola 355ml Can",
+      "genericName": "Product",
+      "localName": "coke",
+      "sku": "COKE-355ML",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 28.0,
+      "totalPrice": 28.0,
+      "category": "Non-Alcoholic",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.83,
+      "suggestedBrands": null,
+      "notes": "STT: '00:00:04,000 --> 00:00:06,000 Coca-Cola? 4 00:00:06,000 -->'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 56.0,
+    "totalItems": 2,
+    "brandedAmount": 56.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 2,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 2
+  },
+  "transactionContext": {
+    "duration": 17.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:01,000  \nKasi niyan?  \n\n2  \n00:00:01,000 --> 00:00:04,000  \nSprite meron?  \n\n3  \n00:00:04,000 --> 00:00:06,000  \nCoca-Cola?  \n\n4  \n00:00:06,000 --> 00:00:08,000  \nMeron.  \n\n5  \n00:00:08,000 --> 00:00:09,000  \nYan. Ang kanis siya?  \n\n6  \n00:00:09,000 --> 00:00:13,000  \nYung malik lang, yung malik din nasa bote.  \n\n7  \n00:00:13,000 --> 00:00:15,000  \nAno lang malamig?  \n\n8  \n00:00:15,000 --> 00:00:17,000  \nLemon.  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T15:38:06.821600.000Z"
+  },
+  "processingTime": 9.04,
+  "edgeVersion": "v2.0.0-stt-only"
+}

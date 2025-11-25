@@ -1,0 +1,221 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "d4efe566-c69f-4f73-a629-5b4d6d1e2fd0",
+  "brandDetection": {
+    "detectedBrands": {
+      "Magic": 0.89,
+      "Leslie's": 0.89,
+      "Mani": 0.89,
+      "Roller Coaster": 0.344
+    },
+    "explicitMentions": [
+      {
+        "brand": "Magic",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "magic chips po leslie's"
+      },
+      {
+        "brand": "Leslie's",
+        "category": "Other Essentials",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "magic chips po leslie's mani isa roller"
+      },
+      {
+        "brand": "Mani",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.89,
+        "detection_type": "exact_match",
+        "context": "chips po leslie's mani isa roller dalawa"
+      },
+      {
+        "brand": "Roller Coaster",
+        "category": "Snacks & Confectionery",
+        "subcategory": "unspecified",
+        "confidence": 0.344,
+        "detection_type": "exact_match",
+        "context": "magic chips po leslie's mani isa roller dalawa coa..."
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Other Essentials": {
+        "branded": [
+          {
+            "brand": "Magic",
+            "confidence": 0.89,
+            "quantity": 1
+          },
+          {
+            "brand": "Leslie's",
+            "confidence": 0.89,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      },
+      "Snacks & Confectionery": {
+        "branded": [
+          {
+            "brand": "Mani",
+            "confidence": 0.89,
+            "quantity": 3
+          },
+          {
+            "brand": "Roller Coaster",
+            "confidence": 0.344,
+            "quantity": 3
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Magic",
+      "productName": "Magic Chips Barbecue Big Pack",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "MAGIC-CHIPS-BBQ-100G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 25.45,
+      "totalPrice": 25.45,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.88,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips po leslie's'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Leslie's",
+      "productName": "Leslie's Clover Chips",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "LESLIE'S-CLOVER-CHIPS-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Other Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips po leslie's mani isa roller'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Mani",
+      "productName": "Mani Garlic Flavor",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "MANI-GARLIC",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 22.0,
+      "totalPrice": 66.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.89,
+      "brandConfidence": 0.82,
+      "suggestedBrands": null,
+      "notes": "STT: 'chips po leslie's mani isa roller dalawa'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    },
+    {
+      "brandName": "Roller Coaster",
+      "productName": "Roller Coaster Cheese Rings",
+      "genericName": "Product",
+      "localName": "chips",
+      "sku": "ROLLERCOASTER-CHEESE-RINGS-60G",
+      "quantity": 3,
+      "unit": "pc",
+      "unitPrice": 16.0,
+      "totalPrice": 48.0,
+      "category": "Snacks & Confectionery",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.344,
+      "brandConfidence": 0.517,
+      "suggestedBrands": null,
+      "notes": "STT: 'magic chips po leslie's mani isa roller dalawa coa...'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 187.45,
+    "totalItems": 10,
+    "brandedAmount": 187.45,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 10,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 4
+  },
+  "transactionContext": {
+    "duration": 5.76,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "magic chips po leslie's mani isa roller dalawa coaster",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T13:07:22.527917.000Z"
+  },
+  "processingTime": 17.34,
+  "edgeVersion": "v2.0.0-stt-only"
+}

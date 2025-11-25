@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "745a3ae4-1235-433e-bbf6-74792b32a388",
+  "brandDetection": {
+    "detectedBrands": {
+      "Dove": 0.92
+    },
+    "explicitMentions": [
+      {
+        "brand": "Dove",
+        "category": "Body Care",
+        "subcategory": "unspecified",
+        "confidence": 0.92,
+        "detection_type": "exact_match",
+        "context": "dove sabon dove conditioner"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Body Care": {
+        "branded": [
+          {
+            "brand": "Dove",
+            "confidence": 0.92,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Dove",
+      "productName": "Dove Beauty Bar Pink",
+      "genericName": "Product",
+      "localName": "sabon",
+      "sku": "DOVE-PINK-135G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 78.0,
+      "totalPrice": 78.0,
+      "category": "Body Care",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.92,
+      "brandConfidence": 0.925,
+      "suggestedBrands": null,
+      "notes": "STT: 'dove sabon dove conditioner'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 78.0,
+    "totalItems": 1,
+    "brandedAmount": 78.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 6.0,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "dove sabon dove conditioner pabili ng dove",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T05:13:07.363846.000Z"
+  },
+  "processingTime": 6.65,
+  "edgeVersion": "v2.0.0-stt-only"
+}

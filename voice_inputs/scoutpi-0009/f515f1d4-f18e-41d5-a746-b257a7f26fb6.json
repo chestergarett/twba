@@ -1,0 +1,99 @@
+{
+  "storeId": "109",
+  "deviceId": "SCOUTPI-0009",
+  "timestamp": "",
+  "transactionId": "f515f1d4-f18e-41d5-a746-b257a7f26fb6",
+  "brandDetection": {
+    "detectedBrands": {
+      "555": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "555",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "Tapos na ang 555?"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "555",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "555",
+      "productName": "555 Sardines Green",
+      "genericName": "Product",
+      "localName": "555",
+      "sku": "555-SARDINES-GREEN-155G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 26.0,
+      "totalPrice": 26.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.86,
+      "suggestedBrands": null,
+      "notes": "STT: 'Tapos na ang 555?'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 26.0,
+    "totalItems": 1,
+    "brandedAmount": 26.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 4.24,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekend",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:02,000  \nBaka may tita pa mga.  \n\n2  \n00:00:02,000 --> 00:00:04,240  \nTapos na ang 555?  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-14T07:53:15.875632.000Z"
+  },
+  "processingTime": 5.24,
+  "edgeVersion": "v2.0.0-stt-only"
+}

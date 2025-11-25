@@ -1,0 +1,99 @@
+{
+  "storeId": "110",
+  "deviceId": "SCOUTPI-0010",
+  "timestamp": "",
+  "transactionId": "4f247949-aae5-497b-a3c9-08c8a19939fc",
+  "brandDetection": {
+    "detectedBrands": {
+      "555": 0.77
+    },
+    "explicitMentions": [
+      {
+        "brand": "555",
+        "category": "Canned & Jarred Goods",
+        "subcategory": "unspecified",
+        "confidence": 0.77,
+        "detection_type": "exact_match",
+        "context": "ko, 40-80 ng 555. 2 00:00:02,800 -->"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Canned & Jarred Goods": {
+        "branded": [
+          {
+            "brand": "555",
+            "confidence": 0.77,
+            "quantity": 40
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "555",
+      "productName": "555 Sardines Green",
+      "genericName": "Product",
+      "localName": "555",
+      "sku": "555-SARDINES-GREEN-155G",
+      "quantity": 40,
+      "unit": "pc",
+      "unitPrice": 26.0,
+      "totalPrice": 1040.0,
+      "category": "Canned & Jarred Goods",
+      "isUnbranded": false,
+      "isBulk": true,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.77,
+      "brandConfidence": 0.8,
+      "suggestedBrands": null,
+      "notes": "STT: 'ko, 40-80 ng 555. 2 00:00:02,800 -->'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": true,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 1040.0,
+    "totalItems": 40,
+    "brandedAmount": 1040.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 40,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 5.8,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:02,800  \nBumili nung isang araw yung anak ko, 40-80 ng 555.  \n\n2  \n00:00:02,800 --> 00:00:05,800  \nTanongin mo.  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T05:02:06.628646.000Z"
+  },
+  "processingTime": 6.27,
+  "edgeVersion": "v2.0.0-stt-only"
+}

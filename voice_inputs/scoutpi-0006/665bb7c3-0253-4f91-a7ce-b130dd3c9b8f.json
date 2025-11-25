@@ -1,0 +1,31 @@
+{
+  "storeId": "108",
+  "deviceId": "SCOUTPI-0006",
+  "timestamp": "",
+  "transactionId": "unspecified",
+  "brandDetection": {
+    "detectedBrands": {},
+    "explicitMentions": [],
+    "implicitSignals": []
+  },
+  "items": [],
+  "totals": {
+    "totalAmount": 0.0,
+    "totalItems": 0,
+    "brandedAmount": 0.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 0,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 0
+  },
+  "transactionContext": {
+    "duration": 0,
+    "audioTranscript": ""
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true
+  },
+  "processingTime": 0.0,
+  "edgeVersion": "v2.0.0-stt-enhanced"
+}

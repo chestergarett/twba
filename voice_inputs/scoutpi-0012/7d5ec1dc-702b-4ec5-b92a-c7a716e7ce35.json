@@ -1,0 +1,99 @@
+{
+  "storeId": "112",
+  "deviceId": "SCOUTPI-0012",
+  "timestamp": "",
+  "transactionId": "7d5ec1dc-702b-4ec5-b92a-c7a716e7ce35",
+  "brandDetection": {
+    "detectedBrands": {
+      "Palm": 0.83
+    },
+    "explicitMentions": [
+      {
+        "brand": "Palm",
+        "category": "Hair Care",
+        "subcategory": "unspecified",
+        "confidence": 0.83,
+        "detection_type": "exact_match",
+        "context": "00:00:01,000 'Yap, pabili, Palm! 2 00:00:01,000 -->"
+      }
+    ],
+    "implicitSignals": [],
+    "detectionMethods": [
+      "exact_match"
+    ],
+    "categoryBrandMapping": {
+      "Hair Care": {
+        "branded": [
+          {
+            "brand": "Palm",
+            "confidence": 0.83,
+            "quantity": 1
+          }
+        ],
+        "unbranded_volume": 0
+      }
+    }
+  },
+  "items": [
+    {
+      "brandName": "Palm",
+      "productName": "Palm Corned Beef",
+      "genericName": "Product",
+      "localName": "palm",
+      "sku": "PALM-CORNED-BEEF-210G",
+      "quantity": 1,
+      "unit": "pc",
+      "unitPrice": 58.0,
+      "totalPrice": 58.0,
+      "category": "Cooking Essentials",
+      "isUnbranded": false,
+      "isBulk": false,
+      "detectionMethod": "stt_brand_only",
+      "confidence": 0.83,
+      "brandConfidence": 0.86,
+      "suggestedBrands": null,
+      "notes": "STT: '00:00:01,000 'Yap, pabili, Palm! 2 00:00:01,000 -->'",
+      "customerRequest": {
+        "requestType": "branded",
+        "specificBrand": true,
+        "pointedToProduct": false,
+        "acceptedSuggestion": false
+      }
+    }
+  ],
+  "totals": {
+    "totalAmount": 58.0,
+    "totalItems": 1,
+    "brandedAmount": 58.0,
+    "unbrandedAmount": 0.0,
+    "brandedCount": 1,
+    "unbrandedCount": 0,
+    "uniqueBrandsCount": 1
+  },
+  "transactionContext": {
+    "duration": 3.9,
+    "paymentMethod": "cash",
+    "timeOfDay": "unspecified",
+    "dayType": "weekday",
+    "audioTranscript": "1  \n00:00:00,000 --> 00:00:01,000  \n'Yap, pabili, Palm!  \n\n2  \n00:00:01,000 --> 00:00:02,700  \nPalm.  \n\n3  \n00:00:02,700 --> 00:00:03,900  \nAti ka.  ",
+    "processingMethods": [
+      "stt_transcription",
+      "brand_detection",
+      "fuzzy_matching",
+      "pricing_lookup",
+      "totals_calculation",
+      "confidence_scoring"
+    ]
+  },
+  "privacy": {
+    "audioStored": false,
+    "brandAnalysisOnly": true,
+    "noFacialRecognition": true,
+    "noImageProcessing": true,
+    "dataRetentionDays": 30,
+    "anonymizationLevel": "high",
+    "consentTimestamp": "2025-09-12T23:31:29.302080.000Z"
+  },
+  "processingTime": 5.78,
+  "edgeVersion": "v2.0.0-stt-only"
+}
