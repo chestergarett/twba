@@ -37,3 +37,5 @@ build/
 # video_inputs/
 # voice_inputs/
 
+.env
+.venv
