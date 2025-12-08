@@ -1,7 +1,0 @@
-
--- clean Gender Column coz of existence of nulls and 'Female' vs Female
--- create Weekday/Weekend Column
--- create Month/Year Column
--- create Month Column
--- convert StoreID to categorical
---
