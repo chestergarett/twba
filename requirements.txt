@@ -1,13 +1,13 @@
+# Production dependencies only - optimized for Vercel deployment
+# Removed: jupyter, ipykernel (dev dependencies, ~100MB+)
+# Removed: dash-draggable (not used in code)
 numpy~=1.26
 pandas~=2.2
 plotly~=5.24
 python-dotenv~=1.0
 supabase~=2.7
-jupyter~=1.1
-ipykernel~=6.29
 dash~=2.17
 dash-bootstrap-components~=1.5
-dash-draggable~=0.1.0
 sqlalchemy~=2.0
 psycopg2-binary~=2.9
 openai~=1.12
