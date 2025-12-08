@@ -1,9 +1,10 @@
 # Exclude large data folders from Vercel deployment
-output/
-video_inputs/
-voice_inputs/
-references/
-scripts/
+# Use absolute paths with leading slash for better matching
+/output/
+/video_inputs/
+/voice_inputs/
+/references/
+/scripts/
 __pycache__/
 *.pyc
 *.pyo
@@ -18,4 +19,8 @@ build/
 venv/
 ENV/
 env/
+*.csv
+*.xlsx
+*.jsonl
+*.parquet
 
