@@ -32,10 +32,10 @@ build/
 *.swo
 *~
 
-# Data files (uncomment if you don't want to track these)
-# output/
-# video_inputs/
-# voice_inputs/
-
+# Data files - excluded from git and deployment
+output/
+video_inputs/
+voice_inputs/
+references/
 .env
 .venv

@@ -1,0 +1,21 @@
+# Exclude large data folders from Vercel deployment
+output/
+video_inputs/
+voice_inputs/
+references/
+scripts/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+ENV/
+env/
+
