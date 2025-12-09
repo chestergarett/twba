@@ -93,143 +93,164 @@ app.index_string = '''
         {%favicon%}
         {%css%}
         <style>
-            /* Dark Mode Base Styles - Material-ish */
+            /* Dark Mode Base Styles */
             body {
-                background-color: #0b0c0f !important;
-                color: #e5e7eb !important;
-                font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                letter-spacing: 0.01em;
+                background-color: #0a0a0a !important;
+                color: #e0e0e0 !important;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             }
-            .container-fluid { background-color: #0b0c0f; }
+            
+            .container-fluid {
+                background-color: #0a0a0a;
+            }
             
             /* Headings */
             h1, h2, h3, h4, h5, h6 {
-                color: #d4af37 !important;
-                font-weight: 700;
-                letter-spacing: 0.01em;
+                color: #d4af37 !important; /* Gold */
             }
             
-            /* Global layout / spacing */
-            .row { margin-bottom: 1.4rem !important; }
-            .col, [class*="col-"] { margin-bottom: 1rem !important; max-height: none !important; overflow: visible !important; }
-            .card-body { background: transparent !important; height: auto !important; overflow: visible !important; padding: 1rem 1rem 1.25rem 1rem !important; }
-            
-            /* Cards - sleek surfaces */
+            /* Cards with emboss/shadow effect */
             .card, .dbc-card {
-                background: #111417 !important;
-                border: 1px solid #1e2126 !important;
+                background: linear-gradient(145deg, #1a1a1a, #0f0f0f) !important;
+                border: 1px solid #2a2a2a !important;
                 border-radius: 12px !important;
-                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32) !important;
-                color: #e5e7eb !important;
-                margin-bottom: 1.6rem !important;
-                margin-top: 0.6rem !important;
-                padding: 0.8rem !important;
-                transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease, background-color 140ms ease;
-            }
-            .card:hover, .dbc-card:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 18px 32px rgba(0, 0, 0, 0.42) !important;
-                border-color: #2a2f37 !important;
-                background: #12171c !important;
+                box-shadow: 
+                    0 8px 16px rgba(0, 0, 0, 0.5),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.3) !important;
+                color: #e0e0e0 !important;
+                margin-bottom: 2rem !important;
+                margin-top: 1rem !important;
+                padding: 1rem !important;
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
             }
             
-            /* Graph containers */
-            .dash-graph { position: relative !important; height: auto !important; max-height: 600px !important; overflow: hidden !important; }
+            /* Add spacing between columns/rows */
+            .row {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .col, [class*="col-"] {
+                margin-bottom: 1rem !important;
+            }
+            
+            .card-body {
+                background: transparent !important;
+                height: auto !important;
+                overflow: visible !important;
+            }
+            
+            /* Column constraints */
+            .col, [class*="col-"] {
+                max-height: none !important;
+                overflow: visible !important;
+            }
+            
+            /* Graph containers - CRITICAL: Fixed height to prevent expansion */
+            .dash-graph {
+                position: relative !important;
+                height: auto !important;
+                max-height: 600px !important;
+                overflow: hidden !important;
+            }
+            
+            /* Plotly plot container - styling only, don't interfere with height */
             .js-plotly-plot {
-                background-color: #13171d !important;
+                background-color: #1a1a1a !important;
                 border-radius: 12px;
                 padding: 10px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
-                border: 1px solid #1f242c;
+                box-shadow: 
+                    0 8px 16px rgba(0, 0, 0, 0.5),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
                 height: 100% !important;
                 max-height: 100% !important;
             }
-            .js-plotly-plot .plotly { height: 100% !important; max-height: 100% !important; }
-            .js-plotly-plot .plotly .main-svg { max-height: 100% !important; }
             
-            /* Tabs (dcc) */
-            .tab { background-color: #1a1d22 !important; color: #e0e0e0 !important; border: 1px solid #2a2f37 !important; }
-            .tab--selected { background-color: #161a1f !important; color: #d4af37 !important; border-bottom: 2px solid #d4af37 !important; }
-
-            /* dbc Tabs in navbar */
-            .twba-tabs .nav-link {
+            /* Force plotly SVG to respect container height */
+            .js-plotly-plot .plotly {
+                height: 100% !important;
+                max-height: 100% !important;
+            }
+            
+            .js-plotly-plot .plotly .main-svg {
+                max-height: 100% !important;
+            }
+            
+            /* Tabs */
+            .tab {
+                background-color: #1a1a1a !important;
                 color: #e0e0e0 !important;
-                background-color: #0f1014 !important;
-                border-color: #2a2f37 !important;
-                border-radius: 10px 10px 0 0;
-                transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
-                box-shadow: inset 0 -1px 0 #2a2f37;
+                border: 1px solid #2a2a2a !important;
             }
-            .twba-tabs .nav-link:hover {
-                background-color: #14171d !important;
-                color: #f2d57c !important;
-            }
-            .twba-tabs .nav-link.active {
+            
+            .tab--selected {
+                background-color: #2a2a2a !important;
                 color: #d4af37 !important;
-                background-color: #1a1e24 !important;
-                border-color: #d4af37 #2a2f37 #1a1e24 !important;
-                box-shadow: inset 0 -2px 0 #d4af37;
+                border-bottom: 2px solid #d4af37 !important;
             }
             
             /* Buttons */
             .btn-primary {
-                background: #d4af37 !important;
-                border: 1px solid #d4af37 !important;
-                color: #0a0a0a !important;
+                background: linear-gradient(145deg, #d4af37, #b8941f) !important;
+                border: none !important;
+                color: #000 !important;
                 font-weight: 600;
-                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35) !important;
-                border-radius: 10px !important;
+                box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3) !important;
             }
+            
             .btn-primary:hover {
-                background: #e0c26b !important;
-                border-color: #e0c26b !important;
-                box-shadow: 0 6px 16px rgba(224, 194, 107, 0.4) !important;
+                background: linear-gradient(145deg, #e5c158, #d4af37) !important;
+                box-shadow: 0 6px 12px rgba(212, 175, 55, 0.4) !important;
             }
+            
             .btn-secondary {
-                background: #1f232b !important;
-                border: 1px solid #2f3540 !important;
+                background: linear-gradient(145deg, #3a3a3a, #2a2a2a) !important;
+                border: 1px solid #4a4a4a !important;
                 color: #e0e0e0 !important;
-                border-radius: 10px !important;
             }
-            .btn-secondary:hover {
-                background: #2a303a !important;
-                border-color: #3a4250 !important;
-            }
+            
             .btn-warning {
-                background: #d4af37 !important;
-                border: 1px solid #d4af37 !important;
-                color: #0a0a0a !important;
+                background: linear-gradient(145deg, #d4af37, #b8941f) !important;
+                border: none !important;
+                color: #000 !important;
                 font-weight: 600;
-                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35) !important;
-                border-radius: 10px !important;
             }
             
             /* Inputs and Dropdowns */
             .form-control, .form-select, .DateInput_input, .DateInput_input_1 {
-                background-color: #12151a !important;
-                border: 1px solid #252a32 !important;
+                background-color: #1a1a1a !important;
+                border: 1px solid #3a3a3a !important;
                 color: #e0e0e0 !important;
-                border-radius: 10px !important;
-                transition: border-color 140ms ease, box-shadow 140ms ease;
             }
+            
             .form-control:focus, .form-select:focus {
-                background-color: #12151a !important;
+                background-color: #1a1a1a !important;
                 border-color: #d4af37 !important;
                 color: #e0e0e0 !important;
-                box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.2) !important;
+                box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25) !important;
             }
             
             /* Dropdown menus */
             .Select-menu-outer {
-                background-color: #12151a !important;
-                border: 1px solid #252a32 !important;
+                background-color: #1a1a1a !important;
+                border: 1px solid #3a3a3a !important;
             }
+            
             .Select-option {
-                background-color: #12151a !important;
+                background-color: #1a1a1a !important;
                 color: #e0e0e0 !important;
             }
-            .Select-option:hover { background-color: #1a1f26 !important; }
-            .Select-option.is-selected { background-color: #d4af37 !important; color: #000 !important; }
+            
+            .Select-option:hover {
+                background-color: #2a2a2a !important;
+            }
+            
+            .Select-option.is-selected {
+                background-color: #d4af37 !important;
+                color: #000 !important;
+            }
             
             /* Labels */
             .filter-label, label {
@@ -500,7 +521,7 @@ def apply_dark_layout(fig, title, xaxis_title="", yaxis_title="", yaxis2_title="
     
     # Ensure height is always set to prevent infinite growth
     if "height" not in dark_layout:
-        dark_layout["height"] = 50  # Default height (further reduced)
+        dark_layout["height"] = 500  # Default height
     
     # CRITICAL: Set autosize to False to prevent Plotly from auto-sizing
     dark_layout["autosize"] = False
@@ -545,136 +566,142 @@ def create_login_page(error_message=""):
 # Store for authentication state - using session storage to persist across page refreshes
 auth_store = dcc.Store(id="auth-store", data={"authenticated": False}, storage_type="session")
 
-# Filters row below navbar
-def build_filters_row():
-    return dbc.Row([
-        dbc.Col([
-            html.Label("Date Range", className="mb-1", style={"fontWeight": "500"}),
-            dcc.DatePickerRange(
-                id="date-range",
-                start_date=transactions_df["TransactionDate"].min() if not transactions_df.empty else datetime.now() - timedelta(days=90),
-                end_date=transactions_df["TransactionDate"].max() if not transactions_df.empty else datetime.now(),
-                display_format="YYYY-MM-DD",
-                style={"width": "100%", "marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-date-range", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label("Month/Year", className="mb-1", style={"fontWeight": "500"}),
-            dcc.Dropdown(
-                id="month-year-filter",
-                options=[
-                    {"label": f"{dt.strftime('%B %Y')}", "value": f"{dt.year}-{dt.month:02d}"}
-                    for dt in pd.date_range(
-                        transactions_df["TransactionDate"].min() if not transactions_df.empty else datetime.now() - timedelta(days=365),
-                        transactions_df["TransactionDate"].max() if not transactions_df.empty else datetime.now(),
-                        freq="MS"
-                    )
-                ],
-                value=None,
-                multi=True,
-                placeholder="All months",
-                style={"marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-month-year", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label("Weekday/Weekend", className="mb-1", style={"fontWeight": "500"}),
-            dcc.Dropdown(
-                id="weekday-weekend-filter",
-                options=[
-                    {"label": "Weekday", "value": "Weekday"},
-                    {"label": "Weekend", "value": "Weekend"},
-                ],
-                value=None,
-                placeholder="All days",
-                style={"marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-weekday-weekend", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label("Gender", className="mb-1", style={"fontWeight": "500"}),
-            dcc.Dropdown(
-                id="gender-filter",
-                options=[{"label": g, "value": g} for g in transactions_df["gender_clean"].unique() if pd.notna(g)],
-                value=None,
-                multi=True,
-                placeholder="All genders",
-                style={"marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-gender", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label("Age Bucket", className="mb-1", style={"fontWeight": "500"}),
-            dcc.Dropdown(
-                id="age-filter",
-                options=[{"label": a, "value": a} for a in sorted(transactions_df["age_bucket"].dropna().unique())],
-                value=None,
-                multi=True,
-                placeholder="All ages",
-                style={"marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-age", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label("Payment Method", className="mb-1", style={"fontWeight": "500"}),
-            dcc.Dropdown(
-                id="payment-filter",
-                options=[{"label": p, "value": p} for p in transactions_df["payment_method"].unique() if pd.notna(p)],
-                value=None,
-                multi=True,
-                placeholder="All methods",
-                style={"marginBottom": "4px"},
-            ),
-            dbc.Button("Reset", id="reset-payment", color="secondary", size="sm", className="w-100"),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-        dbc.Col([
-            html.Label(" ", className="mb-1"),
-            dbc.Button("Reset All Filters", id="reset-all-filters", color="warning", className="w-100", style={"fontWeight": "600", "marginTop": "25px"}),
-        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
-    ], className="mt-2")
-
 # Main dashboard layout function
 def create_dashboard_layout():
     return dbc.Container([
-        # Sticky navbar
-        dbc.Navbar(
-            dbc.Container([
-                html.Div([
-                    html.Span("TWBA Dashboard", className="navbar-brand mb-0 h4", style={"color": "#d4af37"}),
-                ], style={"flex": "1"}),
-                dbc.Tabs(
-                    id="main-tabs",
-                    active_tab="general",
-                    children=[
-                        dbc.Tab(label="Consumer Demographics", tab_id="general"),
-                        dbc.Tab(label="Laundry", tab_id="laundry"),
-                        dbc.Tab(label="Tobacco", tab_id="tobacco"),
-                        dbc.Tab(label="Query Editor", tab_id="query-editor"),
-                        dbc.Tab(label="Ask AI", tab_id="ask-ai"),
-                    ],
-                    className="flex-grow-1 twba-tabs"
-                ),
-                dbc.Button("Logout", id="logout-button", color="danger", size="sm", className="ms-3"),
-            ], fluid=True),
-            color="#0f0f0f",
-            dark=True,
-            fixed="top",
-            className="mb-4",
-            style={"boxShadow": "0 4px 8px rgba(0,0,0,0.4)"},
-        ),
-
-        html.Div(style={"height": "80px"}),  # spacer below navbar
-
-        # Filters row
-        build_filters_row(),
-
-        # Charts/content row
         dbc.Row([
             dbc.Col([
+                html.Div([
+                    html.H1("TWBA Analytics Dashboard", className="mb-4", style={"display": "inline-block", "margin": "0", "width": "calc(100% - 100px)"}),
+                    dbc.Button(
+                        "Logout",
+                        id="logout-button",
+                        color="danger",
+                        size="sm",
+                        className="float-end",
+                        style={"marginTop": "10px", "minWidth": "80px"}
+                    ),
+                ], style={"width": "100%", "position": "relative"}),
+            ])
+        ]),
+        
+        # Filters
+        dbc.Row([
+            dbc.Col([
+                html.Label("Date Range", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.DatePickerRange(
+                        id="date-range",
+                        start_date=transactions_df["TransactionDate"].min() if not transactions_df.empty else datetime.now() - timedelta(days=90),
+                        end_date=transactions_df["TransactionDate"].max() if not transactions_df.empty else datetime.now(),
+                        display_format="YYYY-MM-DD",
+                        style={"width": "100%", "marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-date-range", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+            dbc.Col([
+                html.Label("Month/Year", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.Dropdown(
+                        id="month-year-filter",
+                        options=[
+                            {"label": f"{dt.strftime('%B %Y')}", "value": f"{dt.year}-{dt.month:02d}"}
+                            for dt in pd.date_range(
+                                transactions_df["TransactionDate"].min() if not transactions_df.empty else datetime.now() - timedelta(days=365),
+                                transactions_df["TransactionDate"].max() if not transactions_df.empty else datetime.now(),
+                                freq="MS"
+                            )
+                        ],
+                        value=None,
+                        multi=True,
+                        placeholder="All months",
+                        style={"marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-month-year", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+            dbc.Col([
+                html.Label("Weekday/Weekend", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.Dropdown(
+                        id="weekday-weekend-filter",
+                        options=[
+                            {"label": "Weekday", "value": "Weekday"},
+                            {"label": "Weekend", "value": "Weekend"},
+                        ],
+                        value=None,
+                        placeholder="All days",
+                        style={"marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-weekday-weekend", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+        ], className="mb-2"),
+        dbc.Row([
+            dbc.Col([
+                html.Label("Gender", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.Dropdown(
+                        id="gender-filter",
+                        options=[{"label": g, "value": g} for g in transactions_df["gender_clean"].unique() if pd.notna(g)],
+                        value=None,
+                        multi=True,
+                        placeholder="All genders",
+                        style={"marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-gender", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+            dbc.Col([
+                html.Label("Age Bucket", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.Dropdown(
+                        id="age-filter",
+                        options=[{"label": a, "value": a} for a in sorted(transactions_df["age_bucket"].dropna().unique())],
+                        value=None,
+                        multi=True,
+                        placeholder="All ages",
+                        style={"marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-age", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+            dbc.Col([
+                html.Label("Payment Method", className="mb-1", style={"fontWeight": "500"}),
+                html.Div([
+                    dcc.Dropdown(
+                        id="payment-filter",
+                        options=[{"label": p, "value": p} for p in transactions_df["payment_method"].unique() if pd.notna(p)],
+                        value=None,
+                        multi=True,
+                        placeholder="All methods",
+                        style={"marginBottom": "4px"},
+                    ),
+                    dbc.Button("Reset", id="reset-payment", color="secondary", size="sm", className="w-100"),
+                ]),
+            ], xs=12, sm=6, md=3, className="mb-3"),
+            dbc.Col([
+                html.Label(" ", className="mb-1"),  # Spacer for alignment
+                html.Div([
+                    dbc.Button("Reset All Filters", id="reset-all-filters", color="warning", className="w-100", style={"fontWeight": "600"}),
+                ]),
+            ], xs=12, sm=6, md=4, className="mb-3"),
+        ], className="mb-4"),
+        
+        # Tabs
+        dbc.Row([
+            dbc.Col([
+                dcc.Tabs(id="main-tabs", value="general", children=[
+                    dcc.Tab(label="Consumer Demographics", value="general"),
+                    dcc.Tab(label="Laundry", value="laundry"),
+                    dcc.Tab(label="Tobacco", value="tobacco"),
+                    dcc.Tab(label="Query Editor", value="query-editor"),
+                    dcc.Tab(label="Ask AI", value="ask-ai"),
+                ]),
                 html.Div(id="tab-content"),
-            ], xs=12)
-        ], className="mt-2 mb-4"),
+            ])
+        ]),
     ], fluid=True)
 
 # Define app layout
@@ -1158,14 +1185,9 @@ SQL Query:"""
 )
 def check_auth_on_load(auth_data):
     """Check authentication state on page load."""
-    try:
-        if auth_data and isinstance(auth_data, dict) and auth_data.get("authenticated"):
-            return create_dashboard_layout()
-        else:
-            return create_login_page()
-    except Exception as e:
-        # If there's an error, show login page
-        print(f"Error in check_auth_on_load: {e}")
+    if auth_data and auth_data.get("authenticated"):
+        return create_dashboard_layout()
+    else:
         return create_login_page()
 
 # Callback to handle login
@@ -1183,11 +1205,7 @@ def handle_login(n_clicks, auth_data, username, password):
     if n_clicks:
         # Validate credentials
         if username == AUTH_USERNAME and password == AUTH_PASSWORD:
-            try:
-                return create_dashboard_layout(), {"authenticated": True}
-            except Exception as e:
-                print(f"Error in handle_login: {e}")
-                return create_login_page("Error loading dashboard. Please try again."), {"authenticated": False}
+            return create_dashboard_layout(), {"authenticated": True}
         else:
             # Show error message but stay on login page
             error_message = "Invalid username or password"
@@ -1291,7 +1309,7 @@ def reset_all_filters(n_clicks):
 # Tab content callback
 @callback(
     Output("tab-content", "children"),
-    Input("main-tabs", "active_tab"),
+    Input("main-tabs", "value"),
 )
 def render_tab_content(tab):
     if tab == "general":
@@ -2188,25 +2206,6 @@ def update_daily_sales_payday(start_date, end_date, gender, age, payment, month_
 def update_basket_bands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
     filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
     
-    # Guard: ensure basket_total column exists and data is present
-    if "basket_total" not in filtered.columns or filtered.empty:
-        return go.Figure().add_annotation(
-            text="No basket data available",
-            showarrow=False,
-            x=0.5, y=0.5, xref="paper", yref="paper"
-        )
-    
-    # Ensure basket_total is numeric
-    filtered = filtered.copy()
-    filtered["basket_total"] = pd.to_numeric(filtered["basket_total"], errors="coerce")
-    filtered = filtered.dropna(subset=["basket_total"])
-    if filtered.empty:
-        return go.Figure().add_annotation(
-            text="No basket data available",
-            showarrow=False,
-            x=0.5, y=0.5, xref="paper", yref="paper"
-        )
-    
     def basket_band(value):
         if pd.isna(value):
             return None
@@ -2235,19 +2234,6 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
         .reset_index()
     )
     
-    # Guard: ensure we have data to plot
-    if basket_summary.empty:
-        return go.Figure().add_annotation(
-            text="No basket data available for selected filters",
-            showarrow=False,
-            x=0.5, y=0.5, xref="paper", yref="paper"
-        )
-    
-    # Order bands
-    band_order = ["₱0-10", "₱11-20", "₱21-50", "₱51-100", "₱101-200", "₱200+"]
-    basket_summary["basket_band"] = pd.Categorical(basket_summary["basket_band"], categories=band_order, ordered=True)
-    basket_summary = basket_summary.sort_values("basket_band")
-    
     fig = px.bar(
         basket_summary,
         x="basket_band",
@@ -2258,7 +2244,6 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
         labels={"basket_band": "Basket Band", "transactions": "Transactions"},
         color_continuous_scale="Tealgrn",
     )
-    fig.update_traces(textposition="outside")
     apply_dark_layout(fig, "Basket Value Distribution", "Basket Band", "Transactions", "", height=500)
     return fig
 
@@ -2270,112 +2255,96 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
      Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
 )
 def update_category_performance(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    try:
-        filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
-        
-        # Ensure required columns and numeric values
-        if "totalPrice" not in filtered_items.columns and "unitPrice" in filtered_items.columns and "quantity" in filtered_items.columns:
-            filtered_items["totalPrice"] = filtered_items["unitPrice"] * filtered_items["quantity"]
-        
-        if filtered_items.empty or "category" not in filtered_items.columns:
-            return go.Figure().add_annotation(
-                text="No data available",
-                showarrow=False,
-                x=0.5, y=0.5, xref="paper", yref="paper"
-            )
-        
-        # Coerce numeric columns early
-        for col in ["quantity", "unitPrice", "totalPrice"]:
-            if col in filtered_items.columns:
-                filtered_items[col] = pd.to_numeric(filtered_items[col], errors="coerce")
-        
-        # Aggregations
-        agg_dict = {}
-        if "quantity" in filtered_items.columns:
-            agg_dict["units"] = ("quantity", "sum")
-        if "totalPrice" in filtered_items.columns:
-            agg_dict["revenue"] = ("totalPrice", "sum")
-        
-        if not agg_dict:
-            return go.Figure().add_annotation(
-                text="No price or quantity data available",
-                showarrow=False,
-                x=0.5, y=0.5, xref="paper", yref="paper"
-            )
-        
-        category_summary = (
-            filtered_items.groupby("category")
-            .agg(**agg_dict)
-            .reset_index()
-        )
-        
-        # Sort
-        if "revenue" in category_summary.columns:
-            category_summary = category_summary.sort_values("revenue", ascending=False)
-        elif "units" in category_summary.columns:
-            category_summary = category_summary.sort_values("units", ascending=False)
-        
-        if category_summary.empty:
-            return go.Figure().add_annotation(
-                text="No category data available",
-                showarrow=False,
-                x=0.5, y=0.5, xref="paper", yref="paper"
-            )
-        
-        # Determine plot columns
-        y_col = "revenue" if "revenue" in category_summary.columns else "units"
-        text_col = "units" if "units" in category_summary.columns and y_col == "revenue" else None
-        
-        # Validate data
-        if y_col not in category_summary.columns:
-            return go.Figure().add_annotation(
-                text="No data available for chart",
-                showarrow=False,
-                x=0.5, y=0.5, xref="paper", yref="paper"
-            )
-        
-        # Coerce and clean
-        category_summary[y_col] = pd.to_numeric(category_summary[y_col], errors="coerce")
-        if text_col:
-            category_summary[text_col] = pd.to_numeric(category_summary[text_col], errors="coerce")
-        category_summary = category_summary.dropna(subset=[y_col, "category"])
-        
-        if category_summary.empty:
-            return go.Figure().add_annotation(
-                text="No valid data available",
-                showarrow=False,
-                x=0.5, y=0.5, xref="paper", yref="paper"
-            )
-        
-        # Plot
-        fig = px.bar(
-            category_summary.head(15),
-            x="category",
-            y=y_col,
-            text=text_col if text_col else None,
-            title="Top Categories by Revenue" if y_col == "revenue" else "Top Categories by Units",
-            labels={"category": "Category", "revenue": "Revenue (₱)", "units": "Units"},
-        )
-        if text_col:
-            fig.update_traces(texttemplate="%{text:.0f} units", textposition="outside")
-        
-        apply_dark_layout(
-            fig,
-            "Top Categories by Revenue" if y_col == "revenue" else "Top Categories by Units",
-            "Category",
-            "Revenue (₱)" if y_col == "revenue" else "Units",
-            "",
-            xaxis_tickangle=45,
-            height=450,
-        )
-        return fig
-    except Exception as e:
-        # Return a figure with the error to avoid callback failure
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    
+    # Check if required columns exist
+    required_cols = ["category"]
+    if "totalPrice" not in filtered_items.columns and "unitPrice" in filtered_items.columns and "quantity" in filtered_items.columns:
+        filtered_items["totalPrice"] = filtered_items["unitPrice"] * filtered_items["quantity"]
+    
+    if filtered_items.empty or "category" not in filtered_items.columns:
         return go.Figure().add_annotation(
-            text=f"Error: {e}",
+            text="No data available",
             showarrow=False,
             x=0.5, y=0.5, xref="paper", yref="paper"
         )
+    
+    # Check if we have the necessary columns for aggregation
+    agg_dict = {}
+    if "quantity" in filtered_items.columns:
+        agg_dict["units"] = ("quantity", "sum")
+    if "totalPrice" in filtered_items.columns:
+        agg_dict["revenue"] = ("totalPrice", "sum")
+    
+    if not agg_dict:
+        return go.Figure().add_annotation(
+            text="No price or quantity data available",
+            showarrow=False,
+            x=0.5, y=0.5, xref="paper", yref="paper"
+        )
+    
+    category_summary = (
+        filtered_items.groupby("category")
+        .agg(**agg_dict)
+        .reset_index()
+    )
+    
+    # Check if we have revenue column for sorting
+    if "revenue" in category_summary.columns:
+        category_summary = category_summary.sort_values("revenue", ascending=False)
+    elif "units" in category_summary.columns:
+        category_summary = category_summary.sort_values("units", ascending=False)
+    
+    if category_summary.empty:
+        return go.Figure().add_annotation(
+            text="No category data available",
+            showarrow=False,
+            x=0.5, y=0.5, xref="paper", yref="paper"
+        )
+    
+    # Determine what to plot
+    y_col = "revenue" if "revenue" in category_summary.columns else "units"
+    text_col = "units" if "units" in category_summary.columns and y_col == "revenue" else None
+    
+    # Ensure we have valid data
+    if category_summary.empty or y_col not in category_summary.columns:
+        return go.Figure().add_annotation(
+            text="No data available for chart",
+            showarrow=False,
+            x=0.5, y=0.5, xref="paper", yref="paper"
+        )
+    
+    # Filter out any NaN values
+    category_summary = category_summary.dropna(subset=[y_col, "category"])
+    
+    if category_summary.empty:
+        return go.Figure().add_annotation(
+            text="No valid data available",
+            showarrow=False,
+            x=0.5, y=0.5, xref="paper", yref="paper"
+        )
+    
+    fig = px.bar(
+        category_summary.head(15),
+        x="category",
+        y=y_col,
+        text=text_col if text_col else None,
+        title="Top Categories by Revenue" if y_col == "revenue" else "Top Categories by Units",
+        labels={"category": "Category", "revenue": "Revenue (₱)", "units": "Units"},
+    )
+    if text_col:
+        fig.update_traces(texttemplate="%{text:.0f} units", textposition="outside")
+    # Apply dark mode layout with height constraint
+    apply_dark_layout(
+        fig,
+        "Top Categories by Revenue" if y_col == "revenue" else "Top Categories by Units",
+        "Category",
+        "Revenue (₱)" if y_col == "revenue" else "Units",
+        "",
+        xaxis_tickangle=45,
+        height=500,
+    )
+    return fig
 
 @callback(
     Output("category-by-day", "figure"),
@@ -3160,16 +3129,7 @@ def update_tobacco_brands_day(start_date, end_date, gender, age, payment, month_
         "",
         barmode="stack",
         height=400,
-        legend=dict(
-            orientation="h",
-            yanchor="top",
-            y=-0.25,
-            xanchor="center",
-            x=0.5,
-            bgcolor="#1a1a1a",
-            bordercolor="#3a3a3a",
-            font=dict(color="#e0e0e0"),
-        ),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, bgcolor="#1a1a1a", bordercolor="#3a3a3a", font=dict(color="#e0e0e0")),
     )
     return fig
 
