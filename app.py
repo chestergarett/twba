@@ -4188,4 +4188,6 @@ def handle_ai_query(ask_clicks, clear_clicks, question):
 # Removed: laundry-time, laundry-day, laundry-brand, laundry-gender, laundry-age, surf-pairs, cigarette-time, cigarette-brand, cigarette-day-avg, cigarette-gender, cigarette-age, cigarette-gender-brand
 
 if __name__ == "__main__":
-    app.run_server(debug=True, host="0.0.0.0", port=8050)
+    port = int(os.getenv("PORT", 8050))
+    debug = os.getenv("DEBUG", "False").lower() == "true"
+    app.run_server(debug=debug, host="0.0.0.0", port=port)

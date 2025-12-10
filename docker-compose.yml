@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  twba-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: twba-analytics-dashboard
+    ports:
+      - "8050:8050"
+    environment:
+      # Supabase Configuration (Required)
+      - SUPABASE_URL=${SUPABASE_URL:-https://rlvvitxazrojipjacogn.supabase.co}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      
+      # OpenAI Configuration (Optional - for Ask AI feature)
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      
+      # Database Connection (Optional - for Query Editor)
+      # Option 1: Use DB_CONNECTION_STRING
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      # Option 2: Use individual DB components
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      
+      # Authentication (Optional - defaults provided)
+      - USERNAME=${USERNAME:-twba-admin}
+      - PASSWORD=${PASSWORD:-e1e87780-66e9-42f4-beb9-a7aa7f371983}
+      
+      # Python settings
+      - PYTHONUNBUFFERED=1
+      - PORT=8050
+    env_file:
+      - .env  # Load additional environment variables from .env file
+    volumes:
+      # Mount .env file if you want to override from host
+      - ./.env:/app/.env:ro
+      # Optional: Mount app code for development (comment out for production)
+      # - ./app.py:/app/app.py:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8050/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - twba-network
+
+networks:
+  twba-network:
+    driver: bridge
+
