@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy app code
 COPY . .
 
-# Cloud Run uses $PORT automatically
+# Cloud Run sets PORT automatically, but we provide a default
 ENV PORT=8050
 
 EXPOSE 8050

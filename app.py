@@ -28,6 +28,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 from openai import OpenAI
+from charts.documentation import create_documentation_tab
 
 # Load environment variables
 load_dotenv()
@@ -311,7 +312,7 @@ app.index_string = '''
     </body>
 </html>
 '''
-app.title = "TWBA Analytics Dashboard"
+app.title = "Project Scout Analytics Dashboard"
 
 # Helper function to load data from Supabase
 def load_transactions() -> pd.DataFrame:
@@ -365,6 +366,7 @@ def filter_data(
     payment_method: Optional[list] = None,
     month_year: Optional[list] = None,
     weekday_weekend: Optional[str] = None,
+    category: Optional[list] = None,
 ) -> pd.DataFrame:
     """Apply filters to dataframe."""
     filtered = df.copy()
@@ -429,6 +431,17 @@ def filter_data(
             )
             filtered = filtered[filtered["weekday_type"] == weekday_weekend]
             filtered = filtered.drop(columns=["weekday_type"], errors="ignore")
+    
+    # Handle category filter
+    if category:
+        if "category" in filtered.columns:
+            # Direct category filter for items_df
+            filtered = filtered[filtered["category"].isin(category)]
+        elif "InteractionID" in filtered.columns:
+            # For transactions_df, filter by category through items_df
+            # Get InteractionIDs that have items in the selected categories
+            category_interaction_ids = items_df[items_df["category"].isin(category)]["InteractionID"].unique()
+            filtered = filtered[filtered["InteractionID"].isin(category_interaction_ids)]
     
     return filtered
 
@@ -514,7 +527,7 @@ def create_login_page(error_message=""):
         dbc.Row([
             dbc.Col([
                 html.Div([
-                    html.H1("TWBA Analytics Dashboard", className="text-center mb-4"),
+                    html.H1("Project Scout Analytics Dashboard", className="text-center mb-4"),
                     html.Hr(),
                     dbc.Card([
                         dbc.CardBody([
@@ -629,6 +642,18 @@ def build_filters_row():
             dbc.Button("Reset", id="reset-payment", color="secondary", size="sm", className="w-100"),
         ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
         dbc.Col([
+            html.Label("Category", className="mb-1", style={"fontWeight": "500"}),
+            dcc.Dropdown(
+                id="category-filter",
+                options=[{"label": c, "value": c} for c in sorted(items_df["category"].dropna().unique())] if not items_df.empty and "category" in items_df.columns else [],
+                value=None,
+                multi=True,
+                placeholder="All categories",
+                style={"marginBottom": "4px"},
+            ),
+            dbc.Button("Reset", id="reset-category", color="secondary", size="sm", className="w-100"),
+        ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
+        dbc.Col([
             html.Label(" ", className="mb-1"),
             dbc.Button("Reset All Filters", id="reset-all-filters", color="warning", className="w-100", style={"fontWeight": "600", "marginTop": "25px"}),
         ], xs=12, sm=6, md=4, lg=3, xl=3, className="mb-3"),
@@ -641,7 +666,7 @@ def create_dashboard_layout():
         dbc.Navbar(
             dbc.Container([
                 html.Div([
-                    html.Span("TWBA Dashboard", className="navbar-brand mb-0 h4", style={"color": "#d4af37"}),
+                    html.Span("Project Scout Dashboard", className="navbar-brand mb-0 h4", style={"color": "#d4af37"}),
                 ], style={"flex": "1"}),
                 dbc.Tabs(
                     id="main-tabs",
@@ -652,6 +677,7 @@ def create_dashboard_layout():
                         dbc.Tab(label="Tobacco", tab_id="tobacco"),
                         dbc.Tab(label="Query Editor", tab_id="query-editor"),
                         dbc.Tab(label="Ask AI", tab_id="ask-ai"),
+                        dbc.Tab(label="Documentation", tab_id="documentation"),
                     ],
                     className="flex-grow-1 twba-tabs"
                 ),
@@ -749,25 +775,31 @@ def create_general_tab():
                 dcc.Graph(id="category-performance"),
             ]),
         ]),
-        # Row 9: 2 charts - Category by Day and Category by Price Tier
+        # Row 9: 1 chart - Category by Day
         dbc.Row([
             dbc.Col([
                 dcc.Graph(id="category-by-day"),
-            ], md=6),
+            ]),
+        ]),
+        # Row 10: 1 chart - Category by Price Tier
+        dbc.Row([
             dbc.Col([
                 dcc.Graph(id="category-by-price-tier"),
-            ], md=6),
+            ]),
         ]),
-        # Row 10: 2 charts - Category by Gender and Category by Age
+        # Row 11: 1 chart - Category by Gender
         dbc.Row([
             dbc.Col([
                 dcc.Graph(id="category-by-gender"),
-            ], md=6),
+            ]),
+        ]),
+        # Row 12: 1 chart - Category by Age
+        dbc.Row([
             dbc.Col([
                 dcc.Graph(id="category-by-age"),
-            ], md=6),
+            ]),
         ]),
-        # Row 11: 1 chart - Category Ranking Table
+        # Row 13: 1 chart - Category Ranking Table
         dbc.Row([
             dbc.Col([
                 html.H4("Category Performance Ranking", className="mb-3"),
@@ -779,6 +811,12 @@ def create_general_tab():
             dbc.Col([
                 html.H4("Top Products by Time of Day", className="mb-3"),
                 html.Div(id="top-products-table"),
+            ]),
+        ]),
+        # Row 14: 1 chart - Products Bought Together
+        dbc.Row([
+            dbc.Col([
+                dcc.Graph(id="products-bought-together"),
             ]),
         ]),
     ])
@@ -1263,6 +1301,14 @@ def reset_age(n_clicks):
 def reset_payment(n_clicks):
     return None if n_clicks else dash.no_update
 
+@callback(
+    Output("category-filter", "value", allow_duplicate=True),
+    Input("reset-category", "n_clicks"),
+    prevent_initial_call=True,
+)
+def reset_category(n_clicks):
+    return None if n_clicks else dash.no_update
+
 # Reset all filters callback
 @callback(
     Output("date-range", "start_date", allow_duplicate=True),
@@ -1272,6 +1318,7 @@ def reset_payment(n_clicks):
     Output("gender-filter", "value", allow_duplicate=True),
     Output("age-filter", "value", allow_duplicate=True),
     Output("payment-filter", "value", allow_duplicate=True),
+    Output("category-filter", "value", allow_duplicate=True),
     Input("reset-all-filters", "n_clicks"),
     prevent_initial_call=True,
 )
@@ -1285,8 +1332,9 @@ def reset_all_filters(n_clicks):
             None,  # gender
             None,  # age
             None,  # payment
+            None,  # category
         )
-    return [dash.no_update] * 7
+    return [dash.no_update] * 8
 
 # Tab content callback
 @callback(
@@ -1304,6 +1352,8 @@ def render_tab_content(tab):
         return create_query_editor_tab()
     elif tab == "ask-ai":
         return create_ask_ai_tab()
+    elif tab == "documentation":
+        return create_documentation_tab()
     return html.Div("Select a tab")
 
 # General Analytics Callbacks
@@ -1312,11 +1362,12 @@ def render_tab_content(tab):
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_gender_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_gender_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     gender_summary = (
         filtered.groupby("gender_clean")
@@ -1398,10 +1449,11 @@ def update_gender_combined(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_gender_mom(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_gender_mom(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     monthly_gender = (
         filtered.groupby(["txn_month", "gender_clean"])
@@ -1426,11 +1478,12 @@ def update_gender_mom(start_date, end_date, gender, age, payment, month_year, we
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_age_bucket_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_age_bucket_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend by age."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     age_summary = (
         filtered.dropna(subset=["age_bucket"])
@@ -1519,11 +1572,12 @@ def update_age_bucket_combined(start_date, end_date, gender, age, payment, month
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_payment_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_payment_combined(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend by payment method."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     tender_summary = (
         filtered.groupby("payment_method")
@@ -1606,11 +1660,12 @@ def update_payment_combined(start_date, end_date, gender, age, payment, month_ye
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_weekday_weekend(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_weekday_weekend(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend (Weekday vs Weekend)."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     filtered["weekday_type"] = filtered["TransactionDate"].dt.dayofweek.apply(
         lambda x: "Weekend" if x >= 5 else "Weekday"
@@ -1698,11 +1753,12 @@ def update_weekday_weekend(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_time_of_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_time_of_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend by time of day."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     filtered["weekday_type"] = filtered["TransactionDate"].dt.dayofweek.apply(
         lambda x: "Weekend" if x >= 5 else "Weekday"
@@ -1812,11 +1868,12 @@ def update_time_of_day(start_date, end_date, gender, age, payment, month_year, w
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_day_of_week(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_day_of_week(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a dual-axis chart: bars for transactions, line for average spend by day of week."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Get day of week name
     filtered["day_of_week"] = filtered["TransactionDate"].dt.day_name()
@@ -1912,11 +1969,12 @@ def update_day_of_week(start_date, end_date, gender, age, payment, month_year, w
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_gender_time_distribution(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_gender_time_distribution(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a 100% stacked horizontal bar chart showing gender distribution by time of day."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Group by time of day segment and gender
     time_gender_summary = (
@@ -2016,11 +2074,12 @@ def update_gender_time_distribution(start_date, end_date, gender, age, payment, 
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_daily_sales_payday(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_daily_sales_payday(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a line chart showing average daily sales by day of month with payday windows and petsa de peligro zones."""
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Extract day of month
     filtered["day_of_month"] = filtered["TransactionDate"].dt.day
@@ -2164,7 +2223,7 @@ def update_daily_sales_payday(start_date, end_date, gender, age, payment, month_
                 y=0.02,
                 xref="paper",
                 yref="paper",
-                text="<b>Legend:</b><br>🟢 Green: Payday Windows<br>🔴 Red: Petsa de Peligro<br>🟤 Brown: Overlap",
+                text="<b>Legend:</b><br>🟢 Green: Payday Windows<br>🔴 Red: Petsa de Peligro<br>",
                 showarrow=False,
                 align="right",
                 bgcolor="#2a2a2a",
@@ -2183,10 +2242,43 @@ def update_daily_sales_payday(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_basket_bands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    filtered = filter_data(transactions_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_basket_bands(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    # Filter data but don't apply basket_total filter for this chart (we want all bands)
+    filtered = transactions_df.copy()
+    
+    # Apply all filters except basket_total filter
+    if start_date and end_date:
+        if "TransactionDate" in filtered.columns:
+            try:
+                start = pd.to_datetime(start_date)
+                end = pd.to_datetime(end_date) + pd.Timedelta(days=1) - pd.Timedelta(seconds=1)
+                filtered = filtered[(filtered["TransactionDate"] >= start) & (filtered["TransactionDate"] <= end)]
+            except:
+                pass
+    
+    if gender and "gender_clean" in filtered.columns:
+        filtered = filtered[filtered["gender_clean"].isin(gender)]
+    if age and "age_bucket" in filtered.columns:
+        filtered = filtered[filtered["age_bucket"].isin(age)]
+    if payment and "payment_method" in filtered.columns:
+        filtered = filtered[filtered["payment_method"].isin(payment)]
+    if month_year and len(month_year) > 0 and "TransactionDate" in filtered.columns:
+        filtered["year_month"] = filtered["TransactionDate"].dt.to_period("M")
+        month_year_periods = [pd.Period(f"{m}-01") if len(m) == 7 else pd.Period(m) for m in month_year]
+        filtered = filtered[filtered["year_month"].isin(month_year_periods)]
+        filtered = filtered.drop(columns=["year_month"], errors="ignore")
+    if weekday_weekend and "TransactionDate" in filtered.columns:
+        filtered["weekday_type"] = filtered["TransactionDate"].dt.dayofweek.apply(
+            lambda x: "Weekend" if x >= 5 else "Weekday"
+        )
+        filtered = filtered[filtered["weekday_type"] == weekday_weekend]
+        filtered = filtered.drop(columns=["weekday_type"], errors="ignore")
+    if category and "InteractionID" in filtered.columns:
+        category_interaction_ids = items_df[items_df["category"].isin(category)]["InteractionID"].unique()
+        filtered = filtered[filtered["InteractionID"].isin(category_interaction_ids)]
     
     # Guard: ensure basket_total column exists and data is present
     if "basket_total" not in filtered.columns or filtered.empty:
@@ -2208,7 +2300,7 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
         )
     
     def basket_band(value):
-        if pd.isna(value):
+        if pd.isna(value) or value <= 0:
             return None
         if value <= 10:
             return "₱0-10"
@@ -2248,6 +2340,18 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
     basket_summary["basket_band"] = pd.Categorical(basket_summary["basket_band"], categories=band_order, ordered=True)
     basket_summary = basket_summary.sort_values("basket_band")
     
+    # Ensure transactions and avg_spend are numeric
+    basket_summary["transactions"] = pd.to_numeric(basket_summary["transactions"], errors="coerce")
+    basket_summary["avg_spend"] = pd.to_numeric(basket_summary["avg_spend"], errors="coerce")
+    basket_summary = basket_summary.dropna(subset=["transactions", "avg_spend"])
+    
+    if basket_summary.empty:
+        return go.Figure().add_annotation(
+            text="No valid basket data to display",
+            showarrow=False,
+            x=0.5, y=0.5, xref="paper", yref="paper"
+        )
+    
     fig = px.bar(
         basket_summary,
         x="basket_band",
@@ -2258,7 +2362,7 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
         labels={"basket_band": "Basket Band", "transactions": "Transactions"},
         color_continuous_scale="Tealgrn",
     )
-    fig.update_traces(textposition="outside")
+    fig.update_traces(textposition="outside", texttemplate="%{text:,.0f}")
     apply_dark_layout(fig, "Basket Value Distribution", "Basket Band", "Transactions", "", height=500)
     return fig
 
@@ -2267,11 +2371,12 @@ def update_basket_bands(start_date, end_date, gender, age, payment, month_year, 
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_performance(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_performance(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     try:
-        filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+        filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
         
         # Ensure required columns and numeric values
         if "totalPrice" not in filtered_items.columns and "unitPrice" in filtered_items.columns and "quantity" in filtered_items.columns:
@@ -2382,11 +2487,12 @@ def update_category_performance(start_date, end_date, gender, age, payment, mont
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_by_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_by_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a grouped bar chart showing category performance by day of week."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Get day of week name
     filtered_items["day_of_week"] = filtered_items["TransactionDate"].dt.day_name()
@@ -2492,11 +2598,12 @@ def update_category_by_day(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_by_gender(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_by_gender(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a horizontal stacked bar chart showing gender distribution by category (100% stacked)."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Group by category and gender, count transactions (or sum quantities)
     category_gender_summary = (
@@ -2596,11 +2703,12 @@ def update_category_by_gender(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_by_age(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_by_age(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a grouped bar chart showing age group distribution by category."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Group by category and age bucket, count transactions/units
     category_age_summary = (
@@ -2700,11 +2808,12 @@ def update_category_by_age(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_by_price_tier(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_by_price_tier(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a stacked bar chart showing category composition by price tier."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
 
     # Determine price per unit
     price_per_unit = None
@@ -2816,11 +2925,12 @@ def update_category_by_price_tier(start_date, end_date, gender, age, payment, mo
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_category_ranking_table(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_category_ranking_table(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a ranked table showing category performance with strategic tiers."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Check available columns
     available_cols = filtered_items.columns.tolist()
@@ -2955,10 +3065,11 @@ def _filter_tobacco_items(df: pd.DataFrame) -> pd.DataFrame:
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_time_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_time_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3010,10 +3121,11 @@ def update_tobacco_time_avgqty(start_date, end_date, gender, age, payment, month
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_day_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_day_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3068,10 +3180,11 @@ def update_tobacco_day_avgqty(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3124,10 +3237,11 @@ def update_tobacco_brands(start_date, end_date, gender, age, payment, month_year
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_brands_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_brands_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3179,10 +3293,11 @@ def update_tobacco_brands_day(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_gender_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_gender_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3197,10 +3312,11 @@ def update_tobacco_gender_pie(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_age_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_age_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3215,10 +3331,11 @@ def update_tobacco_age_pie(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_gender_brand(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_tobacco_gender_brand(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    tob = _filter_tobacco_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if tob.empty:
         return go.Figure().add_annotation(text="No tobacco data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3302,10 +3419,11 @@ def update_tobacco_gender_brand(start_date, end_date, gender, age, payment, mont
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_cluster_items(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_tobacco_cluster_items(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     marlboro_txns = items_filtered[items_filtered["brandName"].str.contains("marlboro", case=False, na=False)]
     if marlboro_txns.empty:
         return go.Figure().add_annotation(text="No Marlboro data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3326,10 +3444,11 @@ def update_tobacco_cluster_items(start_date, end_date, gender, age, payment, mon
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_cluster_categories(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_tobacco_cluster_categories(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     marlboro_txns = items_filtered[items_filtered["brandName"].str.contains("marlboro", case=False, na=False)]
     if marlboro_txns.empty:
         return go.Figure().add_annotation(text="No Marlboro data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3362,10 +3481,11 @@ def update_tobacco_cluster_categories(start_date, end_date, gender, age, payment
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_tobacco_cluster_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_tobacco_cluster_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     marlboro_txns = items_filtered[items_filtered["brandName"].str.contains("marlboro", case=False, na=False)]
     if marlboro_txns.empty:
         return go.Figure().add_annotation(text="No Marlboro data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3413,10 +3533,11 @@ def _filter_laundry_items(df: pd.DataFrame) -> pd.DataFrame:
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_time_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_time_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3468,10 +3589,11 @@ def update_laundry_time_avgqty(start_date, end_date, gender, age, payment, month
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_day_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_day_avgqty(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3526,10 +3648,11 @@ def update_laundry_day_avgqty(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3582,10 +3705,11 @@ def update_laundry_brands(start_date, end_date, gender, age, payment, month_year
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_brands_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_brands_day(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3628,10 +3752,11 @@ def update_laundry_brands_day(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_gender_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_gender_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3646,10 +3771,11 @@ def update_laundry_gender_pie(start_date, end_date, gender, age, payment, month_
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_age_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_age_pie(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3664,10 +3790,11 @@ def update_laundry_age_pie(start_date, end_date, gender, age, payment, month_yea
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_gender_brand(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend))
+def update_laundry_gender_brand(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    lau = _filter_laundry_items(filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category))
     if lau.empty:
         return go.Figure().add_annotation(text="No laundry data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
 
@@ -3751,10 +3878,11 @@ def update_laundry_gender_brand(start_date, end_date, gender, age, payment, mont
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_cluster_items(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_laundry_cluster_items(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     anchor_txns = items_filtered[items_filtered["brandName"].str.contains("surf", case=False, na=False)]
     if anchor_txns.empty:
         return go.Figure().add_annotation(text="No Surf data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3775,10 +3903,11 @@ def update_laundry_cluster_items(start_date, end_date, gender, age, payment, mon
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_cluster_categories(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_laundry_cluster_categories(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     anchor_txns = items_filtered[items_filtered["brandName"].str.contains("surf", case=False, na=False)]
     if anchor_txns.empty:
         return go.Figure().add_annotation(text="No Surf data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3811,10 +3940,11 @@ def update_laundry_cluster_categories(start_date, end_date, gender, age, payment
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_laundry_cluster_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
-    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+def update_laundry_cluster_brands(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    items_filtered = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     anchor_txns = items_filtered[items_filtered["brandName"].str.contains("surf", case=False, na=False)]
     if anchor_txns.empty:
         return go.Figure().add_annotation(text="No Surf data", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
@@ -3848,11 +3978,12 @@ def update_laundry_cluster_brands(start_date, end_date, gender, age, payment, mo
     [Input("date-range", "start_date"), Input("date-range", "end_date"),
      Input("gender-filter", "value"), Input("age-filter", "value"),
      Input("payment-filter", "value"),
-     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value")],
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
 )
-def update_top_products_table(start_date, end_date, gender, age, payment, month_year, weekday_weekend):
+def update_top_products_table(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
     """Create a table showing top products by time of day."""
-    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend)
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
     
     # Time segment emojis and labels
     time_segment_info = {
@@ -3922,6 +4053,106 @@ def update_top_products_table(start_date, end_date, gender, age, payment, month_
         dbc.Col(tables[3] if len(tables) > 3 else html.Div(), md=6),
     ])
 
+
+@callback(
+    Output("products-bought-together", "figure"),
+    [Input("date-range", "start_date"), Input("date-range", "end_date"),
+     Input("gender-filter", "value"), Input("age-filter", "value"),
+     Input("payment-filter", "value"),
+     Input("month-year-filter", "value"), Input("weekday-weekend-filter", "value"),
+     Input("category-filter", "value")],
+)
+def update_products_bought_together(start_date, end_date, gender, age, payment, month_year, weekday_weekend, category):
+    """Create a horizontal bar chart showing products frequently bought together."""
+    from itertools import combinations
+    
+    filtered_items = filter_data(items_df, [start_date, end_date], gender, age, payment, month_year, weekday_weekend, category)
+    
+    if filtered_items.empty or "InteractionID" not in filtered_items.columns or "productName" not in filtered_items.columns:
+        return go.Figure().add_annotation(
+            text="No data available for products bought together",
+            showarrow=False,
+            x=0.5,
+            y=0.5,
+            xref="paper",
+            yref="paper"
+        )
+    
+    # Group by transaction to get products bought together
+    product_pairs = []
+    for interaction_id, group in filtered_items.groupby("InteractionID"):
+        # Get unique products in this transaction
+        products = group["productName"].dropna().unique().tolist()
+        
+        # Only create pairs if there are at least 2 products
+        if len(products) >= 2:
+            # Create all pairs of products in this transaction
+            for pair in combinations(sorted(products), 2):
+                product_pairs.append(pair)
+    
+    if not product_pairs:
+        return go.Figure().add_annotation(
+            text="No product pairs found (transactions need at least 2 products)",
+            showarrow=False,
+            x=0.5,
+            y=0.5,
+            xref="paper",
+            yref="paper"
+        )
+    
+    # Count frequency of each pair
+    pair_counts = {}
+    for pair in product_pairs:
+        pair_key = f"{pair[0]} & {pair[1]}"
+        pair_counts[pair_key] = pair_counts.get(pair_key, 0) + 1
+    
+    # Convert to DataFrame and sort by frequency
+    pairs_df = pd.DataFrame([
+        {"Product Pair": pair, "Frequency": count}
+        for pair, count in pair_counts.items()
+    ]).sort_values("Frequency", ascending=False).head(20)  # Top 20 pairs
+    
+    # Create horizontal bar chart
+    fig = go.Figure()
+    
+    fig.add_trace(
+        go.Bar(
+            y=pairs_df["Product Pair"],
+            x=pairs_df["Frequency"],
+            orientation="h",
+            marker_color="gold",
+            text=pairs_df["Frequency"],
+            texttemplate="%{text:,.0f}",
+            textposition="outside",
+            hovertemplate="<b>%{y}</b><br>Frequency: %{x}<extra></extra>",
+        )
+    )
+    
+    apply_dark_layout(
+        fig,
+        "Top 20 Products Bought Together",
+        "Frequency (Number of Transactions)",
+        "Product Pair",
+        "",
+        height=max(600, len(pairs_df) * 30),  # Dynamic height based on number of pairs
+        yaxis=dict(
+            title="Product Pair",
+            autorange="reversed",  # Show highest frequency at top
+            gridcolor="#3a3a3a",
+            linecolor="#4a4a4a",
+            titlefont=dict(color="#d4af37"),
+            tickfont=dict(color="#e0e0e0"),
+        ),
+        xaxis=dict(
+            title="Frequency (Number of Transactions)",
+            gridcolor="#3a3a3a",
+            linecolor="#4a4a4a",
+            titlefont=dict(color="#d4af37"),
+            tickfont=dict(color="#e0e0e0"),
+        ),
+    )
+    
+    return fig
 # Query Editor Callbacks
 
 def validate_select_query(query: str) -> Tuple[bool, str]:
@@ -4184,10 +4415,7 @@ def handle_ai_query(ask_clicks, clear_clicks, question):
     
     return "", dash.no_update
 
-# Old unused callbacks removed - these components don't exist in the layouts
-# Removed: laundry-time, laundry-day, laundry-brand, laundry-gender, laundry-age, surf-pairs, cigarette-time, cigarette-brand, cigarette-day-avg, cigarette-gender, cigarette-age, cigarette-gender-brand
-
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8050))
-    debug = os.getenv("DEBUG", "False").lower() == "true"
+    debug = os.getenv("DEBUG")
     app.run_server(debug=debug, host="0.0.0.0", port=port)
